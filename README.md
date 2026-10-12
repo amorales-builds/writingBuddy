@@ -10,7 +10,7 @@ Input Box — Allows users to enter and edit text. <br>
 
 ### To-Do List
 - [x] Input box
-- [ ] Word Counter
+- [x] Word Counter
 - [ ] Copy-all button
 - [ ] \(Optional) "Flowstate" button
 - [ ] \(Optional) UI Themes
@@ -19,4 +19,3 @@ Input Box — Allows users to enter and edit text. <br>
 ## Project Status
 
 🚧 Work in Progress <br>
-Word Counter still in development
