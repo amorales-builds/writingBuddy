@@ -12,9 +12,11 @@ Input Box — Allows users to enter and edit text. <br>
 - [x] Input box
 - [ ] Word Counter
 - [ ] Copy-all button
+- [ ] \(Optional) "Flowstate" button
 - [ ] \(Optional) UI Themes
 
-      
+
 ## Project Status
 
-🚧 Work in Progress
+🚧 Work in Progress <br>
+Word Counter still in development
