@@ -5,21 +5,29 @@
         <title>Writing Buddy</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
+    <header>
+        <div class="heading">
+            <button class="quit" id="quit"> x </button>
+        </div>
+    </header>
     <body>
         <div class="app">
-            <h1>Meep</h1>
-            <p>wigglewiggle</p>
-            <button id="testBtn">Button</button>
-
-            <!-- <p id="theme-source">System</p>
-            <p>Current theme source: <strong id="theme-source">System</strong></p> -->
+            <h1>Writing Buddy</h1>
+            <p>Never lose count again!</p>
 
             <button id="toggle-dark-mode"> <strong id="theme-source">Other</strong> Mode</button>
             <button id="reset-to-system">Reset to System Theme</button>
+
         </div>
         
         <div class="app">
-            <label> Work Title </label>
+            <div class="square">
+                <label>Goal: </label>
+                <input class="text" id="wcGoal"></input> 
+            </div>
+            
+            <label class="title"> Work Title </label>            
+            <button>COPY</button>
             <textarea id="writing"></textarea>
             <p> Word Count: <strong id="word-number">0</strong></p>          
         </div>

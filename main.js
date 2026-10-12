@@ -11,9 +11,9 @@ const createWindow = () => {
     // maximizable: false,
     // fullscreenable: false,
     //frame: false, 
-    // transparent: true,
+    transparent: true,
     webPreferences: {
-      //contextIsolation: true
+      contextIsolation: true,
       preload: path.join(__dirname, 'preload.js')
     }
   });

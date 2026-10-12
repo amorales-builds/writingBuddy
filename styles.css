@@ -5,6 +5,13 @@
   --lavanderMedium:  rgb(61, 31, 67);
   --lavanderLight: rgb(254, 218, 253);
   --lavanderBlack:  rgb(15, 1, 19);
+
+  --ligthPink:  #ffe2f0;
+  --lavanderPink:  #fbd0e4;
+  --lavanderRed: rgb(94, 28, 55);
+  --lavanderMaroon:#67254b;  
+  --darkPink: #ad5980;
+  --darkMaroon:rgb(43, 14, 31);
 }
 
 * {
@@ -16,19 +23,47 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-
   background: rgb(255, 215, 236);
   user-select: none;
   -webkit-app-region: drag;
+}
+
+.grid{
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto auto; 
 }
 
 .app {
   padding: 16px;
 }
 
-label {
+.square{
+  /* display: grid;
+  grid-template-columns: auto auto; */
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+.title {
   font-size: xx-large;
 } 
+
+.text{
+  text-align: center;
+  max-width: 7%;
+  margin-inline-start: 2px;
+  padding: 3px;
+  background-color:  var(--lavanderMedium);
+  color: lavenderblush;
+  border-radius: 8px; 
+  border: 2px solid rgb(248, 240, 255);
+  @media (prefers-color-scheme: light) {
+    background-color: var(--ligthPink);
+    color: var(--darkMaroon);
+    border: 2px solid var(--darkPink);
+  }
+}
 
 textarea {
   width: 99%;
@@ -43,11 +78,18 @@ textarea {
   color: lavenderblush;
   border-radius: 12px; 
   border: 2px solid lavenderblush;
+
   @media screen and (min-width: 320px){ 
     padding-inline: 10%;
   }
   @media screen and (min-width: 1200px){ 
     padding-inline: 20%;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    background-color: var(--ligthPink);
+    color: var(--darkMaroon);
+    border: 2px solid var(--darkPink);
   }
 }
 
@@ -59,13 +101,49 @@ textarea.flowstate{
 }
 
 button{
-  background-color: var(--lavanderLight);
+  background-color: var(--lavanderLight);  
   /* border-style: hidden;*/
   border-radius: 12px; 
   border: 1px solid lavenderblush;
   padding: 8px;
   margin: 5px;
+
+  @media (prefers-color-scheme: light) {
+    background-color: var(--lavanderMaroon);
+    color: var(--lavanderPink);
+  }
 }
+
+button:hover{
+  background-color: var(--lavanderDark);  
+  border: 1px solid var(--lavanderLight);
+  color:  var(--lavanderLight);
+  /* margin-inline-end: 15px; */
+
+  @media (prefers-color-scheme: light) {
+    background-color: var(--lavanderPink);
+  border: 1px solid var(--lavanderRed);
+    color: var(--lavanderRed);
+  }
+}
+
+.quit{
+  margin-left: 50%;
+  margin-top: 5px;
+  padding-inline: 12px;
+  border-radius: 100%;
+  font-weight: bolder;
+}
+
+.heading{
+  position: fixed;
+  width: 100%;
+  /* visibility: visible;
+  :hover{
+    visibility: hidden;
+  } */
+}
+
 
 input,
 select {
@@ -78,7 +156,7 @@ select {
 }
 
 @media (prefers-color-scheme: light) {
-  body { background: #fbd0e4; color: rgb(94, 28, 55); }
+  body { background: var(--lavanderPink); color: var(--lavanderRed); }
 }
 
 /**/

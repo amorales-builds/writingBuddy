@@ -15,12 +15,17 @@ document.getElementById('reset-to-system').addEventListener('click', async () =>
     document.getElementById('theme-source').innerHTML = 'System'
 })
 
+document.getElementById('quit').addEventListener('click', async () => {
+    window.opener = self;
+    window.close();
+})
+
 document.getElementById('writing').addEventListener('keydown', async () => {
     function countWords(s){
         s = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
         s = s.replace(/[ ]{2,}/gi," ");//2 or more space to 1
         s = s.replace(/\n /,"\n"); // exclude newline with a start spacing
-        return s.split(/\s+/).filter(String).length;
+        return s.split(/\s+/).filter(String).length; // split excludes spaces and multiple lines
     }
     document.getElementById('word-number').innerHTML = countWords(document.getElementById("writing").value);
 })
