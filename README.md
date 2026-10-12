@@ -12,7 +12,7 @@ Input Box — Allows users to enter and edit text. <br>
 - [x] Input box
 - [ ] Word Counter
 - [ ] Copy-all button
-- [ ] UI Themes
+- [ ] \(Optional) UI Themes
 
       
 ## Project Status
