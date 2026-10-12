@@ -28,42 +28,6 @@ body {
   -webkit-app-region: drag;
 }
 
-.grid{
-  padding: 16px;
-  display: grid;
-  grid-template-columns: auto auto; 
-}
-
-.app {
-  padding: 16px;
-}
-
-.square{
-  /* display: grid;
-  grid-template-columns: auto auto; */
-  padding: 10px;
-  padding-bottom: 50px;
-}
-
-.title {
-  font-size: xx-large;
-} 
-
-.text{
-  text-align: center;
-  max-width: 7%;
-  margin-inline-start: 2px;
-  padding: 3px;
-  background-color:  var(--lavanderMedium);
-  color: lavenderblush;
-  border-radius: 8px; 
-  border: 2px solid rgb(248, 240, 255);
-  @media (prefers-color-scheme: light) {
-    background-color: var(--ligthPink);
-    color: var(--darkMaroon);
-    border: 2px solid var(--darkPink);
-  }
-}
 
 textarea {
   width: 99%;
@@ -74,10 +38,11 @@ textarea {
   font-size:x-large;
   margin-top: 10px;
   /* background-color: rgb(147, 107, 145); */
-  background-color:  var(--lavanderMedium);
   color: lavenderblush;
-  border-radius: 12px; 
-  border: 2px solid lavenderblush;
+  background-color:  var(--lavanderMedium);
+  border: 0;
+  /* border-radius: 12px; 
+  border: 2px solid lavenderblush; */
 
   @media screen and (min-width: 320px){ 
     padding-inline: 10%;
@@ -101,6 +66,7 @@ textarea.flowstate{
 }
 
 button{
+  cursor:pointer;
   background-color: var(--lavanderLight);  
   /* border-style: hidden;*/
   border-radius: 12px; 
@@ -127,6 +93,26 @@ button:hover{
   }
 }
 
+input,
+select {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  body { background:var(--lavanderDark); color: var(--lavanderLight); }
+}
+
+@media (prefers-color-scheme: light) {
+  body { background: var(--lavanderPink); color: var(--lavanderRed); }
+}
+
+.copybutton:active{
+  background-color: #04AA6D;
+  font-weight: bolder;
+  padding-inline: 100px;
+}
+
 .quit{
   margin-left: 50%;
   margin-top: 5px;
@@ -144,19 +130,51 @@ button:hover{
   } */
 }
 
-
-input,
-select {
-  -webkit-app-region: no-drag;
-  cursor: pointer;
+.textareaGrid{
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto; 
+  background-color:  var(--lavanderMedium);
+  border-radius: 12px; 
+  border: 2px solid lavenderblush;
 }
 
-@media (prefers-color-scheme: dark) {
-  body { background:var(--lavanderDark); color: var(--lavanderLight); }
+.grid{
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto auto auto; 
 }
 
-@media (prefers-color-scheme: light) {
-  body { background: var(--lavanderPink); color: var(--lavanderRed); }
+.app {
+  padding: 16px;
+}
+
+.square{
+  /* display: grid;
+  grid-template-columns: auto auto; */
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+.title {
+  font-size: xx-large;
+} 
+
+.text{
+  cursor:text;
+  text-align: center;
+  max-width: 7%;
+  margin-inline-start: 2px;
+  padding: 3px;
+  color: lavenderblush;
+  background-color:  var(--lavanderMedium);
+  border-radius: 8px; 
+  border: 2px solid rgb(248, 240, 255);
+  @media (prefers-color-scheme: light) {
+    background-color: var(--ligthPink);
+    color: var(--darkMaroon);
+    border: 2px solid var(--darkPink);
+  }
 }
 
 /**/

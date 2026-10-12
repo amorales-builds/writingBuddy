@@ -29,3 +29,7 @@ document.getElementById('writing').addEventListener('keydown', async () => {
     }
     document.getElementById('word-number').innerHTML = countWords(document.getElementById("writing").value);
 })
+
+document.getElementById('copyBtn').addEventListener('click', async () => {
+    navigator.clipboard.writeText( document.getElementById("writing").value);
+})
