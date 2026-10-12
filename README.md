@@ -12,7 +12,7 @@ Light/Dark Mode - Allows users to toggle light or dark mode for better user expe
 ### To-Do List
 - [x] Input box
 - [x] Word Counter
-- [ ] Copy text button
+- [x] Copy text button
 - [ ] Word Count Goal
 - [ ] \(Optional) "Flowstate" button
 - [ ] \(Optional) UI Themes
