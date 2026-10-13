@@ -30,17 +30,19 @@ body {
 
 
 textarea {
-  width: 99%;
+  /* width: 99%; */
   /* height: 900px; */
   height: 600px;
   line-height: 1.3;
   padding: 30px;
+  padding-top: 10px;
   font-size:x-large;
-  margin-top: 10px;
+  margin-top: 5px;
   /* background-color: rgb(147, 107, 145); */
   color: lavenderblush;
   background-color:  var(--lavanderMedium);
   border: 0;
+  outline: none;
   /* border-radius: 12px; 
   border: 2px solid lavenderblush; */
 
@@ -49,6 +51,7 @@ textarea {
   }
   @media screen and (min-width: 1200px){ 
     padding-inline: 20%;
+  line-height: 1.8; 
   }
   
   @media (prefers-color-scheme: light) {
@@ -107,10 +110,40 @@ select {
   body { background: var(--lavanderPink); color: var(--lavanderRed); }
 }
 
+.copybutton{
+  max-width: 65px;
+  margin-left: 90%;
+  padding:6px;
+
+  background-color: var(--lavanderDark);  
+  border: 1px solid var(--lavanderLight);
+  color: lavenderblush;
+
+  @media (prefers-color-scheme: light) {
+    background-color: var(--lavanderPink);
+    color: var(--lavanderMaroon);
+  }
+
+  @media screen and (min-width: 1200px){ 
+    max-width: 100px;
+    margin-left: 0%;
+  }
+}
+
+.copybutton:hover{
+  background-color: var(--lavanderLight);  
+  border: 1px solid var(--lavanderDark);
+  color: var(--lavanderDark);
+
+  @media (prefers-color-scheme: light) {
+    background-color: var(--lavanderMaroon);
+    color: var(--lavanderPink);
+  }
+}
 .copybutton:active{
   background-color: #04AA6D;
-  font-weight: bolder;
-  padding-inline: 100px;
+  /* font-weight: bolder;
+  padding-inline: 100px; */
 }
 
 .quit{
@@ -131,12 +164,22 @@ select {
 }
 
 .textareaGrid{
+  width: 99%;
   padding: 16px;
   display: grid;
   grid-template-columns: auto; 
   background-color:  var(--lavanderMedium);
   border-radius: 12px; 
-  border: 2px solid lavenderblush;
+  border: 2px solid lavenderblush;  
+  margin-top: 10px;
+  @media screen and (min-width: 1200px){     
+    width: 80%;
+  }
+}
+
+.titleGrid{
+  display: grid;
+  grid-template-columns: auto auto; 
 }
 
 .grid{
@@ -148,12 +191,15 @@ select {
 .app {
   padding: 16px;
 }
+.appCenter{
+  padding: 16px;
+  place-items: center;
+}
 
 .square{
   /* display: grid;
   grid-template-columns: auto auto; */
   padding: 10px;
-  padding-bottom: 50px;
 }
 
 .title {
@@ -163,7 +209,7 @@ select {
 .text{
   cursor:text;
   text-align: center;
-  max-width: 7%;
+  max-width: 50px;
   margin-inline-start: 2px;
   padding: 3px;
   color: lavenderblush;
