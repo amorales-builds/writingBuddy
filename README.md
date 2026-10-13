@@ -1,9 +1,9 @@
 # Writing Buddy
 _a desktop app_
 
-**Updates**
+**Updates:** <br>
 Refinement stage. <br>
-Expect: changes in UI (layout, colors, etc)
+Expect changes in UI (layout, colors, etc)
 
 ## Goal
 The goal is to help **writer focus**, with a word counter and other minor tools to make the writing process more efficient.
@@ -16,7 +16,7 @@ The goal is to help **writer focus**, with a word counter and other minor tools 
 - **Word Count Goal** - Notifies when the word count goal has been achieved.
 
 ### Extra
-**Light/Dark Mode** - Allows users to toggle light or dark mode for better user experience <br>
+- **Light/Dark Mode** - Allows users to toggle light or dark mode for better user experience <br>
 
 
 ## To-Do List
