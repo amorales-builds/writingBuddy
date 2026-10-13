@@ -27,7 +27,14 @@
                 <label class="title"> Work Title </label>
                 <div class="square">            
                     <label>Goal: </label>
-                    <input class="text" id="wcGoal"></input>
+                    <datalist id="myList">                         
+                        <option value="5"></option>
+                        <option value="50"></option>
+                        <option value="100"></option>
+                        <option value="500"></option>
+                        <option value="1000"></option>
+                    </datalist>
+                    <input class="text" id="wcGoal" type="search" list="myList"></input>
                 </div>
             </div>  
 
