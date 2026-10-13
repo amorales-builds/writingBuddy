@@ -1,8 +1,9 @@
 # Writing Buddy
-_a desktop app_
+_a desktop app for writers_
 
 **Updates:** <br>
-Refinement stage. <br>
+Functional <br>
+Entered refinement stage. <br>
 Expect changes in UI (layout, colors, etc)
 
 ## Goal
