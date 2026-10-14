@@ -5,44 +5,58 @@
         <title>Writing Buddy</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
-    <header>
+    <!-- <header>
         <div class="heading">
             <button class="quit" id="quit"> x </button>
         </div>
-    </header>
+    </header> -->
     <body>
-        <div class="app">
-            <h1>Writing Buddy</h1>
-            <p>Never lose count again!</p>
-
+        
+        <div class="headingLine"><p></p></div>        
+        <div class="settingsLine">
             <button id="toggle-dark-mode"> <strong id="theme-source">Other</strong> Mode</button>
-            <button id="reset-to-system">Reset to System Theme</button>
+            <button id="reset-to-system">Reset to System Theme</button>                
+            <button class="quit" id="quit"> x </button>
+        </div>
 
+        <div class="app">    
+            <h1>Writing Buddy</h1>
+            <p style="margin:-15px; padding-left: 35px;"><i>Never lose count again!</i></p>
         </div>
         
         <div class="appCenter">
             
 
             <div class="titleGrid">
-                <label class="title"> Work Title </label>
-                <div class="square">            
-                    <label>Goal: </label>
-                    <datalist id="myList">                         
-                        <option value="5"></option>
-                        <option value="50"></option>
-                        <option value="100"></option>
-                        <option value="500"></option>
-                        <option value="1000"></option>
-                    </datalist>
-                    <input class="text" id="wcGoal" type="search" list="myList"></input>
+                <h2 id="workTitle" class="title">Work Title</h2>
+                <input id="titleInput" class="titleInput" placeholder="Work Title"></input>
+
+                <div class="grid2">
+                    <div class="square">            
+                        <label id="lblGoal">Goal: </label>
+                        <datalist id="myList">                         
+                            <option value="5"></option>
+                            <option value="50"></option>
+                            <option value="100"></option>
+                            <option value="500"></option>
+                            <option value="1000"></option>
+                        </datalist>
+                        <input class="text" id="wcGoal" type="search" list="myList"></input>
+                    </div>
+                    <button id="enterBtn" class="enterBtn">Hide</button>
                 </div>
             </div>  
-
-            <div class="textareaGrid">                     
-                <button id="copyBtn" class="copybutton">COPY</button>              
-                <textarea id="writing"></textarea>
+            
+            <div class="textareaGrid" id = "textareaGrid">   
+                <button id="copyBtn" class="copybutton">COPY</button>        
+                <textarea id="writing"></textarea> 
+                <div id= "alertNote" class="alert" onclick="this.style.display='none'"";>
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong>Success!</strong> WRITING GOAL MET!
+                </div>               
             </div>    
-            <p> Word Count: <strong id="word-number">0</strong></p>       
+            <p> Word Count: <strong id="word-number">0</strong></strong><strong id="word-goal" style="visibility:hidden">0</strong></p>  
+            <p id="word-percent"></p>
         </div>
         
         <script src="script.js"></script>

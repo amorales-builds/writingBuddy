@@ -2,7 +2,7 @@
 _a desktop app for writers_
 
 **Updates:** <br>
-Functional <br>
+Functional. <br>
 Entered refinement stage. <br>
 Expect changes in UI (layout, colors, etc)
 
@@ -18,6 +18,8 @@ The goal is to help **writer focus**, with a word counter and other minor tools 
 
 ### Extra
 - **Light/Dark Mode** - Allows users to toggle light or dark mode for better user experience <br>
+- **Work title change** - Change title of work. At the moment this is only visual. <br>
+- **Word Counter percent** - Percentage of completion below word count once the goal is hidden. <br>
 
 
 ## To-Do List
@@ -25,6 +27,7 @@ The goal is to help **writer focus**, with a word counter and other minor tools 
 - [x] Word Counter
 - [x] Copy text button
 - [x] Word Count Goal
+- [ ] \(Optional) Save progress on specific title
 - [ ] \(Optional) "Flowstate" button
 - [ ] \(Optional) UI Themes
 - [ ] \(Optional) Animated Companion

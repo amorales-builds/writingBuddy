@@ -36,7 +36,8 @@ textarea {
   line-height: 1.3;
   padding: 30px;
   padding-top: 10px;
-  font-size:x-large;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
   margin-top: 5px;
   /* background-color: rgb(147, 107, 145); */
   color: lavenderblush;
@@ -102,12 +103,51 @@ select {
   cursor: pointer;
 }
 
+h1{
+  padding-top: 20px;
+}
+
+/* span{
+  padding: 20px;
+  background-color: #04AA6D;
+  display: none;
+} */
+
 @media (prefers-color-scheme: dark) {
   body { background:var(--lavanderDark); color: var(--lavanderLight); }
 }
 
 @media (prefers-color-scheme: light) {
   body { background: var(--lavanderPink); color: var(--lavanderRed); }
+}
+
+.alert {
+  padding: 20px;
+  background-color: #04AA6D; /* Red */
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  display: none;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
 }
 
 .copybutton{
@@ -147,8 +187,8 @@ select {
 }
 
 .quit{
-  margin-left: 50%;
-  margin-top: 5px;
+  /* margin-left: 50%;
+  margin-top: 5px; */
   padding-inline: 12px;
   border-radius: 100%;
   font-weight: bolder;
@@ -161,6 +201,24 @@ select {
   :hover{
     visibility: hidden;
   } */
+}
+
+.settingsLine{
+  position: fixed;
+  right: 10px; 
+  padding-top: 8px;
+}
+
+.headingLine{
+  position: fixed;
+  /* background-color: #25082d; */
+  width: 100%;  
+  padding-top: 40px;  
+  /* opacity: .9; */
+  /* -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+  from(rgba(0,0,0,1)), to(rgba(0,0,0,0))); */
+  background: linear-gradient(180deg,rgba(37, 8, 45, 0.95) 41%, rgba(37, 8, 45, 0.82) 66%, rgba(37, 8, 45, 0.62) 85%, rgba(37, 8, 45, 0) 100%);
+  /* background-image: linear-gradient(to top, rgba(255,0,0,0),  rgba(37,8,45,100)); */
 }
 
 .textareaGrid{
@@ -177,9 +235,23 @@ select {
   }
 }
 
-.titleGrid{
+.grid2{
   display: grid;
   grid-template-columns: auto auto; 
+}
+
+.enterBtn{
+  padding: 5px;
+  margin: 10px;
+  margin-left: 0;
+  font-size: small;
+  font-weight: bold;
+  opacity: .35;
+}
+
+.titleGrid{
+  display: grid;
+  grid-template-columns: auto; 
 }
 
 .grid{
@@ -191,6 +263,7 @@ select {
 .app {
   padding: 16px;
 }
+
 .appCenter{
   padding: 16px;
   place-items: center;
@@ -204,7 +277,26 @@ select {
 
 .title {
   font-size: xx-large;
+  margin-bottom: 0;  
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
 } 
+
+.titleInput{
+  font-size: xx-large;
+  margin-top: 22px;
+  margin-bottom: 0; 
+  cursor: text;
+  text-align: center; 
+  margin-bottom: 3px;
+  background-color: lavenderblush;
+  border: var(--lavanderDark);
+  border-radius: 12px;
+  display: none;
+}
 
 .text{
   cursor:text;

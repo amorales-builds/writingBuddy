@@ -1,9 +1,20 @@
-// var txt = document.getElementById("textarea").value;
 
-// document.getElementById('toggle-dark-mode').addEventListener('click', async () => {
-//   const isDarkMode = await window.darkMode.toggle()
-//   document.getElementById('theme-source').innerHTML = isDarkMode ? 'Dark' : 'Light'
-// })
+let alertNoteE = document.getElementById("alertNote");
+let textareaGridE = document.getElementById("textareaGrid");
+let wcGoalE = document.getElementById("wcGoal");
+let workTitleE = document.getElementById("workTitle");
+let titleInputE = document.getElementById("titleInput");
+let enterBtnE = document.getElementById("enterBtn");
+let writingE = document.getElementById("writing");
+
+function countWords(s){
+        s = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
+        s = s.replace(/[ ]{2,}/gi," ");//2 or more space to 1
+        s = s.replace(/\n /,"\n"); // exclude newline with a start spacing
+        return s.split(/\s+/).filter(String).length; // split excludes spaces and multiple lines
+    }
+
+//////////////////////////////////
 
 document.getElementById('toggle-dark-mode').addEventListener('click', async () => {
     const isDarkMode = await window.darkMode.toggle()
@@ -21,22 +32,76 @@ document.getElementById('quit').addEventListener('click', async () => {
 })
 
 document.getElementById('writing').addEventListener('keyup', async () => {
-    
-    function countWords(s){
-        s = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
-        s = s.replace(/[ ]{2,}/gi," ");//2 or more space to 1
-        s = s.replace(/\n /,"\n"); // exclude newline with a start spacing
-        return s.split(/\s+/).filter(String).length; // split excludes spaces and multiple lines
-    }
-    document.getElementById('word-number').innerHTML = countWords(document.getElementById("writing").value);
 
-    if (((event.code === 'Space') || (event.key === '.')) && (document.getElementById("wcGoal").value > 0)){
-        if ( countWords(document.getElementById("writing").value) == document.getElementById("wcGoal").value){
-            alert("Writing goal met!");
+    document.getElementById('word-number').innerHTML = countWords(writingE.value);          
+
+    if (wcGoalE.value > 0) {
+        
+        let percentage = Math.round((countWords(writingE.value) / wcGoalE.value) * 100);
+        if (enterBtnE.style.display == 'none'){
+            document.getElementById('word-percent').innerHTML= percentage + '%';
+        }
+
+        if ((event.code === 'Space') || (event.key === '.')){
+            if ( countWords(writingE.value) == wcGoalE.value){
+                // alert("Writing goal met!");
+                alertNoteE.style.display = 'block';
+                textareaGridE.style.border = '3px solid #07faa1';
+                if (enterBtnE.style.display == 'none'&& wcGoalE.style.display == 'none'&& document.getElementById("lblGoal").style.display == 'none'){                    
+                    enterBtnE.style.display = 'inline-block';
+                    wcGoalE.style.display = 'inline-block';
+                    document.getElementById("lblGoal").style.display = 'inline-block';    
+                }
+            }
+        } 
+
+        if ( (wcGoalE.style.background !== '#04AA6D') && (countWords(writingE.value) >= wcGoalE.value)) {
+            wcGoalE.style.background = '#04AA6D';
+        }
+        else if ((wcGoalE.style.background === '#04AA6D') && (countWords(writingE.value) < wcGoalE.value)) {
+            wcGoalE.style.background = 'red';
         }
     }
 })
 
-document.getElementById('copyBtn').addEventListener('click', async () => {
-    navigator.clipboard.writeText( document.getElementById("writing").value);
+workTitleE.addEventListener('click', async () => {
+    navigator.clipboard.writeText(writingE.value);
+})
+
+let savedTitle = workTitleE.textContent;
+
+workTitleE.addEventListener('click', async () => {
+
+    workTitleE.style.display = 'none';
+    titleInputE.style.display = 'inline-block';
+    if (workTitleE.textContent != ""){
+        titleInputE.value = "";
+    }
+})
+
+titleInputE.addEventListener('keyup', async () => {
+    if (event.key === 'Enter'){       
+        //alert(document.getElementById("workTitle").textContent) 
+        workTitleE.textContent = titleInputE.value;
+        titleInputE.style.display = 'none';
+        workTitleE.style.display = 'inline-block';
+        if (titleInputE.value == ""){
+            workTitleE.textContent = savedTitle;
+        }else{
+            savedTitle = titleInputE.value;
+        }
+    }
+})
+
+
+enterBtnE.addEventListener('click', async () => {
+
+    enterBtnE.style.display = 'none';
+    wcGoalE.style.display = 'none';
+    document.getElementById("lblGoal").style.display = 'none';    
+
+    if (wcGoalE.value > 0) {       
+        document.getElementById('word-goal').style.visibility='visible';
+        document.getElementById('word-goal').innerHTML = " / " + wcGoalE.value;
+    }
 })
