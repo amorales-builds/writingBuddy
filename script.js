@@ -8,22 +8,39 @@ let enterBtnE = document.getElementById("enterBtn");
 let writingE = document.getElementById("writing");
 let monmonE = document.getElementById("monmon");
 
+const frames = document.getElementById("animation").children;
+const frameCount = frames.length;
+
 function countWords(s){
-        s = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
-        s = s.replace(/[ ]{2,}/gi," ");//2 or more space to 1
-        s = s.replace(/\n /,"\n"); // exclude newline with a start spacing
-        return s.split(/\s+/).filter(String).length; // split excludes spaces and multiple lines
+    s = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
+    s = s.replace(/[ ]{2,}/gi," ");//2 or more space to 1
+    s = s.replace(/\n /,"\n"); // exclude newline with a start spacing
+    return s.split(/\s+/).filter(String).length; // split excludes spaces and multiple lines
+}
+
+let x = 1;
+
+function animationCycle(a){
+    if(a > 1){
+        a = 0;
+        frames[ a + 1 ].style.display = "none";
+        frames[a].style.display = "block";
+    } 
+    else{
+        frames[ a - 1 ].style.display = "none";
+        frames[a].style.display = "block";
     }
+}
 
 //////////////////////////////////
 
-const frames = document.getElementById("animation").children;
-const frameCount = frames.length;
-let i = 0;
-setInterval(function () { 
-    frames[i % frameCount].style.display = "none";
-    frames[++i % frameCount].style.display = "block";
-}, 300);
+// const frames = document.getElementById("animation").children;
+// const frameCount = frames.length;
+// let i = 0;
+// setInterval(function () { 
+//     frames[i % frameCount].style.display = "none";
+//     frames[++i % frameCount].style.display = "block";
+// }, 300);
 
 /////////////////////////////////
 
@@ -43,6 +60,22 @@ document.getElementById('quit').addEventListener('click', async () => {
 })
 
 writingE.addEventListener('keyup', async () => {
+
+    animationCycle(x);
+    alert(x);
+    x++;
+
+    // let i = 0;
+    // setInterval(function () { 
+    //     frames[i % frameCount].style.display = "none";
+    //     frames[++i % frameCount].style.display = "block";
+    // }, 300);
+
+    // if (i=0){
+    //     frames[i % frameCount].style.display = "none";
+    // } else{
+    //     frames[++i % frameCount].style.display = "none";
+    // }
 
     // if (monmonE.style.content == "url(images/monmon2.png)"){
     //     monmonE.style.content = "url(images/monmon1.png)";
