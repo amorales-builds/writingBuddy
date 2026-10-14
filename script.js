@@ -6,6 +6,7 @@ let workTitleE = document.getElementById("workTitle");
 let titleInputE = document.getElementById("titleInput");
 let enterBtnE = document.getElementById("enterBtn");
 let writingE = document.getElementById("writing");
+let monmonE = document.getElementById("monmon");
 
 function countWords(s){
         s = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
@@ -15,6 +16,16 @@ function countWords(s){
     }
 
 //////////////////////////////////
+
+const frames = document.getElementById("animation").children;
+const frameCount = frames.length;
+let i = 0;
+setInterval(function () { 
+    frames[i % frameCount].style.display = "none";
+    frames[++i % frameCount].style.display = "block";
+}, 300);
+
+/////////////////////////////////
 
 document.getElementById('toggle-dark-mode').addEventListener('click', async () => {
     const isDarkMode = await window.darkMode.toggle()
@@ -31,7 +42,32 @@ document.getElementById('quit').addEventListener('click', async () => {
     window.close();
 })
 
-document.getElementById('writing').addEventListener('keyup', async () => {
+writingE.addEventListener('keyup', async () => {
+
+    // if (monmonE.style.content == "url(images/monmon2.png)"){
+    //     monmonE.style.content = "url(images/monmon1.png)";
+    // }
+    
+    // monmonE.style.content = "url(images/monmon2.png)";
+
+    // if ((monmonE.style.content !== "url(images/monmon1.png)") && monmonE.style.content !== "url(images/monmon2.png)"){
+    //     // monmonE.style.content = "url(images/monmon2.png)";
+    //     if((monmonE.style.content !== "url(images/monmon1.png)")){
+    //         monmonE.style.content = "url(images/monmon1.png)";
+    //     } 
+    //     else if ((monmonE.style.content !== "url(images/monmon2.png)")){
+    //         monmonE.style.content = "url(images/monmon2.png)";
+    //     }
+    // }
+
+    // if((monmonE.style.content === "url(images/monmon1.png)")){
+    //     monmonE.style.content = "url(images/monmon2.png)";
+    // } 
+    // else if ((monmonE.style.content === "url(images/monmon2.png)")){
+    //     monmonE.style.content = "url(images/monmon1.png)";
+    // }
+
+    
 
     document.getElementById('word-number').innerHTML = countWords(writingE.value);          
 

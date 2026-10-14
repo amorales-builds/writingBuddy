@@ -16,7 +16,7 @@
         <div class="settingsLine">
             <button id="toggle-dark-mode"> <strong id="theme-source">Other</strong> Mode</button>
             <button id="reset-to-system">Reset to System Theme</button>                
-            <button class="quit" id="quit"> x </button>
+            <button id="quit"> x </button>
         </div>
 
         <div class="app">    
@@ -28,8 +28,13 @@
             
 
             <div class="titleGrid">
-                <h2 id="workTitle" class="title">Work Title</h2>
-                <input id="titleInput" class="titleInput" placeholder="Work Title"></input>
+                <!-- <img id="monmon" src="images/monmonSleep.png"> -->
+                <div id="animation">
+                    <img src="images/monmon1.png"/>
+                    <img src="images/monmon2.png"/>
+                </div>
+                <h2 id="workTitle">Work Title</h2>
+                <input id="titleInput" placeholder="Work Title"></input>
 
                 <div class="grid2">
                     <div class="square">            
@@ -43,14 +48,14 @@
                         </datalist>
                         <input class="text" id="wcGoal" type="search" list="myList"></input>
                     </div>
-                    <button id="enterBtn" class="enterBtn">Hide</button>
+                    <button id="enterBtn">Hide</button>
                 </div>
             </div>  
             
-            <div class="textareaGrid" id = "textareaGrid">   
-                <button id="copyBtn" class="copybutton">COPY</button>        
+            <div id = "textareaGrid">   
+                <button id="copyBtn" >COPY</button>        
                 <textarea id="writing"></textarea> 
-                <div id= "alertNote" class="alert" onclick="this.style.display='none'"";>
+                <div id= "alertNote" onclick="this.style.display='none'"";>
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     <strong>Success!</strong> WRITING GOAL MET!
                 </div>               
