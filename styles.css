@@ -246,7 +246,7 @@ h1{
   }
 }
 
-.grid2{
+#goalGrid{
   display: grid;
   grid-template-columns: auto auto; 
 }
@@ -278,6 +278,48 @@ h1{
 .appCenter{
   padding: 16px;
   place-items: center;
+  display: grid;
+}
+
+#center{
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px){      
+  .appCenter{
+    padding: 2px;
+    /* height: 100%; */
+    /* grid-template-columns: auto auto;  */
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(1,2fr); */
+    /* grid-auto-rows: 200px; */
+    gap: 10px;
+  }
+  .appCenter div:nth-child(1){
+    grid-column: 2;
+    /* grid-row: 1/2; */
+    /* height: 100%; */
+  }
+  .appCenter div:nth-child(2){
+    /* grid-area: textareaGrid; */
+    grid-column: 1;
+    /* position: sticky;
+    top: 0; */
+    /* grid-row: 1/2; */
+  }
+
+  textarea{
+    height: 2000px;
+  }
+
+  .buddyGrid{
+    position: sticky;
+    top: 0;
+  }
+
+  /* .titleGrid{
+    display: absolute;
+  } */
 }
 
 .square{
@@ -309,7 +351,7 @@ h1{
   display: none;
 }
 
-.text{
+#wcGoal{
   cursor:text;
   text-align: center;
   max-width: 90px;

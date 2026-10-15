@@ -6,7 +6,8 @@ let workTitleE = document.getElementById("workTitle");
 let titleInputE = document.getElementById("titleInput");
 let enterBtnE = document.getElementById("enterBtn");
 let writingE = document.getElementById("writing");
-let monmonE = document.getElementById("monmon");
+let monmonE = document.getElementById("animation");
+let wPercentE = document.getElementById("word-percent");
 
 const frames = document.getElementById("animation").children;
 const frameCount = frames.length;
@@ -21,6 +22,7 @@ function countWords(s){
 let x = 1;
 
 function animationCycle(a){
+    frames[2].style.display = "none";
     if(a > 1){
         a = 0;
         frames[ a + 1 ].style.display = "none";
@@ -30,19 +32,63 @@ function animationCycle(a){
         frames[ a - 1 ].style.display = "none";
         frames[a].style.display = "block";
     }
+    x++;
+    if (x > 2){
+        x = 1;
+    }
+
 }
 
-//////////////////////////////////
+function animationSleep(){
+    frames[0].style.display = "none";
+    frames[1].style.display = "none";
+    frames[2].style.display = "block";
+}
 
-// const frames = document.getElementById("animation").children;
-// const frameCount = frames.length;
-// let i = 0;
-// setInterval(function () { 
-//     frames[i % frameCount].style.display = "none";
-//     frames[++i % frameCount].style.display = "block";
-// }, 300);
+const myTimeOut = setTimeout(animationSleep(), 5000);
 
+// function stopFunction(){
+//     clearTimeout(myTimeOut);
+// }
 /////////////////////////////////
+
+writingE.addEventListener('keydown', async () => {
+    animationCycle(x);    
+})
+
+textareaGridE.addEventListener('mouseleave', async () => {
+    animationSleep();   
+})
+
+monmonE.addEventListener('mouseleave', async () => {
+    animationSleep();   
+})
+
+monmonE.addEventListener('click', async () => {    
+    animationCycle(x);
+})
+
+
+// monmonE.addEventListener('mouseover', async () => {
+
+//     frames[0].style.display = "block";
+//     frames[1].style.display = "none";
+//     frames[2].style.display = "none";
+
+//     // const frames = document.getElementById("animation").children;
+//     // const frameCount = frames.length;
+//     // let i = 0;
+//     // setInterval(function () { 
+//     //     frames[i % frameCount].style.display = "none";
+//     //     frames[++i % frameCount].style.display = "block";
+//     // }, 300);
+// })
+
+// monmonE.addEventListener('mouseout', async () => {
+//     animationSleep();  
+// })
+
+    
 
 document.getElementById('toggle-dark-mode').addEventListener('click', async () => {
     const isDarkMode = await window.darkMode.toggle()
@@ -60,47 +106,6 @@ document.getElementById('quit').addEventListener('click', async () => {
 })
 
 writingE.addEventListener('keyup', async () => {
-
-    animationCycle(x);
-    alert(x);
-    x++;
-
-    // let i = 0;
-    // setInterval(function () { 
-    //     frames[i % frameCount].style.display = "none";
-    //     frames[++i % frameCount].style.display = "block";
-    // }, 300);
-
-    // if (i=0){
-    //     frames[i % frameCount].style.display = "none";
-    // } else{
-    //     frames[++i % frameCount].style.display = "none";
-    // }
-
-    // if (monmonE.style.content == "url(images/monmon2.png)"){
-    //     monmonE.style.content = "url(images/monmon1.png)";
-    // }
-    
-    // monmonE.style.content = "url(images/monmon2.png)";
-
-    // if ((monmonE.style.content !== "url(images/monmon1.png)") && monmonE.style.content !== "url(images/monmon2.png)"){
-    //     // monmonE.style.content = "url(images/monmon2.png)";
-    //     if((monmonE.style.content !== "url(images/monmon1.png)")){
-    //         monmonE.style.content = "url(images/monmon1.png)";
-    //     } 
-    //     else if ((monmonE.style.content !== "url(images/monmon2.png)")){
-    //         monmonE.style.content = "url(images/monmon2.png)";
-    //     }
-    // }
-
-    // if((monmonE.style.content === "url(images/monmon1.png)")){
-    //     monmonE.style.content = "url(images/monmon2.png)";
-    // } 
-    // else if ((monmonE.style.content === "url(images/monmon2.png)")){
-    //     monmonE.style.content = "url(images/monmon1.png)";
-    // }
-
-    
 
     document.getElementById('word-number').innerHTML = countWords(writingE.value);          
 
@@ -133,7 +138,7 @@ writingE.addEventListener('keyup', async () => {
     }
 })
 
-workTitleE.addEventListener('click', async () => {
+document.getElementById("copyBtn").addEventListener('click', async () => {
     navigator.clipboard.writeText(writingE.value);
 })
 
@@ -165,11 +170,11 @@ titleInputE.addEventListener('keyup', async () => {
 
 enterBtnE.addEventListener('click', async () => {
 
-    enterBtnE.style.display = 'none';
-    wcGoalE.style.display = 'none';
+    document.getElementById("goalGrid").style.display = 'none'; 
     document.getElementById("lblGoal").style.display = 'none';    
 
     if (wcGoalE.value > 0) {       
+        wPercentE.style.display = 'inline-block';
         document.getElementById('word-goal').style.visibility='visible';
         document.getElementById('word-goal').innerHTML = " / " + wcGoalE.value;
     }

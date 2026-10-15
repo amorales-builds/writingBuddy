@@ -24,34 +24,41 @@
             <p style="margin:-15px; padding-left: 35px;"><i>Never lose count again!</i></p>
         </div>
         
-        <div class="appCenter">
+        <div class="appCenter">          
             
-
-            <div class="titleGrid">
-                <!-- <img id="monmon" src="images/monmonSleep.png"> -->
-                <div id="animation">
-                    <img src="images/monmon1.png"/>
-                    <img src="images/monmon2.png"/>
-                </div>
-                <h2 id="workTitle">Work Title</h2>
-                <input id="titleInput" placeholder="Work Title"></input>
-
-                <div class="grid2">
-                    <div class="square">            
-                        <label id="lblGoal">Goal: </label>
-                        <datalist id="myList">                         
-                            <option value="5"></option>
-                            <option value="50"></option>
-                            <option value="100"></option>
-                            <option value="500"></option>
-                            <option value="1000"></option>
-                        </datalist>
-                        <input class="text" id="wcGoal" type="search" list="myList"></input>
+            <div id="buddyGrid">
+                <div class="titleGrid">
+                    <!-- <img id="monmon" src="images/monmonSleep.png"> -->                
+                    <div id="animation">
+                        <img src="images/monmon1.png"/>
+                        <img src="images/monmon2.png"/>
+                        <img src="images/monmonSleep.png">
                     </div>
-                    <button id="enterBtn">Hide</button>
+                    <div>
+                        <h2 id="workTitle">Work Title</h2>
+                        <input id="titleInput" placeholder="Work Title"></input>
+                    </div>
+                    <div id="goalGrid">
+                        <div class="square">            
+                            <label id="lblGoal">Goal: </label>
+                            <datalist id="myList">                         
+                                <option value="5"></option>
+                                <option value="50"></option>
+                                <option value="100"></option>
+                                <option value="500"></option>
+                                <option value="1000"></option>
+                            </datalist>
+                            <input id="wcGoal" type="search" list="myList"></input>
+                        </div>
+                        <button id="enterBtn">Hide</button>
+                    </div>
+                </div>  
+                <div id="center">
+                    <p> Word Count: <strong id="word-number">0</strong></strong><strong id="word-goal" style="visibility:hidden">0</strong></p>  
+                    <p id="word-percent" style="display: none; margin-top: 0px;">0%</p>
                 </div>
-            </div>  
-            
+            </div>
+
             <div id = "textareaGrid">   
                 <button id="copyBtn" >COPY</button>        
                 <textarea id="writing"></textarea> 
@@ -60,8 +67,6 @@
                     <strong>Success!</strong> WRITING GOAL MET!
                 </div>               
             </div>    
-            <p> Word Count: <strong id="word-number">0</strong></strong><strong id="word-goal" style="visibility:hidden">0</strong></p>  
-            <p id="word-percent"></p>
         </div>
         
         <script src="script.js"></script>
