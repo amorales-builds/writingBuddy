@@ -4,7 +4,7 @@ let textareaGridE = document.getElementById("textareaGrid");
 let wcGoalE = document.getElementById("wcGoal");
 let workTitleE = document.getElementById("workTitle");
 let titleInputE = document.getElementById("titleInput");
-let enterBtnE = document.getElementById("enterBtn");
+let hideBtnE = document.getElementById("hideBtn");
 let writingE = document.getElementById("writing");
 let monmonE = document.getElementById("animation");
 let wPercentE = document.getElementById("word-percent");
@@ -50,6 +50,8 @@ const myTimeOut = setTimeout(animationSleep(), 5000);
 // function stopFunction(){
 //     clearTimeout(myTimeOut);
 // }
+
+
 /////////////////////////////////
 
 writingE.addEventListener('keydown', async () => {
@@ -112,7 +114,7 @@ writingE.addEventListener('keyup', async () => {
     if (wcGoalE.value > 0) {
         
         let percentage = Math.round((countWords(writingE.value) / wcGoalE.value) * 100);
-        if (enterBtnE.style.display == 'none'){
+        if (hideBtnE.style.display == 'none'){
             document.getElementById('word-percent').innerHTML= percentage + '%';
         }
 
@@ -121,8 +123,8 @@ writingE.addEventListener('keyup', async () => {
                 // alert("Writing goal met!");
                 alertNoteE.style.display = 'block';
                 textareaGridE.style.border = '3px solid #07faa1';
-                if (enterBtnE.style.display == 'none'&& wcGoalE.style.display == 'none'&& document.getElementById("lblGoal").style.display == 'none'){                    
-                    enterBtnE.style.display = 'inline-block';
+                if (hideBtnE.style.display == 'none'&& wcGoalE.style.display == 'none'&& document.getElementById("lblGoal").style.display == 'none'){                    
+                    hideBtnE.style.display = 'inline-block';
                     wcGoalE.style.display = 'inline-block';
                     document.getElementById("lblGoal").style.display = 'inline-block';    
                 }
@@ -168,7 +170,7 @@ titleInputE.addEventListener('keyup', async () => {
 })
 
 
-enterBtnE.addEventListener('click', async () => {
+hideBtnE.addEventListener('click', async () => {
 
     document.getElementById("goalGrid").style.display = 'none'; 
     document.getElementById("lblGoal").style.display = 'none';    

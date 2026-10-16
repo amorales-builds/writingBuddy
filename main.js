@@ -5,8 +5,8 @@ const createWindow = () => {
   const win = new BrowserWindow({
     // width: 292,
     // height: 430,
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 800,
     // resizable: false,
     // maximizable: false,
     // fullscreenable: false,

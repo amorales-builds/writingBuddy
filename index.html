@@ -13,9 +13,13 @@
     <body>
         
         <div class="headingLine"><p></p></div>        
-        <div class="settingsLine">
-            <button id="toggle-dark-mode"> <strong id="theme-source">Other</strong> Mode</button>
-            <button id="reset-to-system">Reset to System Theme</button>                
+        <div class="settingsLine">      
+            <details id="themeSelector">
+                <summary>Themes</summary>
+                <button id="toggle-dark-mode"> <strong id="theme-source">Other</strong> Mode</button>
+            </details>
+            
+            <button id="reset-to-system">Reset to System Theme</button>
             <button id="quit"> x </button>
         </div>
 
@@ -24,11 +28,38 @@
             <p style="margin:-15px; padding-left: 35px;"><i>Never lose count again!</i></p>
         </div>
         
-        <div class="appCenter">          
-            
-            <div id="buddyGrid">
-                <div class="titleGrid">
-                    <!-- <img id="monmon" src="images/monmonSleep.png"> -->                
+        <div class="grid2">
+            <div id="writingOptions">
+                <details class="sideBar">
+                    <summary>Size</summary>
+                    <datalist id="letterSize">                         
+                        <option value="12"></option>
+                        <option value="16"></option>
+                        <option value="18"></option>
+                        <option value="24"></option>
+                        <option value="48"></option>
+                    </datalist>
+                    <input class="letterInput" id="letterSizeInput" type="search" list="letterSize"></input>
+                </details>
+                <details class="sideBar">
+                    <summary>Weight</summary>
+                    <datalist id="letterWeight">                         
+                        <option value="12"></option>
+                        <option value="16"></option>
+                        <option value="18"></option>
+                        <option value="24"></option>
+                        <option value="48"></option>
+                    </datalist>
+                    <input class="letterInput" id="letterWeightInput" type="search" list="letterWeight"></input>
+                </details>
+                <button class="sideBar">hallo</button>
+                <button class="sideBar">hallo</button>
+                <button class="sideBar">hallo</button>
+                <button class="sideBar">hallo</button>
+            </div>
+            <div class="appCenter">          
+                
+                <div id="buddyGrid">
                     <div id="animation">
                         <img src="images/monmon1.png"/>
                         <img src="images/monmon2.png"/>
@@ -50,26 +81,35 @@
                             </datalist>
                             <input id="wcGoal" type="search" list="myList"></input>
                         </div>
-                        <button id="enterBtn">Hide</button>
+                        <button id="hideBtn">Hide</button>
+                    </div> 
+                    <div id="center">
+                        <p> Word Count: <strong id="word-number">0</strong></strong><strong id="word-goal" style="visibility:hidden">0</strong></p>  
+                        <p id="word-percent" style="display: none; margin-top: 0px;">0%</p>
                     </div>
-                </div>  
-                <div id="center">
-                    <p> Word Count: <strong id="word-number">0</strong></strong><strong id="word-goal" style="visibility:hidden">0</strong></p>  
-                    <p id="word-percent" style="display: none; margin-top: 0px;">0%</p>
+                    <!-- <div id="buddySettings">
+                        <button >mute</button>
+                    </div> -->
                 </div>
-            </div>
 
-            <div id = "textareaGrid">   
-                <button id="copyBtn" >COPY</button>        
-                <textarea id="writing"></textarea> 
-                <div id= "alertNote" onclick="this.style.display='none'"";>
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                    <strong>Success!</strong> WRITING GOAL MET!
-                </div>               
-            </div>    
+                <div id = "textareaGrid">   
+                    <button id="copyBtn" >COPY</button>
+                    <textarea id="writing" placeholder="Write at your own pace..."></textarea>             
+                    <div id= "alertNote" onclick="this.style.display='none'"";>
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <strong>Success!</strong> WRITING GOAL MET!
+                    </div>               
+                </div>    
+            </div>
         </div>
         
         <script src="script.js"></script>
+
+        <div class="foot">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris pharetra vestibulum fusce dictum risus.
+            </p>
+        </div> 
         
     </body>
 </html>
