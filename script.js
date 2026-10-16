@@ -5,12 +5,28 @@ let wcGoalE = document.getElementById("wcGoal");
 let workTitleE = document.getElementById("workTitle");
 let titleInputE = document.getElementById("titleInput");
 let hideBtnE = document.getElementById("hideBtn");
-let writingE = document.getElementById("writing");
 let monmonE = document.getElementById("animation");
+let writingE = document.getElementById("writing");
 let wPercentE = document.getElementById("word-percent");
+let wSize = document.getElementById("letterSizeInput");
+let wWeight = document.getElementById("letterWeightInput");
+let enterBtnE = document.getElementById("enterBtn");
+
 
 const frames = document.getElementById("animation").children;
 const frameCount = frames.length;
+
+
+// function fontSize() {
+//     if (wSize > 1){
+//         fSize.style.fontSize = wSize.value + 'px';
+//     }
+// }
+
+// function myFunction(selectTag) {
+//     var listValue = selectTag.options[selectTag.selectedIndex].text;
+//     fSize.style.fontSize = listValue;
+// }
 
 function countWords(s){
     s = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
@@ -53,6 +69,30 @@ const myTimeOut = setTimeout(animationSleep(), 5000);
 
 
 /////////////////////////////////
+
+wSize.addEventListener('input', async () => {    
+    if ((wSize.value >= 12) && (wSize.value <= 80)){
+        writingE.style.fontSize = wSize.value + 'px';
+    }
+})
+
+// wWeight.addEventListener('input', async () => {    
+//     if ((wWeight.value >= 200) && (wWeight.value <= 1000)){
+//         writingE.style.fontWeight = wWeight.value;
+//     }
+// })
+
+wWeight.addEventListener('input', async () => {    
+    if (wWeight.value == 'light'){
+        writingE.style.fontWeight = 300;
+    }else if (wWeight.value == 'bold'){
+        writingE.style.fontWeight = 600;
+    }else if (wWeight.value == 'bolder'){
+        writingE.style.fontWeight = 900;
+    }
+})
+
+
 
 writingE.addEventListener('keydown', async () => {
     animationCycle(x);    

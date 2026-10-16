@@ -42,6 +42,7 @@ textarea {
   padding: 30px;
   padding-top: 5px;
   /* margin-bottom: 100px; */
+  /* font-weight: 1000; */
   font-size: large;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 5px;
@@ -346,11 +347,11 @@ h1{
   margin-left: 1vw;
   /* grid-template-columns: auto, auto ;  */
   grid-template-columns: repeat(2, 10px); 
-}
+  }
 
-.grid2 div:nth-child(1){
-  margin-right: 0px;
-}
+  .grid2 div:nth-child(1){
+    margin-right: 0px;
+  }
 
   .appCenter{
     padding-top: 10px;
