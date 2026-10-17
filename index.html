@@ -54,15 +54,31 @@
                 <details class="sideBar">
                     <summary>Font</summary>
                     <datalist id="letterFont">                         
-                        <option value="light"></option>
-                        <option value="bold"></option>
-                        <option value="bolder"></option>
+                        <option value="Arial"></option>                        
+                        <option value="Gill Sans"></option>
+                        <option value="Monospace"></option>
+                        <option value="Times New Roman"></option>
+                        <option value="Segoe UI"></option>
                     </datalist>
                     <input class="letterInput" id="letterFontInput" type="search" list="letterFont"></input>
                 </details>
-                <button class="sideBar">hallo</button>
-                <button class="sideBar">hallo</button>
-                <button class="sideBar">hallo</button>
+                <details class="sideBar">
+                    <summary>Paragraph</summary>
+                    <datalist id="letterParagraph">                         
+                        <option value="Center"></option>
+                        <option value="Justify"></option>
+                        <option value="Left"></option>
+                        <option value="Right"></option>
+                    </datalist>
+                    <input class="letterInput" id="letterParagraphInput" type="search" list="letterParagraph"></input>
+                </details>
+                <!-- <button class="sideBar" onclick="format('bold')"><b>B</b></button>
+                <button class="sideBar" onclick="format('italic')"><i>I</i></button>
+                <button class="sideBar" onclick="format('underline')"><u>U</u></button>
+                <button class="sideBar" onclick="format('strikeThrough')"><s>S</s></button>
+                <button class="sideBar" onclick="format('justifyLeft')">Left</button>
+                <button class="sideBar" onclick="format('justifyCenter')">Center</button>
+                <button class="sideBar" onclick="format('justifyRight')">Right</button> -->
             </div>
             <div class="appCenter">          
                 
@@ -104,8 +120,10 @@
                 </div>
 
                 <div id = "textareaGrid">   
-                    <button id="copyBtn" >COPY</button>
-                    <textarea id="writing" placeholder="Write at your own pace..."></textarea>             
+                    <button id="copyBtn">COPY</button>
+                    <button id="copyIcon" ></button>
+                    <!-- <img id="copyIcon" src="/svg/copyIcon.svg"> -->
+                    <textarea id="writing" contenteditable="true" placeholder="Write at your own pace..."></textarea>             
                     <div id= "alertNote" onclick="this.style.display='none'"";>
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                         <strong>Success!</strong> WRITING GOAL MET!

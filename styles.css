@@ -12,6 +12,8 @@
   --lavanderMaroon:#67254b;  
   --darkPink: #ad5980;
   --darkMaroon:rgb(43, 14, 31);
+
+  --winGreen: #04AA6D;
 }
 
 * {
@@ -134,7 +136,7 @@ h1{
 
 #alertNote {
   padding: 18px;
-  background-color: #04AA6D; /* Red */
+  background-color: var(--winGreen); /* Red */
   color: white;
   margin-top: 15px;
   border-radius: 15px;
@@ -161,7 +163,38 @@ h1{
   color: black;
 }
 
+#copyIcon{
+  margin-left: 95%;
+  padding: 14px;
+  border: transparent;
+
+  @media (prefers-color-scheme: light) {
+    background:url(svg/copyIcon.svg);
+    background-repeat: no-repeat;
+  }  
+  @media (prefers-color-scheme: dark) {
+    background:url(svg/copyIconDark.svg);
+    background-repeat: no-repeat;
+  }  
+  @media screen and (min-width: 1200px){ 
+    display: none;
+  }
+}
+#copyIcon:hover{
+  /* border: 3px solid var(--lavanderMaroon);
+  background-color: var(--lavanderMaroon);
+  border-radius: 15px; */
+  background:url(svg/copyIconBlue.svg);  
+  background-repeat: no-repeat;
+  
+}
+#copyIcon:active{
+  background:url(svg/copyIconGreen.svg);  
+  background-repeat: no-repeat;
+}
+
 #copyBtn{
+  display: none;
   max-width: 65px;
   margin-left: 90%;
   padding:6px;
@@ -177,6 +210,7 @@ h1{
   }
 
   @media screen and (min-width: 1200px){ 
+    display: block;
     max-width: 100px;
     margin-left: 0%;
   }
@@ -309,7 +343,7 @@ h1{
 .letterInput{
   width: 90px;
   margin-top: 5px;
-  text-align: center;
+  text-align: end;
   background-color: lavenderblush;
   border: 2px solid lavenderblush;  
   border-radius: 20px;
@@ -337,6 +371,13 @@ h1{
 
 #buddySettings{
   display: none;
+}
+
+#workMenu{
+  display: none;
+  @media screen and (min-width: 1200px){ 
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1200px){   
@@ -498,11 +539,31 @@ h1{
   ::placeholder{
     color: rgba(255, 240, 245, 0.331);
   }
+
+  .sideBar{
+    border: 2px solid lavenderblush; 
+  }
+  .sideBar:hover{
+    background-color: var(--lavanderMedium);
+  }
 }
 
 @media (prefers-color-scheme: light) {
   body { background: var(--lavanderPink); color: var(--lavanderRed); }
   ::placeholder{
     color: rgba(168, 103, 125, 0.543);
+  }
+  .sideBar{
+    border: 2px solid var(--lavanderMaroon);     
+    background-color: var(--ligthPink);
+  }
+  .sideBar:hover{
+    color: var(--ligthPink);
+    background-color: var(--darkPink);  
+  }
+  .letterInput{
+    outline: auto;
+    outline-color: var(--lavanderMaroon);
+    /* background-color: var(--lavanderPink); */
   }
 }

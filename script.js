@@ -8,9 +8,11 @@ let hideBtnE = document.getElementById("hideBtn");
 let monmonE = document.getElementById("animation");
 let writingE = document.getElementById("writing");
 let wPercentE = document.getElementById("word-percent");
+let enterBtnE = document.getElementById("enterBtn");
 let wSize = document.getElementById("letterSizeInput");
 let wWeight = document.getElementById("letterWeightInput");
-let enterBtnE = document.getElementById("enterBtn");
+let wFont = document.getElementById("letterFontInput");
+let wParagraph = document.getElementById("letterParagraphInput");
 
 
 const frames = document.getElementById("animation").children;
@@ -89,8 +91,66 @@ wWeight.addEventListener('input', async () => {
         writingE.style.fontWeight = 600;
     }else if (wWeight.value == 'bolder'){
         writingE.style.fontWeight = 900;
+    }else{
+        writingE.style.fontWeight = wWeight.value;
     }
 })
+
+wFont.addEventListener('input', async () => {    
+    if (wFont.value == 'Arial'){
+        writingE.style.fontFamily = "Arial, Helvetica, sans-serif";
+    }else if (wFont.value == 'Gill Sans'){
+        writingE.style.fontFamily = "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif";
+    }else if (wFont.value == 'Monospace'){
+        writingE.style.fontFamily = "monospace";
+    }else if (wFont.value == 'Times New Roman'){
+        writingE.style.fontFamily = "Georgia,'Times New Roman', Times, serif";
+    }else if (wFont.value == 'Segoe UI'){
+        writingE.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+    }else{
+        writingE.style.fontFamily = wFont.value;
+    }
+})
+
+wParagraph.addEventListener('input', async () => {    
+    if (wParagraph.value == 'Center'){
+        writingE.style.textAlign = 'center';
+    }else if (wParagraph.value == 'Justify'){
+        writingE.style.textAlign = 'justify';
+    }else if (wParagraph.value == 'Left'){
+        writingE.style.textAlign = 'start';
+    }else if (wParagraph.value == 'Right'){
+        writingE.style.textAlign = 'end';
+    }else{
+        writingE.style.textAlign = wParagraph.value;
+    }
+})
+
+
+wSize.addEventListener('click', async () => {    
+    if (wSize.value != ''){
+        wSize.value = '';
+    }
+})
+
+wWeight.addEventListener('click', async () => {    
+    if (wWeight.value != ''){
+        wWeight.value = '';
+    }
+})
+
+wFont.addEventListener('click', async () => {    
+    if (wFont.value != ''){
+        wFont.value = '';
+    }
+})
+
+wParagraph.addEventListener('click', async () => {    
+    if (wParagraph.value != ''){
+        wParagraph.value = '';
+    }
+})
+
 
 
 
