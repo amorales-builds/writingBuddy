@@ -7,7 +7,8 @@ Entered refinement stage. <br>
 Expect changes in UI (layout, colors, etc)
 
 ## Goal
-The goal is to help **writer focus**, with a word counter and other minor tools to make the writing process more efficient.
+The goal is to help **writer focus**, with a word counter and other minor tools to make the writing process more efficient. <br>
+The Writing Buddy is an animated fellow that moves to the rhythm of the user's keystrokes.
 
 ## Features
 ### Main
@@ -38,5 +39,5 @@ The goal is to help **writer focus**, with a word counter and other minor tools 
 
 
 ## Project Status
-✅️ Main Features complete <br>
+✅️ Main Features functional <br>
 🚧 _Refining in Progress_ <br>
