@@ -71,19 +71,34 @@
                         <option value="Right"></option>
                     </datalist>
                     <input class="letterInput" id="letterParagraphInput" type="search" list="letterParagraph"></input>
-                </details>
-                <!-- <button class="sideBar" onclick="format('bold')"><b>B</b></button>
-                <button class="sideBar" onclick="format('italic')"><i>I</i></button>
-                <button class="sideBar" onclick="format('underline')"><u>U</u></button>
-                <button class="sideBar" onclick="format('strikeThrough')"><s>S</s></button>
-                <button class="sideBar" onclick="format('justifyLeft')">Left</button>
-                <button class="sideBar" onclick="format('justifyCenter')">Center</button>
-                <button class="sideBar" onclick="format('justifyRight')">Right</button> -->
+                </details>                
             </div>
             <div class="appCenter">          
                 
                 <div id="buddyGrid">
                     <button id="workMenu">menu</button>
+                    <!-- <button>x</button> -->
+                    <form id="workInfo">
+                        <label for="wTitle">Title:</label><br>
+                        <input class="workInfoInput" type="text" id="wTitle" name="wTitle"><br>
+                        <label for="wGenre">Genre:</label><br>
+                        <datalist id="workGenre">                         
+                            <option value="Fantasy"></option>
+                            <option value="Sci-Fi"></option>
+                            <option value="Non-Fiction"></option>
+                        </datalist>
+                        <input class="workInfoInput" id="wGenre" name="wGenre" type="search" list="workGenre"><br>
+                        <label for="wType">Type:</label><br>
+                        <datalist id="workType">                         
+                            <option value="Short-Story - 10k"></option>
+                            <option value="Novella - 50k"></option>
+                            <option value="Novel - 100k"></option>
+                        </datalist>
+                        <input class="workInfoInput" id="wType" name="wType" type="search" list="workType"><br>
+                        <button style="width: 100%; margin-top: 2vh; opacity: 0.5;">Save</button>
+                        
+                    </form>
+                    <br style="margin-bottom:5vh;">
                     <div id="buddyScreen">
                         <div id="animation">
                             <img src="images/monmon1.png"/>
@@ -114,16 +129,16 @@
                         </div>
                     </div>
                     <!-- <div id="buddySettings">
-                        <button >mute</button>
+                        <button >Buddy Shop</button>
                     </div> -->
                 
                 </div>
-
+                
                 <div id = "textareaGrid">   
                     <button id="copyBtn">COPY</button>
                     <button id="copyIcon" ></button>
                     <!-- <img id="copyIcon" src="/svg/copyIcon.svg"> -->
-                    <textarea id="writing" contenteditable="true" placeholder="Write at your own pace..."></textarea>             
+                    <textarea id="writing" contenteditable="true" spellcheck="true" placeholder="Write at your own pace..."></textarea>             
                     <div id= "alertNote" onclick="this.style.display='none'"";>
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                         <strong>Success!</strong> WRITING GOAL MET!

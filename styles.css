@@ -111,6 +111,7 @@ input,
 select {
   -webkit-app-region: no-drag;
   cursor: pointer;
+  text-align: center;
 }
 
 h1{
@@ -343,7 +344,7 @@ h1{
 .letterInput{
   width: 90px;
   margin-top: 5px;
-  text-align: end;
+  text-align: center;
   background-color: lavenderblush;
   border: 2px solid lavenderblush;  
   border-radius: 20px;
@@ -377,7 +378,30 @@ h1{
   display: none;
   @media screen and (min-width: 1200px){ 
     display: block;
+    margin-bottom: 1vh;
+    margin-left:100%;
+    width: 5vw;
+    opacity: .2;
+    /* background-color: var; */
   }
+}
+#workMenu:hover{
+  opacity: 1;
+}
+
+#workInfo{
+  margin-bottom: 5vh;
+  display:none;
+}
+
+.workInfoInput{
+  margin-top: 5px;
+  margin-bottom: 35px;
+  width: 100%;
+  padding: 5px;
+  background-color: lavenderblush;
+  border: transparent;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 1200px){   
@@ -452,7 +476,8 @@ h1{
   }
 
   #buddyGrid{
-    padding-top: 6vh;
+    padding-top: 1vh;
+    /* padding-top: 6vh; */
     padding-bottom: 7vh;
     /* padding-bottom: 2vh; */
     /* padding-inline: 100px; */
@@ -535,7 +560,15 @@ h1{
 
 
 @media (prefers-color-scheme: dark) {
-  body { background:var(--lavanderDark); color: var(--lavanderLight); }
+  body { 
+    background:var(--lavanderDark); 
+    color: var(--lavanderLight); 
+  }
+
+  input{
+    color: var(--lavanderDark); 
+  }
+
   ::placeholder{
     color: rgba(255, 240, 245, 0.331);
   }
@@ -549,7 +582,16 @@ h1{
 }
 
 @media (prefers-color-scheme: light) {
-  body { background: var(--lavanderPink); color: var(--lavanderRed); }
+  body { 
+    background: var(--lavanderPink); 
+    color: var(--lavanderRed); 
+  }
+
+  input{
+    color: var(--lavanderMaroon);  
+    background-color: lavenderblush;
+  }
+
   ::placeholder{
     color: rgba(168, 103, 125, 0.543);
   }

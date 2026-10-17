@@ -13,22 +13,14 @@ let wSize = document.getElementById("letterSizeInput");
 let wWeight = document.getElementById("letterWeightInput");
 let wFont = document.getElementById("letterFontInput");
 let wParagraph = document.getElementById("letterParagraphInput");
+let workMenuE = document.getElementById("workMenu");
+let workInfoE = document.getElementById("workInfo");
 
 
 const frames = document.getElementById("animation").children;
 const frameCount = frames.length;
 
 
-// function fontSize() {
-//     if (wSize > 1){
-//         fSize.style.fontSize = wSize.value + 'px';
-//     }
-// }
-
-// function myFunction(selectTag) {
-//     var listValue = selectTag.options[selectTag.selectedIndex].text;
-//     fSize.style.fontSize = listValue;
-// }
 
 function countWords(s){
     s = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
@@ -65,24 +57,17 @@ function animationSleep(){
 
 const myTimeOut = setTimeout(animationSleep(), 5000);
 
-// function stopFunction(){
-//     clearTimeout(myTimeOut);
-// }
 
 
 /////////////////////////////////
+
+
 
 wSize.addEventListener('input', async () => {    
     if ((wSize.value >= 12) && (wSize.value <= 80)){
         writingE.style.fontSize = wSize.value + 'px';
     }
 })
-
-// wWeight.addEventListener('input', async () => {    
-//     if ((wWeight.value >= 200) && (wWeight.value <= 1000)){
-//         writingE.style.fontWeight = wWeight.value;
-//     }
-// })
 
 wWeight.addEventListener('input', async () => {    
     if (wWeight.value == 'light'){
@@ -150,8 +135,6 @@ wParagraph.addEventListener('click', async () => {
         wParagraph.value = '';
     }
 })
-
-
 
 
 writingE.addEventListener('keydown', async () => {
@@ -269,7 +252,6 @@ titleInputE.addEventListener('keyup', async () => {
     }
 })
 
-
 hideBtnE.addEventListener('click', async () => {
 
     document.getElementById("goalGrid").style.display = 'none'; 
@@ -280,4 +262,33 @@ hideBtnE.addEventListener('click', async () => {
         document.getElementById('word-goal').style.visibility='visible';
         document.getElementById('word-goal').innerHTML = " / " + wcGoalE.value;
     }
+})
+
+workMenuE.addEventListener('click', async () => {
+
+    if(workMenuE.style.opacity != "1"){
+        workMenuE.style.opacity = "1";
+        workMenuE.style.width = "3vh";
+        workMenuE.style.marginLeft = "130%";
+        workMenuE.innerHTML = "x";
+        workInfoE.style.display = "block";
+
+    } else{
+        workMenuE.style.opacity =""; 
+        workMenuE.style.width = "";
+        workMenuE.style.marginLeft = "";
+        workMenuE.innerHTML = "menu";   
+        if(workInfoE.style.display != "none"){
+            workInfoE.style.display = "none";
+        }    
+    }
+    
+    // document.getElementById("goalGrid").style.display = 'none'; 
+    // document.getElementById("lblGoal").style.display = 'none';    
+
+    // if (wcGoalE.value > 0) {       
+    //     wPercentE.style.display = 'inline-block';
+    //     document.getElementById('word-goal').style.visibility='visible';
+    //     document.getElementById('word-goal').innerHTML = " / " + wcGoalE.value;
+    // }
 })
