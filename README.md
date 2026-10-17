@@ -30,7 +30,7 @@ The goal is to help **writer focus**, with a word counter and other minor tools 
 - [x] Copy text button
 - [x] Word Count Goal
 - [x] Animated Companion
-   - [] \(Optional) Companion Activities <!--  ex. slaying monsters in dungeon, writing at desk, etc -->
+- [] \(Optional) Companion Activities <!--  ex. slaying monsters in dungeon, writing at desk, etc -->
 - [ ] \(Optional) Save progress on specific title
 - [ ] \(Optional) "Flowstate" button
 - [ ] \(Optional) UI Themes
