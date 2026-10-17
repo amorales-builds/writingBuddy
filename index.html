@@ -76,9 +76,16 @@
             <div class="appCenter">          
                 
                 <div id="buddyGrid">
-                    <button id="workMenu">menu</button>
+                    <div id="topBuddyGrid">
+                        <div class="topBuddyInfo" id="topBuddyInfo">
+                            <label id="topGenre"></label>
+                            <label id="emDash">&mdash;</label>
+                            <label id="topType"></label>
+                        </div>
+                        <button id="workMenu">menu</button>
+                    </div>
                     <!-- <button>x</button> -->
-                    <form id="workInfo">
+                    <form id="workInfo" onsubmit="return false">
                         <label for="wTitle">Title:</label><br>
                         <input class="workInfoInput" type="text" id="wTitle" name="wTitle"><br>
                         <label for="wGenre">Genre:</label><br>
@@ -95,8 +102,7 @@
                             <option value="Novel - 100k"></option>
                         </datalist>
                         <input class="workInfoInput" id="wType" name="wType" type="search" list="workType"><br>
-                        <button style="width: 100%; margin-top: 2vh; opacity: 0.5;">Save</button>
-                        
+                        <button id="saveBtn" style="width: 100%; margin-top: 2vh; opacity: 0.5;">Save</button>                        
                     </form>
                     <br style="margin-bottom:5vh;">
                     <div id="buddyScreen">
@@ -107,7 +113,7 @@
                         </div>
                         <div>
                             <h2 id="workTitle">Work Title</h2>
-                            <input id="titleInput" placeholder="Work Title"></input>
+                            <!-- <input id="titleInput" placeholder="Work Title"></input> -->
                         </div>
                         <div id="goalGrid">
                             <div class="square">            

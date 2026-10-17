@@ -15,6 +15,9 @@ let wFont = document.getElementById("letterFontInput");
 let wParagraph = document.getElementById("letterParagraphInput");
 let workMenuE = document.getElementById("workMenu");
 let workInfoE = document.getElementById("workInfo");
+let topGenreE = document.getElementById("topGenre");
+let topTypeE = document.getElementById("topType");
+let saveBtnE = document.getElementById("saveBtn");
 
 
 const frames = document.getElementById("animation").children;
@@ -228,29 +231,31 @@ document.getElementById("copyBtn").addEventListener('click', async () => {
 })
 
 let savedTitle = workTitleE.textContent;
+let savedGenre = topGenreE.textContent;
+let savedType = topTypeE.textContent;
 
-workTitleE.addEventListener('click', async () => {
+// workTitleE.addEventListener('click', async () => {
 
-    workTitleE.style.display = 'none';
-    titleInputE.style.display = 'inline-block';
-    if (workTitleE.textContent != ""){
-        titleInputE.value = "";
-    }
-})
+//     workTitleE.style.display = 'none';
+//     titleInputE.style.display = 'inline-block';
+//     if (workTitleE.textContent != ""){
+//         titleInputE.value = "";
+//     }
+// })
 
-titleInputE.addEventListener('keyup', async () => {
-    if (event.key === 'Enter'){       
-        //alert(document.getElementById("workTitle").textContent) 
-        workTitleE.textContent = titleInputE.value;
-        titleInputE.style.display = 'none';
-        workTitleE.style.display = 'inline-block';
-        if (titleInputE.value == ""){
-            workTitleE.textContent = savedTitle;
-        }else{
-            savedTitle = titleInputE.value;
-        }
-    }
-})
+// titleInputE.addEventListener('keyup', async () => {
+//     if (event.key === 'Enter'){       
+//         //alert(document.getElementById("workTitle").textContent) 
+//         workTitleE.textContent = titleInputE.value;
+//         titleInputE.style.display = 'none';
+//         workTitleE.style.display = 'inline-block';
+//         if (titleInputE.value == ""){
+//             workTitleE.textContent = savedTitle;
+//         }else{
+//             savedTitle = titleInputE.value;
+//         }
+//     }
+// })
 
 hideBtnE.addEventListener('click', async () => {
 
@@ -264,14 +269,15 @@ hideBtnE.addEventListener('click', async () => {
     }
 })
 
-workMenuE.addEventListener('click', async () => {
-
+function buttonClose(){
     if(workMenuE.style.opacity != "1"){
         workMenuE.style.opacity = "1";
         workMenuE.style.width = "3vh";
         workMenuE.style.marginLeft = "130%";
         workMenuE.innerHTML = "x";
         workInfoE.style.display = "block";
+        // workTitleE.style.display = 'none';
+        document.getElementById('topBuddyInfo').style.visibility='hidden';
 
     } else{
         workMenuE.style.opacity =""; 
@@ -281,14 +287,43 @@ workMenuE.addEventListener('click', async () => {
         if(workInfoE.style.display != "none"){
             workInfoE.style.display = "none";
         }    
-    }
-    
-    // document.getElementById("goalGrid").style.display = 'none'; 
-    // document.getElementById("lblGoal").style.display = 'none';    
 
-    // if (wcGoalE.value > 0) {       
-    //     wPercentE.style.display = 'inline-block';
-    //     document.getElementById('word-goal').style.visibility='visible';
-    //     document.getElementById('word-goal').innerHTML = " / " + wcGoalE.value;
-    // }
+        if((savedGenre != "") || (savedType != "")){
+            document.getElementById('topBuddyInfo').style.visibility='visible';
+                document.getElementById('emDash').style.visibility='hidden';
+            if((savedGenre != "") && (savedType != "")){
+                document.getElementById('emDash').style.visibility='visible';
+            }
+        }
+    }
+}
+
+workMenuE.addEventListener('click', async () => {
+    buttonClose();    
 })
+
+saveBtnE.addEventListener('click', async () => {      
+        if (document.getElementById("wTitle").value == ""){
+            workTitleE.textContent = savedTitle;
+        }else{
+            workTitleE.textContent = document.getElementById("wTitle").value;
+            savedTitle = document.getElementById("wTitle").value;
+        }
+
+        if (document.getElementById("wGenre").value == ""){
+            topGenreE.textContent = savedGenre;
+        }else{
+            topGenreE.textContent = document.getElementById("wGenre").value;
+            savedGenre = document.getElementById("wGenre").value;
+        }
+        
+        if (document.getElementById("wType").value == ""){
+            topTypeE.textContent = savedType;
+        }else{
+            topTypeE.textContent = document.getElementById("wType").value;
+            savedType = document.getElementById("wType").value;
+        }
+
+    buttonClose();  //when save/submit true delete this and fix other stuff
+})
+

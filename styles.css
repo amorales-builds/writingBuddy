@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 :root{
-  --lavanderDark:  #25082d;
-  --lavanderMedium:  rgb(61, 31, 67);
-  --lavanderLight: rgb(254, 218, 253);
-  --lavanderBlack:  rgb(15, 1, 19);
+  --plumDark:  #25082d;
+  --plumMediumDark:  rgb(49, 21, 55);
+  --plumMedium:  rgb(61, 31, 67);
+  --plumMediumLight:  rgb(102, 61, 110);
+  --plumLight: rgb(254, 218, 253);
+  --plumBlack:  rgb(15, 1, 19);
 
-  --ligthPink:  #ffe2f0;
-  --lavanderPink:  #fbd0e4;
-  --lavanderRed: rgb(94, 28, 55);
-  --lavanderMaroon:#67254b;  
-  --darkPink: #ad5980;
-  --darkMaroon:rgb(43, 14, 31);
+  --roseLight:  #ffe2f0;
+  --rosePink:  #fbd0e4;
+  --roseRed: rgb(94, 28, 55);
+  --roseMaroon:#67254b;  
+  --roseDark: #ad5980;
+  --roseBlack:rgb(43, 14, 31);
 
   --winGreen: #04AA6D;
 }
@@ -49,8 +51,6 @@ textarea {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 5px;
   /* background-color: rgb(147, 107, 145); */
-  color: lavenderblush;
-  background-color:  var(--lavanderMedium);
   border: 0;
   outline: none;
   /* border-radius: 12px; 
@@ -64,12 +64,6 @@ textarea {
     line-height: 1.8; 
     margin-top: 15px;
   }
-  
-  @media (prefers-color-scheme: light) {
-    background-color: var(--ligthPink);
-    color: var(--lavanderRed);
-    /* border: 2px solid var(--darkPink); */
-  }
 }
 
 textarea.flowstate{  
@@ -81,7 +75,7 @@ textarea.flowstate{
 
 button{
   cursor:pointer;
-  background-color: var(--lavanderLight);  
+  background-color: var(--plumLight);  
   /* border-style: hidden;*/
   border-radius: 12px; 
   border: 1px solid lavenderblush;
@@ -89,21 +83,21 @@ button{
   margin: 5px;
 
   @media (prefers-color-scheme: light) {
-    background-color: var(--lavanderMaroon);
-    color: var(--lavanderPink);
+    background-color: var(--roseMaroon);
+    color: var(--rosePink);
   }
 }
 
 button:hover{
-  background-color: var(--lavanderDark);  
-  border: 1px solid var(--lavanderLight);
-  color:  var(--lavanderLight);
+  background-color: var(--plumDark);  
+  border: 1px solid var(--plumLight);
+  color:  var(--plumLight);
   /* margin-inline-end: 15px; */
 
   @media (prefers-color-scheme: light) {
-    background-color: var(--lavanderPink);
-  border: 1px solid var(--lavanderRed);
-    color: var(--lavanderRed);
+    background-color: var(--rosePink);
+  border: 1px solid var(--roseRed);
+    color: var(--roseRed);
   }
 }
 
@@ -182,8 +176,8 @@ h1{
   }
 }
 #copyIcon:hover{
-  /* border: 3px solid var(--lavanderMaroon);
-  background-color: var(--lavanderMaroon);
+  /* border: 3px solid var(--roseMaroon);
+  background-color: var(--roseMaroon);
   border-radius: 15px; */
   background:url(svg/copyIconBlue.svg);  
   background-repeat: no-repeat;
@@ -200,14 +194,14 @@ h1{
   margin-left: 90%;
   padding:6px;
 
-  background-color: var(--lavanderDark);  
-  border: 1px solid var(--lavanderLight);
+  background-color: var(--plumDark);  
+  border: 1px solid var(--plumLight);
   color: lavenderblush;
 
   @media (prefers-color-scheme: light) {
-    background-color: var(--lavanderPink);
-    color: var(--lavanderMaroon);
-    border: 1px solid var(--lavanderRed);
+    background-color: var(--rosePink);
+    color: var(--roseMaroon);
+    border: 1px solid var(--roseRed);
   }
 
   @media screen and (min-width: 1200px){ 
@@ -218,13 +212,13 @@ h1{
 }
 
 #copyBtn:hover{
-  background-color: var(--lavanderLight);  
-  border: 1px solid var(--lavanderDark);
-  color: var(--lavanderDark);
+  background-color: var(--plumLight);  
+  border: 1px solid var(--plumDark);
+  color: var(--plumDark);
 
   @media (prefers-color-scheme: light) {
-    background-color: var(--lavanderMaroon);
-    color: var(--lavanderPink);
+    background-color: var(--roseMaroon);
+    color: var(--rosePink);
   }
 }
 #copyBtn:active{
@@ -268,7 +262,7 @@ h1{
   /* background: linear-gradient(180deg,rgba(37, 8, 45, 0.95) 41%, rgba(37, 8, 45, 0.82) 66%, rgba(37, 8, 45, 0.62) 85%, rgba(37, 8, 45, 0) 100%); */
   background: linear-gradient(180deg,rgba(37, 8, 45, 1) 50%, rgba(37, 8, 45, 0) 100%);
   @media (prefers-color-scheme: light) {
-    background:  linear-gradient(180deg, var(--lavanderPink) 50%,rgba(37, 8, 45, 0) 100%);;
+    background:  linear-gradient(180deg, var(--rosePink) 50%,rgba(37, 8, 45, 0) 100%);;
   }
   /* background-image: linear-gradient(to top, rgba(255,0,0,0),  rgba(37,8,45,100)); */
 }
@@ -286,13 +280,13 @@ h1{
   padding: 16px;
   display: grid;
   grid-template-columns: auto; 
-  background-color:  var(--lavanderMedium);
+  background-color:  var(--plumMedium);
   border-radius: 12px; 
   border: 2px solid lavenderblush;  
   margin-top: 10px;
   @media (prefers-color-scheme: light) {
-    background-color:  var(--ligthPink);
-    border: 2px solid var(--lavanderMaroon);  
+    background-color:  var(--roseLight);
+    border: 2px solid var(--roseMaroon);  
   }
 }
 
@@ -345,8 +339,6 @@ h1{
   width: 90px;
   margin-top: 5px;
   text-align: center;
-  background-color: lavenderblush;
-  border: 2px solid lavenderblush;  
   border-radius: 20px;
 }
 
@@ -374,22 +366,39 @@ h1{
   display: none;
 }
 
-#workMenu{
+.topBuddyInfo{
+  visibility: hidden;
+  padding-top: 1vh;
+  max-width:7.7vw;
+  white-space: nowrap;
+  overflow: hidden;
+  /* position: fixed; */ 
+}
+
+#topBuddyGrid{
   display: none;
   @media screen and (min-width: 1200px){ 
-    display: block;
-    margin-bottom: 1vh;
-    margin-left:100%;
-    width: 5vw;
-    opacity: .2;
-    /* background-color: var; */
+    position:fixed;
+    right: 8.5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+#workMenu{
+  display: inline-block;
+  margin-bottom: 1vh;
+  margin-left: 85%;
+  width: 5vw;
+  opacity: .99;
+}
+
 #workMenu:hover{
   opacity: 1;
 }
 
 #workInfo{
+  margin-top: 5vh;
   margin-bottom: 5vh;
   display:none;
 }
@@ -403,6 +412,46 @@ h1{
   border: transparent;
   border-radius: 10px;
 }
+
+
+.square{
+  /* display: grid;
+  grid-template-columns: auto auto; */
+  padding: 10px;
+}
+
+#workTitle {
+  font-size: xx-large;
+  margin-bottom: 0;  
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  /* cursor: pointer; */
+  text-align: center;
+} 
+
+/* #titleInput{
+  font-size: xx-large;
+  margin-top: 22px;
+  margin-bottom: 0; 
+  cursor: text;
+  text-align: center; 
+  margin-bottom: 3px;
+  background-color: lavenderblush;
+  border: var(--plumDark);
+  border-radius: 12px;
+  display: none;
+} */
+
+#wcGoal{
+  cursor:text;
+  text-align: center;
+  max-width: 90px;
+  margin-inline-start: 2px;
+  padding: 3px;
+  border-radius: 8px; 
+}
+
 
 @media screen and (min-width: 1200px){   
   
@@ -485,20 +534,20 @@ h1{
     position: fixed;
     top: 100px;
     right: 4vw;
-    border: 2px solid lavenderblush;  
     border-radius: 20px;
-    align-items: center;
-    @media (prefers-color-scheme: light) {
-      border: 2px solid var(--lavanderMaroon); 
-      /* background-color: var(--ligthPink); */
-    }
+    /* align-items: center; */
+  }
+
+  #buddyScreen{
+    padding-top: 6vh;
   }
 
   #buddySettings{
     display: inline;
     margin-top: 2vh;
     margin-left: 100%;
-    opacity: .5;
+    /* opacity: .5; */
+    opacity: 1;
   }
 
   #buddySettings:hover{
@@ -510,63 +559,72 @@ h1{
   } */
 }
 
-.square{
-  /* display: grid;
-  grid-template-columns: auto auto; */
-  padding: 10px;
-}
-
-#workTitle {
-  font-size: xx-large;
-  margin-bottom: 0;  
-  background-color: transparent;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-} 
-
-#titleInput{
-  font-size: xx-large;
-  margin-top: 22px;
-  margin-bottom: 0; 
-  cursor: text;
-  text-align: center; 
-  margin-bottom: 3px;
-  background-color: lavenderblush;
-  border: var(--lavanderDark);
-  border-radius: 12px;
-  display: none;
-}
-
-#wcGoal{
-  cursor:text;
-  text-align: center;
-  max-width: 90px;
-  margin-inline-start: 2px;
-  padding: 3px;
-  color: lavenderblush;
-  background-color:  var(--lavanderMedium);
-  border-radius: 8px; 
-  border: 2px solid rgb(248, 240, 255);
-  @media (prefers-color-scheme: light) {
-    background-color: var(--ligthPink);
-    color: var(--darkMaroon);
-    border: 2px solid var(--darkPink);
-  }
-}
-
 /**/
 
 
-@media (prefers-color-scheme: dark) {
+/* Soft Rose Theme */
+@media (prefers-color-scheme: light) {
   body { 
-    background:var(--lavanderDark); 
-    color: var(--lavanderLight); 
+    background: var(--rosePink); 
+    color: var(--roseRed); 
+  }
+  input{
+    color: var(--roseMaroon);  
+    background-color: lavenderblush;
+  }
+  textArea{    
+    background-color: var(--roseLight);
+    color: var(--roseRed);
+    /* border: 2px solid var(--roseDark); */
   }
 
+  ::placeholder{
+    color: rgba(168, 103, 125, 0.543);
+  }
+
+  .sideBar{
+    border: 2px solid var(--roseMaroon);     
+    background-color: var(--roseLight);
+  }
+  .sideBar:hover{
+    color: var(--roseLight);
+    background-color: var(--roseDark);  
+  }
+  .letterInput{
+    outline: auto;
+    outline-color: var(--roseMaroon);
+    /* background-color: var(--rosePink); */
+  }
+
+  #wcGoal{
+    background-color: var(--roseLight);
+    color: var(--roseBlack);
+    border: 2px solid var(--roseDark);
+  }
+  
+  @media screen and (min-width: 1200px){
+    #buddyGrid{    
+      border: 4px solid var(--roseMaroon); 
+    }
+    #workMenu{
+      background-color: var(--roseLight);
+      color: var(--roseDark);
+    }
+  }
+}
+
+/* Dark Plum Theme */
+@media (prefers-color-scheme: dark) {
+  body { 
+    background:var(--plumDark); 
+    color: var(--plumLight); 
+  }
   input{
-    color: var(--lavanderDark); 
+    color: var(--plumDark); 
+  }
+  textarea{
+    color: lavenderblush;
+    background-color:  var(--plumMedium);
   }
 
   ::placeholder{
@@ -577,35 +635,32 @@ h1{
     border: 2px solid lavenderblush; 
   }
   .sideBar:hover{
-    background-color: var(--lavanderMedium);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body { 
-    background: var(--lavanderPink); 
-    color: var(--lavanderRed); 
-  }
-
-  input{
-    color: var(--lavanderMaroon);  
-    background-color: lavenderblush;
-  }
-
-  ::placeholder{
-    color: rgba(168, 103, 125, 0.543);
-  }
-  .sideBar{
-    border: 2px solid var(--lavanderMaroon);     
-    background-color: var(--ligthPink);
-  }
-  .sideBar:hover{
-    color: var(--ligthPink);
-    background-color: var(--darkPink);  
+    background-color: var(--plumMedium);
   }
   .letterInput{
-    outline: auto;
-    outline-color: var(--lavanderMaroon);
-    /* background-color: var(--lavanderPink); */
+    background-color: lavenderblush;
+    border: 2px solid lavenderblush;  
+  }
+
+  #wcGoal{
+    color: lavenderblush;
+    background-color:  var(--plumMedium);
+    border: 2px solid rgb(248, 240, 255);    
+  }
+
+  @media screen and (min-width: 1200px){
+    #buddyGrid{
+      border: 2px solid lavenderblush; 
+    }
+    #workMenu{
+      background-color: var(--plumMediumDark);
+      border-color: var(--plumMedium);
+      color: var(--plumMediumLight);
+    }
+    #workMenu:hover{
+      background-color: var(--plumMediumDark);
+      border-color: var(--plumLight);
+      color: var(--plumLight);
+    }
   }
 }
