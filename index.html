@@ -85,26 +85,27 @@
                         <button id="workMenu">menu</button>
                     </div>
                     <!-- <button>x</button> -->
-                    <form id="workInfo" onsubmit="return false">
-                        <label for="wTitle">Title:</label><br>
-                        <input class="workInfoInput" type="text" id="wTitle" name="wTitle"><br>
-                        <label for="wGenre">Genre:</label><br>
-                        <datalist id="workGenre">                         
-                            <option value="Fantasy"></option>
-                            <option value="Sci-Fi"></option>
-                            <option value="Non-Fiction"></option>
-                        </datalist>
-                        <input class="workInfoInput" id="wGenre" name="wGenre" type="search" list="workGenre"><br>
-                        <label for="wType">Type:</label><br>
-                        <datalist id="workType">                         
-                            <option value="Short-Story - 10k"></option>
-                            <option value="Novella - 50k"></option>
-                            <option value="Novel - 100k"></option>
-                        </datalist>
-                        <input class="workInfoInput" id="wType" name="wType" type="search" list="workType"><br>
-                        <button id="saveBtn" style="width: 100%; margin-top: 2vh; opacity: 0.5;">Save</button>                        
-                    </form>
-                    <br style="margin-bottom:5vh;">
+                    <div style="margin-bottom:5vh;">
+                        <form id="workInfo" onsubmit="return false">
+                            <label for="wTitle">Title:</label><br>
+                            <input class="workInfoInput" type="text" id="wTitle" name="wTitle"><br>
+                            <label for="wGenre">Genre:</label><br>
+                            <datalist id="workGenre">                         
+                                <option value="Fantasy"></option>
+                                <option value="Sci-Fi"></option>
+                                <option value="Non-Fiction"></option>
+                            </datalist>
+                            <input class="workInfoInput" id="wGenre" name="wGenre" type="search" list="workGenre"><br>
+                            <label for="wType">Type:</label><br>
+                            <datalist id="workType">                         
+                                <option value="Short-Story - 10k"></option>
+                                <option value="Novella - 50k"></option>
+                                <option value="Novel - 100k"></option>
+                            </datalist>
+                            <input class="workInfoInput" id="wType" name="wType" type="search" list="workType"><br>
+                            <button id="saveBtn" style="width: 100%; margin-top: 2vh; opacity: 0.5;">Save</button>                        
+                        </form>
+                    </div>    
                     <div id="buddyScreen">
                         <div id="animation">
                             <img src="images/monmon1.png"/>
@@ -115,29 +116,26 @@
                             <h2 id="workTitle">Work Title</h2>
                             <!-- <input id="titleInput" placeholder="Work Title"></input> -->
                         </div>
-                        <div id="goalGrid">
-                            <div class="square">            
-                                <label id="lblGoal">Goal: </label>
-                                <datalist id="myList">                         
-                                    <option value="5"></option>
-                                    <option value="50"></option>
-                                    <option value="100"></option>
-                                    <option value="500"></option>
-                                    <option value="1000"></option>
-                                </datalist>
-                                <input id="wcGoal" type="search" list="myList"></input>
-                            </div>
+                        <div id="goalGrid">            
+                            <label id="lblGoal">Goal: </label>
+                            <datalist id="myList">                         
+                                <option value="5"></option>
+                                <option value="50"></option>
+                                <option value="100"></option>
+                                <option value="500"></option>
+                                <option value="1000"></option>
+                            </datalist>
+                            <input id="wcGoal" type="search" list="myList"></input>
                             <button id="hideBtn">Hide</button>
-                        </div> 
-                        <div id="center">
+                        </div>
+                        <div>
                             <p> Word Count: <strong id="word-number">0</strong></strong><strong id="word-goal" style="visibility:hidden">0</strong></p>  
                             <p id="word-percent" style="display: none; margin-top: 0px;">0%</p>
                         </div>
                     </div>
-                    <!-- <div id="buddySettings">
+                    <div id="buddySettings">
                         <button >Buddy Shop</button>
-                    </div> -->
-                
+                    </div>             
                 </div>
                 
                 <div id = "textareaGrid">   
