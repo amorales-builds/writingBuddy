@@ -279,7 +279,8 @@ function buttonClose(){
         // workTitleE.style.display = 'none';
         document.getElementById('topBuddyInfo').style.visibility='hidden';
 
-    } else{
+    } 
+    else{
         workMenuE.style.opacity =""; 
         workMenuE.style.width = "";
         workMenuE.style.marginLeft = "";
@@ -290,7 +291,7 @@ function buttonClose(){
 
         if((savedGenre != "") || (savedType != "")){
             document.getElementById('topBuddyInfo').style.visibility='visible';
-                document.getElementById('emDash').style.visibility='hidden';
+            document.getElementById('emDash').style.visibility='hidden';
             if((savedGenre != "") && (savedType != "")){
                 document.getElementById('emDash').style.visibility='visible';
             }
