@@ -85,7 +85,7 @@
                         <button id="workMenu">menu</button>
                     </div>
                     <!-- <button>x</button> -->
-                    <div style="margin-bottom:5vh;">
+                    <div>
                         <form id="workInfo" onsubmit="return false">
                             <label for="wTitle">Title:</label><br>
                             <input class="workInfoInput" type="text" id="wTitle" name="wTitle"><br>
@@ -139,7 +139,10 @@
                 </div>
                 
                 <div id = "textareaGrid">   
-                    <button id="copyBtn">COPY</button>
+                    <div class="upperBtnGrid">
+                        <button class="cpBtn" id="copyBtn">COPY</button>
+                        <button class="cpBtn" id="pasteBtn">PASTE</button>
+                    </div>
                     <button id="copyIcon" ></button>
                     <!-- <img id="copyIcon" src="/svg/copyIcon.svg"> -->
                     <textarea id="writing" contenteditable="true" spellcheck="true" placeholder="Write at your own pace..."></textarea>             

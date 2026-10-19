@@ -224,10 +224,25 @@ writingE.addEventListener('keyup', async () => {
             wcGoalE.style.background = 'red';
         }
     }
+
+    // Pages by number of words
+
+    let page = countWords(writingE.value);  
+    let pageMax = 250;
+    
+    if (page % pageMax == 0){
+        writingE.value = writingE.value + "\n";
+        // writingE.fillText(line, x, y);
+    }
+    
 })
 
 document.getElementById("copyBtn").addEventListener('click', async () => {
     navigator.clipboard.writeText(writingE.value);
+})
+
+document.getElementById("pasteBtn").addEventListener('click', async () => {    
+    writingE.value = await navigator.clipboard.readText();
 })
 
 let savedTitle = workTitleE.textContent;
