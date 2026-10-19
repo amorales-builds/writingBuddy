@@ -195,46 +195,52 @@ document.getElementById('quit').addEventListener('click', async () => {
 
 writingE.addEventListener('keyup', async () => {
 
-    document.getElementById('word-number').innerHTML = countWords(writingE.value);          
+    if (document.getElementById('goalSelection').value = 'Words'){
 
-    if (wcGoalE.value > 0) {
-        
-        let percentage = Math.round((countWords(writingE.value) / wcGoalE.value) * 100);
-        if (hideBtnE.style.display == 'none'){
-            document.getElementById('word-percent').innerHTML= percentage + '%';
-        }
+    
+        document.getElementById('word-number').innerHTML = countWords(writingE.value);          
 
-        if ((event.code === 'Space') || (event.key === '.')){
-            if ( countWords(writingE.value) == wcGoalE.value){
-                // alert("Writing goal met!");
-                alertNoteE.style.display = 'block';
-                textareaGridE.style.border = '3px solid #07faa1';
-                if (hideBtnE.style.display == 'none'&& wcGoalE.style.display == 'none'&& document.getElementById("lblGoal").style.display == 'none'){                    
-                    hideBtnE.style.display = 'inline-block';
-                    wcGoalE.style.display = 'inline-block';
-                    document.getElementById("lblGoal").style.display = 'inline-block';    
-                }
+        if (wcGoalE.value > 0) {
+            
+            let percentage = Math.round((countWords(writingE.value) / wcGoalE.value) * 100);
+            if (hideBtnE.style.display == 'none'){
+                document.getElementById('word-percent').innerHTML= percentage + '%';
             }
-        } 
 
-        if ( (wcGoalE.style.background !== '#04AA6D') && (countWords(writingE.value) >= wcGoalE.value)) {
-            wcGoalE.style.background = '#04AA6D';
-        }
-        else if ((wcGoalE.style.background === '#04AA6D') && (countWords(writingE.value) < wcGoalE.value)) {
-            wcGoalE.style.background = 'red';
+            if ((event.code === 'Space') || (event.key === '.')){
+                if ( countWords(writingE.value) == wcGoalE.value){
+                    // alert("Writing goal met!");
+                    alertNoteE.style.display = 'block';
+                    textareaGridE.style.border = '3px solid #07faa1';
+                    if (hideBtnE.style.display == 'none'&& wcGoalE.style.display == 'none'&& document.getElementById("lblGoal").style.display == 'none'){                    
+                        hideBtnE.style.display = 'inline-block';
+                        wcGoalE.style.display = 'inline-block';
+                        document.getElementById("lblGoal").style.display = 'inline-block';    
+                    }
+                }
+            } 
+
+            if ( (wcGoalE.style.background !== '#04AA6D') && (countWords(writingE.value) >= wcGoalE.value)) {
+                wcGoalE.style.background = '#04AA6D';
+            }
+            else if ((wcGoalE.style.background === '#04AA6D') && (countWords(writingE.value) < wcGoalE.value)) {
+                wcGoalE.style.background = 'red';
+            }
         }
     }
 
-    // Pages by number of words
+    if (document.getElementById('goalSelection').value = 'Pages'){
+    
+        // Pages by number of words
 
-    let page = countWords(writingE.value);  
-    let pageMax = 250;
-    
-    if (page % pageMax == 0){
-        writingE.value = writingE.value + "\n";
-        // writingE.fillText(line, x, y);
+        let page = countWords(writingE.value);  
+        let pageMax = 250;
+        
+        if (page % pageMax == 0){
+            writingE.value = writingE.value + "\n";
+            // writingE.fillText(line, x, y);
+        }
     }
-    
 })
 
 document.getElementById("copyBtn").addEventListener('click', async () => {
@@ -288,11 +294,12 @@ function buttonClose(){
     if(workMenuE.style.opacity != "1"){
         workMenuE.style.opacity = "1";
         workMenuE.style.width = "3vh";
-        workMenuE.style.marginLeft = "130%";
+        workMenuE.style.marginLeft = "220%";
         workMenuE.innerHTML = "x";
         workInfoE.style.display = "block";
         // workTitleE.style.display = 'none';
-        document.getElementById('topBuddyInfo').style.visibility='hidden';
+        document.getElementById('topBuddyInfo').style.visibility ='hidden';
+        document.getElementById('buddySettings').style.display = 'none';
 
     } 
     else{
@@ -303,6 +310,8 @@ function buttonClose(){
         if(workInfoE.style.display != "none"){
             workInfoE.style.display = "none";
         }    
+
+        document.getElementById('buddySettings').style.display = '';
 
         if((savedGenre != "") || (savedType != "")){
             document.getElementById('topBuddyInfo').style.visibility='visible';

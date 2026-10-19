@@ -273,10 +273,6 @@ h1{
   grid-row: 3/3;
 } */
 
-#goalGrid{
-  padding-top: 6.5px;
-  /* text-align: center; */
-}
 
 /* .titleGrid{
   display: grid;
@@ -356,6 +352,24 @@ h1{
   display: block;
 }
 
+#buddyScreen{
+  text-align: center;
+}
+
+#goalGrid{
+  padding-top: 6.5px;
+  /* margin-left: 3.25vw; */
+  /* text-align: center; */
+}
+
+#wcGoal{
+  cursor:text;
+  max-width: 90px;
+  margin-inline-start: 4px;
+  padding: 3px;
+  border-radius: 8px; 
+}
+
 #buddySettings{
   display: none;
 }
@@ -371,13 +385,18 @@ h1{
 #workMenu{
   display: inline-block;
   margin-bottom: 1vh;
-  margin-left: 85%;
+  margin-left: 100%;
   width: 5vw;
   opacity: .99;
 }
 
 #workMenu:hover{
   opacity: 1;
+}
+
+fieldset{
+  padding: 1vw;
+  border-radius: 20px;
 }
 
 #workInfo{
@@ -417,14 +436,6 @@ h1{
   border-radius: 12px;
   display: none;
 } */
-
-#wcGoal{
-  cursor:text;
-  max-width: 90px;
-  margin-inline-start: 2px;
-  padding: 3px;
-  border-radius: 8px; 
-}
 
 @media screen and (min-width: 1200px){   
   
@@ -499,24 +510,23 @@ h1{
 
   #buddyGrid{
     display: grid;
-    grid-template-columns: repeat(1, [col] 14vw);
+    grid-template-columns: repeat(1, [col] 20vw);
     grid-template-rows: repeat(3, auto);
     padding-top: 1vh;
     /* padding-top: 6vh; */
-    padding-bottom: 7vh;
+    padding-bottom: 2vh;
     /* padding-bottom: 2vh; */
     /* padding-inline: 100px; */
-    padding-inline: 6vw ;
+    padding-inline: 3vw ;
     position: fixed;
     top: 8.5vh;
-    right: 3vw;
+    right: 2vw;
     border-radius: 20px;
     /* align-items: center; */
   }
 
   #buddyScreen{
     padding-top: 8vh;
-    text-align: center;
   }
 
   #wcGoal{
@@ -526,8 +536,8 @@ h1{
 
   #buddySettings{
     display: inline;
-    margin-top: 2vh;
-    margin-left: 100%;
+    margin-top: 3.5vh;
+    margin-left: 17.75vw;
     /* opacity: .5; */
     opacity: 1;
   }
@@ -553,6 +563,15 @@ h1{
   input{
     color: var(--roseMaroon);  
     background-color: lavenderblush;
+  }
+  select{
+    color: var(--roseMaroon);  
+    background-color: transparent;
+    border: transparent;
+  }
+  option{
+    font-weight: bold;
+    background: var(--rosePink); 
   }
   textArea{    
     background-color: var(--roseLight);
@@ -612,6 +631,14 @@ h1{
   }
   input{
     color: var(--plumDark); 
+  }
+  select{
+    background-color: transparent; 
+    color: var(--plumLight); 
+    border: transparent;
+  }
+  option{
+    background: var(--plumDark); 
   }
   textarea{
     color: lavenderblush;

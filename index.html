@@ -87,23 +87,26 @@
                     <!-- <button>x</button> -->
                     <div>
                         <form id="workInfo" onsubmit="return false">
-                            <label for="wTitle">Title:</label><br>
-                            <input class="workInfoInput" type="text" id="wTitle" name="wTitle"><br>
-                            <label for="wGenre">Genre:</label><br>
-                            <datalist id="workGenre">                         
-                                <option value="Fantasy"></option>
-                                <option value="Sci-Fi"></option>
-                                <option value="Non-Fiction"></option>
-                            </datalist>
-                            <input class="workInfoInput" id="wGenre" name="wGenre" type="search" list="workGenre"><br>
-                            <label for="wType">Type:</label><br>
-                            <datalist id="workType">                         
-                                <option value="Short-Story - 10k"></option>
-                                <option value="Novella - 50k"></option>
-                                <option value="Novel - 100k"></option>
-                            </datalist>
-                            <input class="workInfoInput" id="wType" name="wType" type="search" list="workType"><br>
-                            <button id="saveBtn" style="width: 100%; margin-top: 2vh; opacity: 0.5;">Save</button>                        
+                            <!-- <fieldset> -->
+                                <!-- <legend>Work Information</legend> -->
+                                <label for="wTitle">Title:</label><br>
+                                <input class="workInfoInput" type="text" id="wTitle" name="wTitle"><br>
+                                <label for="wGenre">Genre:</label><br>
+                                <datalist id="workGenre">                         
+                                    <option value="Fantasy"></option>
+                                    <option value="Sci-Fi"></option>
+                                    <option value="Non-Fiction"></option>
+                                </datalist>
+                                <input class="workInfoInput" id="wGenre" name="wGenre" type="search" list="workGenre"><br>
+                                <label for="wType">Type:</label><br>
+                                <datalist id="workType">                         
+                                    <option value="Short-Story - 10k"></option>
+                                    <option value="Novella - 50k"></option>
+                                    <option value="Novel - 100k"></option>
+                                </datalist>
+                                <input class="workInfoInput" id="wType" name="wType" type="search" list="workType"><br>
+                                <button id="saveBtn" style="width: 100%; margin-top: 2vh; opacity: 0.5;">Save</button>   
+                            <!-- </fieldset>                      -->
                         </form>
                     </div>    
                     <div id="buddyScreen">
@@ -126,6 +129,10 @@
                                 <option value="1000"></option>
                             </datalist>
                             <input id="wcGoal" type="search" list="myList"></input>
+                            <select id="goalSelection">
+                                <option>Words</option>
+                                <option>Pages</option>
+                            </select>
                             <button id="hideBtn">Hide</button>
                         </div>
                         <div>
@@ -134,7 +141,7 @@
                         </div>
                     </div>
                     <div id="buddySettings">
-                        <button >Buddy Shop</button>
+                        <button style="opacity:0.5">Buddy Shop</button>
                     </div>             
                 </div>
                 
