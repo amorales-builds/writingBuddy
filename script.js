@@ -5,7 +5,9 @@ let wcGoalE = document.getElementById("wcGoal");
 let workTitleE = document.getElementById("workTitle");
 let titleInputE = document.getElementById("titleInput");
 let hideBtnE = document.getElementById("hideBtn");
-let monmonE = document.getElementById("animation");
+let goalGridE = document.getElementById("goalGrid");
+let monmonE = document.getElementById("monAnimation");
+let swmE = document.getElementById("swordAnimation");
 let writingE = document.getElementById("writing");
 let wPercentE = document.getElementById("word-percent");
 let enterBtnE = document.getElementById("enterBtn");
@@ -20,8 +22,10 @@ let topTypeE = document.getElementById("topType");
 let saveBtnE = document.getElementById("saveBtn");
 
 
-const frames = document.getElementById("animation").children;
-const frameCount = frames.length;
+const monsterBud = document.getElementById("monAnimation").children;
+const monCount = monsterBud.length;
+const swordsmanBud = document.getElementById("swordAnimation").children;
+const swmCount = swordsmanBud.length;
 
 
 
@@ -34,16 +38,16 @@ function countWords(s){
 
 let x = 1;
 
-function animationCycle(a){
-    frames[2].style.display = "none";
+function monAnimationCycle(a){
+    monsterBud[2].style.display = "none";
     if(a > 1){
         a = 0;
-        frames[ a + 1 ].style.display = "none";
-        frames[a].style.display = "block";
+        monsterBud[ a + 1 ].style.display = "none";
+        monsterBud[a].style.display = "block";
     } 
     else{
-        frames[ a - 1 ].style.display = "none";
-        frames[a].style.display = "block";
+        monsterBud[ a - 1 ].style.display = "none";
+        monsterBud[a].style.display = "block";
     }
     x++;
     if (x > 2){
@@ -52,13 +56,40 @@ function animationCycle(a){
 
 }
 
-function animationSleep(){
-    frames[0].style.display = "none";
-    frames[1].style.display = "none";
-    frames[2].style.display = "block";
+function swmAnimationCycle(a){
+    swordsmanBud[2].style.display = "none";
+    if(a > 1){
+        a = 0;
+        swordsmanBud[ a + 1 ].style.display = "none";
+        swordsmanBud[a].style.display = "block";
+    } 
+    else{
+        swordsmanBud[ a - 1 ].style.display = "none";
+        swordsmanBud[a].style.display = "block";
+    }
+    x++;
+    if (x > 2){
+        x = 1;
+    }
+
 }
 
-const myTimeOut = setTimeout(animationSleep(), 5000);
+function monAnimationSleep(){
+    monsterBud[0].style.display = "none";
+    monsterBud[1].style.display = "none";
+    monsterBud[2].style.display = "block";
+}
+
+
+function swmAnimationSleep(){
+    swordsmanBud[0].style.display = "none";
+    swordsmanBud[1].style.display = "none";
+    swordsmanBud[2].style.display = "block";
+}
+
+
+const monTimeOut = setTimeout(monAnimationSleep(), 5000);
+const swmTimeOut = setTimeout(swmAnimationSleep(), 5000);
 
 
 
@@ -139,41 +170,74 @@ wParagraph.addEventListener('click', async () => {
     }
 })
 
+document.getElementById("buddyCharacterBtn").addEventListener('click', async () => {
+    if(monmonE.style.display =='none'){
+        swmE.style.display = 'none';
+        monmonE.style.display = 'inline-block';
+        // monAnimationCycle(x); 
+        // document.getElementById("buddyCharacterBtn").style.opacity = '0.5';
+    } else{
+        swmE.style.display = 'inline-block';
+        monmonE.style.display = 'none';
+        // swmAnimationCycle(x);
+        // document.getElementById("buddyCharacterBtn").style.opacity = '0.5';
+    }
+})
+
+// document.getElementById("buddyCharacterBtn").addEventListener('click', async () => {
+//     buddyCharacterMotion();
+// })
+
+
+function buddySleep(){    
+    monAnimationSleep();  
+    swmAnimationSleep();   
+}
+
+function buddyAnimation(){
+    if(monmonE.style.display =='none'){
+        swmAnimationCycle(x);         
+        
+    } else{
+        monAnimationCycle(x);
+    }
+}
 
 writingE.addEventListener('keydown', async () => {
-    animationCycle(x);    
+    buddyAnimation()
 })
 
 textareaGridE.addEventListener('mouseleave', async () => {
-    animationSleep();   
+    buddySleep()  
 })
 
-monmonE.addEventListener('mouseleave', async () => {
-    animationSleep();   
+document.getElementById('buddyArea').addEventListener('mouseleave', async () => {
+    buddySleep() 
 })
 
-monmonE.addEventListener('click', async () => {    
-    animationCycle(x);
+document.getElementById('buddyArea').addEventListener('click', async () => {    
+    buddyAnimation()
 })
+
 
 
 // monmonE.addEventListener('mouseover', async () => {
 
-//     frames[0].style.display = "block";
-//     frames[1].style.display = "none";
-//     frames[2].style.display = "none";
+//     monsterBud[0].style.display = "block";
+//     monsterBud[1].style.display = "none";
+//     monsterBud[2].style.display = "none";
 
-//     // const frames = document.getElementById("animation").children;
-//     // const frameCount = frames.length;
+//     // const monsterBud = document.getElementById("monAnimation").children;
+//     // const monCount = monsterBud.length;
 //     // let i = 0;
 //     // setInterval(function () { 
-//     //     frames[i % frameCount].style.display = "none";
-//     //     frames[++i % frameCount].style.display = "block";
+//     //     monsterBud[i % monCount].style.display = "none";
+//     //     monsterBud[++i % monCount].style.display = "block";
 //     // }, 300);
 // })
 
 // monmonE.addEventListener('mouseout', async () => {
-//     animationSleep();  
+//     monAnimationSleep();  
 // })
 
     
@@ -195,16 +259,21 @@ document.getElementById('quit').addEventListener('click', async () => {
 
 writingE.addEventListener('keyup', async () => {
 
-    if (document.getElementById('goalSelection').value = 'Words'){
+    // alert(document.getElementById('goalOutput').textContent);
 
-    
-        document.getElementById('word-number').innerHTML = countWords(writingE.value);          
+    // if (document.getElementById('goalSelection').value = 'Words'){
 
-        if (wcGoalE.value > 0) {
+        document.getElementById('word-number').innerHTML = countWords(writingE.value); 
+
+        if (wcGoalE.value > 0) { 
             
             let percentage = Math.round((countWords(writingE.value) / wcGoalE.value) * 100);
-            if (hideBtnE.style.display == 'none'){
+            if (goalGridE.style.display == 'none'){
                 document.getElementById('word-percent').innerHTML= percentage + '%';
+                document.getElementById('word-meter').value = percentage;
+                if(percentage >= 100){
+                    document.getElementById('word-meter').style.accentColor =' #04AA6D';
+                }
             }
 
             if ((event.code === 'Space') || (event.key === '.')){
@@ -227,20 +296,32 @@ writingE.addEventListener('keyup', async () => {
                 wcGoalE.style.background = 'red';
             }
         }
-    }
+    // }
 
-    if (document.getElementById('goalSelection').value = 'Pages'){
+    // if (document.getElementById('goalSelection').value = 'Pages'){
     
-        // Pages by number of words
+    //     // Pages by number of words
 
-        let page = countWords(writingE.value);  
-        let pageMax = 250;
-        
-        if (page % pageMax == 0){
-            writingE.value = writingE.value + "\n";
-            // writingE.fillText(line, x, y);
-        }
-    }
+    //     let page = countWords(writingE.value);  
+    //     let pageMax = 250;
+    //     let pagesNumber = page / pageMax;
+
+    //     if (page % pageMax == 0){
+    //         writingE.value = writingE.value + "\n";
+    //         // writingE.fillText(line, x, y);
+    //     }
+
+    //     // document.getElementById('word-number').innerHTML = (pagesNumber);   
+
+    //     if (wcGoalE.value > 0) {
+            
+    //         let percentage = Math.round((pagesNumber / wcGoalE.value) * 100);
+    //         if (hideBtnE.style.display == 'none'){
+    //             document.getElementById('word-percent').innerHTML= percentage + '%';
+    //         }
+    //     }
+
+    // }
 })
 
 document.getElementById("copyBtn").addEventListener('click', async () => {
@@ -287,6 +368,7 @@ hideBtnE.addEventListener('click', async () => {
         wPercentE.style.display = 'inline-block';
         document.getElementById('word-goal').style.visibility='visible';
         document.getElementById('word-goal').innerHTML = " / " + wcGoalE.value;
+        document.getElementById('word-meter').style.display='inline-block';
     }
 })
 

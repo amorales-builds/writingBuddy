@@ -110,10 +110,17 @@
                         </form>
                     </div>    
                     <div id="buddyScreen">
-                        <div id="animation">
-                            <img src="images/monmon1.png"/>
-                            <img src="images/monmon2.png"/>
-                            <img src="images/monmonSleep.png">
+                        <div id="buddyArea">
+                            <div class="animation" id="monAnimation">
+                                <img src="images/monmon1.png"/>
+                                <img src="images/monmon2.png"/>
+                                <img src="images/monmonSleep.png">
+                            </div>
+                            <div class="animation" id="swordAnimation" style="display:none">
+                                <img src="images/swordsman.png"/>
+                                <img src="images/swordsman1.png"/>
+                                <img src="images/swordsmanTired.png">
+                            </div>
                         </div>
                         <div>
                             <h2 id="workTitle">Work Title</h2>
@@ -136,13 +143,21 @@
                             <button id="hideBtn">Hide</button>
                         </div>
                         <div>
-                            <p> Word Count: <strong id="word-number">0</strong></strong><strong id="word-goal" style="visibility:hidden">0</strong></p>  
+                            <p> Word Count: <strong id="word-number">0</strong></strong><strong id="word-goal" style="visibility:hidden">0</strong></p> 
+                            <progress id="word-meter" style="display:none" max="100"></progress> 
                             <p id="word-percent" style="display: none; margin-top: 0px;">0%</p>
                         </div>
                     </div>
                     <div id="buddySettings">
-                        <button style="opacity:0.5">Buddy Shop</button>
-                    </div>             
+                        <button id="buddyCharacterBtn" style="opacity:0.5">Buddy Shop</button>
+                    </div>  
+                    <div id="buddyShop">
+                        <fieldset>
+                            <legend style="padding-inline: 0.5vw;">Choose Buddy:</legend>
+                            <label><input class="buddySelection" type="radio" name="buddySelection" value="mon" /> Monster </label>
+                            <label><input class="buddySelection" type="radio" name="buddySelection" value="swm" /> Swordsman </label>
+                        </fieldset>
+                    </div>           
                 </div>
                 
                 <div id = "textareaGrid">   

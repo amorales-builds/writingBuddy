@@ -24,6 +24,7 @@ The Writing Buddy is an animated fellow that moves to the rhythm of the user's k
 - **Word Counter percent** - Percentage of completion below word count once the goal is hidden. <br>
 - **Textarea Size** - User can choose the size of the writing font.<br>
 - **Textarea Weight** -  User can choose the weight of the writing font.<br>
+- **Character Selection** - User can press a button to change the character depicted as Buddy. <br>
 
 ## To-Do List
 - [x] Input box
