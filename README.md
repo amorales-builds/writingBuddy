@@ -25,6 +25,7 @@ The Writing Buddy is an animated fellow that moves to the rhythm of the user's k
 - **Textarea Size** - User can choose the size of the writing font.<br>
 - **Textarea Weight** -  User can choose the weight of the writing font.<br>
 - **Character Selection** - User can change the character depicted as Buddy by choosing an option at the Buddy Shop. <br>
+- **Page Counter** -  User can choose between a Word-Count goal and a Page-Count goal, where each page is exactly <!--around--> 450 words.<br>
 
 ## To-Do List
 - [x] Input box
@@ -35,9 +36,9 @@ The Writing Buddy is an animated fellow that moves to the rhythm of the user's k
    - [x] \(Optional) Character Selection <!--  ex. slaying monsters in dungeon, writing at desk, etc -->
 - [x] \(Optional) Dark/Light Mode
     - [ ] \(Optional) UI Themes <!--  cuter/cooler themes with names -->
+- [x] \(Optional) Page Counter option
 - [ ] \(Optional) Save progress on specific title
 - [ ] \(Optional) "Flowstate" button
-- [ ] \(Optional) Page Counter option
 
 
 ## Project Status

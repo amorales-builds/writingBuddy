@@ -284,17 +284,12 @@ document.getElementById('quit').addEventListener('click', async () => {
     window.close();
 })
 
-writingE.addEventListener('keyup', async () => {
-
-    // alert(document.getElementById('goalOutput').textContent);
-
-    // if (document.getElementById('goalSelection').value = 'Words'){
-
-        document.getElementById('word-number').innerHTML = countWords(writingE.value); 
+function whatAreWeCounting(x){
 
         if (wcGoalE.value > 0) { 
             
-            let percentage = Math.round((countWords(writingE.value) / wcGoalE.value) * 100);
+            let percentage = Math.round((x / wcGoalE.value) * 100);
+
             if (goalGridE.style.display == 'none'){
                 document.getElementById('word-percent').innerHTML= percentage + '%';
                 document.getElementById('word-meter').value = percentage;
@@ -304,51 +299,69 @@ writingE.addEventListener('keyup', async () => {
             }
 
             if ((event.code === 'Space') || (event.key === '.')){
-                if ( countWords(writingE.value) == wcGoalE.value){
+                if (x == wcGoalE.value){
                     // alert("Writing goal met!");
                     alertNoteE.style.display = 'block';
                     textareaGridE.style.border = '3px solid #07faa1';
-                    if (hideBtnE.style.display == 'none'&& wcGoalE.style.display == 'none'&& document.getElementById("lblGoal").style.display == 'none'){                    
-                        hideBtnE.style.display = 'inline-block';
-                        wcGoalE.style.display = 'inline-block';
-                        document.getElementById("lblGoal").style.display = 'inline-block';    
+                    if (goalGridE.style.display == 'none'){                    
+                        goalGridE.style.display = '';                        
                     }
                 }
             } 
 
-            if ( (wcGoalE.style.background !== '#04AA6D') && (countWords(writingE.value) >= wcGoalE.value)) {
+            if ( (wcGoalE.style.background !== '#04AA6D') && (x >= wcGoalE.value)) {
                 wcGoalE.style.background = '#04AA6D';
             }
-            else if ((wcGoalE.style.background === '#04AA6D') && (countWords(writingE.value) < wcGoalE.value)) {
+            else if ((wcGoalE.style.background === '#04AA6D') && (x < wcGoalE.value)) {
                 wcGoalE.style.background = 'red';
             }
         }
-    // }
+}
 
-    // if (document.getElementById('goalSelection').value = 'Pages'){
+writingE.addEventListener('keyup', async () => {
+
+    // alert(document.getElementById('goalOutput').textContent);
+
+    if (document.getElementById("goalSelection").value == 'Words'){
+
+        let wordNumber = countWords(writingE.value);
+
+        document.getElementById('word-number').innerHTML = wordNumber; 
+
+        whatAreWeCounting(wordNumber);
+    }
+
+    // alert(document.getElementById("lblCount").textContent);
+
+    if (document.getElementById("goalSelection").value == 'Pages'){
     
-    //     // Pages by number of words
+        // Pages by number of words
 
-    //     let page = countWords(writingE.value);  
-    //     let pageMax = 250;
-    //     let pagesNumber = page / pageMax;
+        let page = countWords(writingE.value);  
+        let pageMax = 450; //in Docs it's around 500, Word is around 550 (at 12pt) ((some sources say ~400))
+        let pagesNumber = (Math.trunc(page / pageMax)) + 1;
 
-    //     if (page % pageMax == 0){
-    //         writingE.value = writingE.value + "\n";
-    //         // writingE.fillText(line, x, y);
-    //     }
+        if ((page % pageMax == 0) && (event.code === 'Space') || (event.key === '.')){
+            writingE.value = writingE.value + "\n" + "\n";
+            // writingE.fillText(line, x, y);
+        }
+        
+        document.getElementById('word-number').innerHTML = pagesNumber; 
 
-    //     // document.getElementById('word-number').innerHTML = (pagesNumber);   
+        if ((event.code === 'Space') || (event.key === '.')){
+            whatAreWeCounting(pagesNumber);
+        }
 
-    //     if (wcGoalE.value > 0) {
-            
-    //         let percentage = Math.round((pagesNumber / wcGoalE.value) * 100);
-    //         if (hideBtnE.style.display == 'none'){
-    //             document.getElementById('word-percent').innerHTML= percentage + '%';
-    //         }
-    //     }
+    }
+})
 
-    // }
+document.getElementById("goalGrid").addEventListener('click', async () => {   
+    if (document.getElementById("goalSelection").value == 'Pages'){ 
+        document.getElementById("lblCount").textContent = 'Page';
+    }
+    if (document.getElementById("goalSelection").value == 'Words'){
+        document.getElementById("lblCount").textContent = 'Word';
+    }
 })
 
 document.getElementById("copyBtn").addEventListener('click', async () => {
@@ -388,8 +401,7 @@ let savedType = topTypeE.textContent;
 
 hideBtnE.addEventListener('click', async () => {
 
-    document.getElementById("goalGrid").style.display = 'none'; 
-    document.getElementById("lblGoal").style.display = 'none';    
+    document.getElementById("goalGrid").style.display = 'none';    
 
     if (wcGoalE.value > 0) {       
         wPercentE.style.display = 'inline-block';
