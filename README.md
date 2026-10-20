@@ -24,7 +24,7 @@ The Writing Buddy is an animated fellow that moves to the rhythm of the user's k
 - **Word Counter percent** - Percentage of completion below word count once the goal is hidden. <br>
 - **Textarea Size** - User can choose the size of the writing font.<br>
 - **Textarea Weight** -  User can choose the weight of the writing font.<br>
-- **Character Selection** - User can press a button to change the character depicted as Buddy. <br>
+- **Character Selection** - User can change the character depicted as Buddy by choosing an option at the Buddy Shop. <br>
 
 ## To-Do List
 - [x] Input box
@@ -32,11 +32,12 @@ The Writing Buddy is an animated fellow that moves to the rhythm of the user's k
 - [x] Copy text button
 - [x] Word Count Goal
 - [x] Animated Companion
-   - [ ] \(Optional) Companion Activities <!--  ex. slaying monsters in dungeon, writing at desk, etc -->
+   - [x] \(Optional) Character Selection <!--  ex. slaying monsters in dungeon, writing at desk, etc -->
 - [x] \(Optional) Dark/Light Mode
     - [ ] \(Optional) UI Themes <!--  cuter/cooler themes with names -->
 - [ ] \(Optional) Save progress on specific title
 - [ ] \(Optional) "Flowstate" button
+- [ ] \(Optional) Page Counter option
 
 
 ## Project Status

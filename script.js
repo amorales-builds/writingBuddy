@@ -170,22 +170,48 @@ wParagraph.addEventListener('click', async () => {
     }
 })
 
+// document.getElementById("buddyCharacterBtn").addEventListener('click', async () => {
+//     if(monmonE.style.display =='none'){
+//         swmE.style.display = 'none';
+//         monmonE.style.display = '';
+//         // monAnimationCycle(x); 
+//         // document.getElementById("buddyCharacterBtn").style.opacity = '0.5';
+//     } else{
+//         swmE.style.display = '';
+//         monmonE.style.display = 'none';
+//         // swmAnimationCycle(x);
+//         // document.getElementById("buddyCharacterBtn").style.opacity = '0.5';
+//     }
+// })
+
 document.getElementById("buddyCharacterBtn").addEventListener('click', async () => {
-    if(monmonE.style.display =='none'){
+    if(document.getElementById("buddyShop").style.display == 'none'){
+        document.getElementById("buddyShop").style.display = '';
+        document.getElementById("topBuddyGrid").style.display = 'none';
+    }else{
+        document.getElementById("buddyShop").style.display = 'none';
+        document.getElementById("topBuddyGrid").style.display = '';
+    }
+    // alert(document.getElementsByName('buddySelection').value);
+})
+
+document.getElementById("buddyShop").addEventListener('click', async () => {
+    if(document.getElementById('mons').checked == true){
         swmE.style.display = 'none';
         monmonE.style.display = 'inline-block';
-        // monAnimationCycle(x); 
-        // document.getElementById("buddyCharacterBtn").style.opacity = '0.5';
-    } else{
+    } 
+    if (document.getElementById('swords').checked == true) {
         swmE.style.display = 'inline-block';
         monmonE.style.display = 'none';
-        // swmAnimationCycle(x);
-        // document.getElementById("buddyCharacterBtn").style.opacity = '0.5';
     }
 })
 
+// document.getElementByName("buddySelection").addEventListener('change', async () => {
+//     alert("hi");
+// })
+
 // document.getElementById("buddyCharacterBtn").addEventListener('click', async () => {
-//     buddyCharacterMotion();
+//     document.getElementById('mons').checked = false;
 // })
 
 
@@ -195,11 +221,12 @@ function buddySleep(){
 }
 
 function buddyAnimation(){
-    if(monmonE.style.display =='none'){
-        swmAnimationCycle(x);         
+    if(monmonE.style.display !='none'){
+        monAnimationCycle(x);         
         
-    } else{
-        monAnimationCycle(x);
+    } 
+    if(swmE.style.display !='none'){
+        swmAnimationCycle(x); 
     }
 }
 

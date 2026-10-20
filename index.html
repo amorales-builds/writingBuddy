@@ -84,7 +84,6 @@
                         </div>
                         <button id="workMenu">menu</button>
                     </div>
-                    <!-- <button>x</button> -->
                     <div>
                         <form id="workInfo" onsubmit="return false">
                             <!-- <fieldset> -->
@@ -151,11 +150,11 @@
                     <div id="buddySettings">
                         <button id="buddyCharacterBtn" style="opacity:0.5">Buddy Shop</button>
                     </div>  
-                    <div id="buddyShop">
+                    <div id="buddyShop" style="display: none;">
                         <fieldset>
                             <legend style="padding-inline: 0.5vw;">Choose Buddy:</legend>
-                            <label><input class="buddySelection" type="radio" name="buddySelection" value="mon" /> Monster </label>
-                            <label><input class="buddySelection" type="radio" name="buddySelection" value="swm" /> Swordsman </label>
+                            <label><input id="mons" class="buddySelection" type="radio" name="buddySelection" checked/> Monster </label>
+                            <label><input  id="swords" class="buddySelection" type="radio" name="buddySelection" /> Swordsman </label>
                         </fieldset>
                     </div>           
                 </div>
