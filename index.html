@@ -27,6 +27,24 @@
             <h1>Writing Buddy</h1>
             <p style="margin:-15px; padding-left: 35px;"><i>Never lose count again!</i></p>
         </div>
+
+        <!-- <div class="app">
+            <p>below here</p>
+            <div class="timer-circle" 
+                id="timer">15:00
+            </div>
+            <div class="control-buttons">
+                <button onclick="togglePauseResume()">
+                    Pause
+                </button>
+                <button onclick="restartTimer()">
+                    Restart
+                </button>
+                <button onclick="chooseTime()">
+                    Choose Time
+                </button>
+            </div>
+        </div> -->
         
         <div class="grid2">
             <div id="writingOptions">
@@ -153,8 +171,8 @@
                     <div id="buddyShop" style="display: none;">
                         <fieldset>
                             <legend style="padding-inline: 0.5vw;">Choose Buddy:</legend>
-                            <label><input id="mons" class="buddySelection" type="radio" name="buddySelection" checked/> Monster </label>
-                            <label><input  id="swords" class="buddySelection" type="radio" name="buddySelection" /> Swordsman </label>
+                            <label><input id="mons" class="buddySelection" type="radio" name="buddySelection" checked onchange="monsBuddyChosen()"/> Monster </label>
+                            <label><input  id="swords" class="buddySelection" type="radio" name="buddySelection" onchange="swmBuddyChosen()"/> Swordsman </label>
                         </fieldset>
                     </div>           
                 </div>

@@ -195,16 +195,31 @@ document.getElementById("buddyCharacterBtn").addEventListener('click', async () 
     // alert(document.getElementsByName('buddySelection').value);
 })
 
-document.getElementById("buddyShop").addEventListener('click', async () => {
-    if(document.getElementById('mons').checked == true){
-        swmE.style.display = 'none';
-        monmonE.style.display = 'inline-block';
-    } 
-    if (document.getElementById('swords').checked == true) {
-        swmE.style.display = 'inline-block';
-        monmonE.style.display = 'none';
-    }
-})
+// document.getElementById("buddyShop").addEventListener('click', async () => {
+//     if(document.getElementById('mons').checked == true){
+//         swmE.style.display = 'none';
+//         monmonE.style.display = 'inline-block';
+//     } 
+//     if (document.getElementById('swords').checked == true) {
+//         swmE.style.display = 'inline-block';
+//         monmonE.style.display = 'none';
+//     }
+// })
+
+function allBuddiesDisabled(){    
+    swmE.style.display = 'none';    
+    monmonE.style.display = 'none';
+}
+
+function monsBuddyChosen(){
+    allBuddiesDisabled();
+    monmonE.style.display = 'inline-block';
+}
+
+function swmBuddyChosen(){    
+    allBuddiesDisabled();
+    swmE.style.display = 'inline-block';
+}
 
 // document.getElementByName("buddySelection").addEventListener('change', async () => {
 //     alert("hi");
@@ -415,7 +430,7 @@ function buttonClose(){
     if(workMenuE.style.opacity != "1"){
         workMenuE.style.opacity = "1";
         workMenuE.style.width = "3vh";
-        workMenuE.style.marginLeft = "220%";
+        workMenuE.style.marginLeft = "218%";
         workMenuE.innerHTML = "x";
         workInfoE.style.display = "block";
         // workTitleE.style.display = 'none';
@@ -473,3 +488,91 @@ saveBtnE.addEventListener('click', async () => {
     buttonClose();  //when save/submit true delete this and fix other stuff
 })
 
+/////
+
+// let timer;
+// let minutes = 15;
+// let seconds = 0;
+// let isPaused = false;
+// let enteredTime = null;
+
+// function startTimer() {
+//     timer = setInterval(updateTimer, 1000);
+// }
+
+// function updateTimer() {
+//     const timerElement =
+//         document.getElementById('timer');
+//         timerElement.textContent = 
+//         formatTime(minutes, seconds);
+
+//     if (minutes === 0 && seconds === 0) {
+//         clearInterval(timer);
+//         alert('Time is up! Take a break.');
+//     } else if (!isPaused) {
+//         if (seconds > 0) {
+//             seconds--;
+//         } else {
+//             seconds = 59;
+//             minutes--;
+//         }
+//     }
+// }
+
+// function formatTime(minutes, seconds) {
+//     return 
+//     `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+// }
+
+// function togglePauseResume() {
+//     const pauseResumeButton =
+//         document.querySelector('.control-buttons button');
+//     isPaused = !isPaused;
+
+//     if (isPaused) {
+//         clearInterval(timer);
+//         pauseResumeButton.textContent = 'Resume';
+//     } else {
+//         startTimer();
+//         pauseResumeButton.textContent = 'Pause';
+//     }
+// }
+
+// function restartTimer() {
+//     clearInterval(timer);
+//     minutes = enteredTime || 15;
+//     seconds = 0;
+//     isPaused = false;
+//     const timerElement =
+//         document.getElementById('timer');
+//     timerElement.textContent =
+//         formatTime(minutes, seconds);
+//     const pauseResumeButton =
+//         document.querySelector('.control-buttons button');
+//     pauseResumeButton.textContent = 'Pause';
+//     startTimer();
+// }
+
+// function chooseTime() {
+//     const newTime = prompt('Enter new time in minutes:');
+//     if (!isNaN(newTime) && newTime > 0) {
+//         enteredTime = parseInt(newTime);
+//         minutes = enteredTime;
+//         seconds = 0;
+//         isPaused = false;
+//         const timerElement =
+//             document.getElementById('timer');
+//         timerElement.textContent =
+//             formatTime(minutes, seconds);
+//         clearInterval(timer);
+//         const pauseResumeButton =
+//             document.querySelector('.control-buttons button');
+//         pauseResumeButton.textContent = 'Pause';
+//         startTimer();
+//     } else {
+//         alert('Invalid input. Please enter'+
+//             ' a valid number greater than 0.');
+//     }
+// }
+
+// startTimer();
