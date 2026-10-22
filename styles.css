@@ -1,15 +1,29 @@
 @import "tailwindcss";
 
 :root{
+  --plumDarkGrad: repeating-linear-gradient(180deg,rgba(37, 8, 45) 55%,rgb(49, 16, 57) 75%);
+  /* --plumDarkGrad: repeating-linear-gradient(180deg,rgb(61, 31, 67) 25%, rgba(37, 8, 45) 50%, rgb(61, 31, 67) 75%); */
+  /* --plumDarkGrad: repeating-linear-gradient(180deg,rgba(37, 8, 45) 25%,rgb(49, 21, 55) 50%); */
+  --plumDarker:  #1f0327;
   --plumDark:  #25082d;
-  --plumMediumDark:  rgb(49, 21, 55);
+  --plumMediumDark:  rgb(49, 16, 57);
+  --plumMediumDarkish:  rgb(55, 23, 61);
   --plumMedium:  rgb(61, 31, 67);
+  --plumMediumTransparent: rgb(61, 31, 67, 0.7);
   --plumMediumLight:  rgb(102, 61, 110);
+  --plumMediumLighter:  rgb(130, 99, 137);
   --plumLight: rgb(254, 218, 253);
+  /* --plumLight: rgb(254, 218, 253); */
   --plumBlack:  rgb(15, 1, 19);
 
+  /* --rosePinkGrad: repeating-linear-gradient(180deg,#fbd0e4 25%, #fec7e1 50%); */
+  --rosePinkGrad: repeating-linear-gradient(180deg,#fbd0e4 25%, #ffbada 50%) ;
   --roseLight:  #ffe2f0;
+  --roseLightTransparent:  #ffe2f0a6;
+  --roseLightTransparentish:  #ffe2f0e1;
+  --rosePinkMediumLight: #fedeed;  
   --rosePink:  #fbd0e4;
+  --rosePinkDark: #ffbada;
   --roseRed: rgb(94, 28, 55);
   --roseMaroon:#67254b;  
   --roseDark: #ad5980;
@@ -255,14 +269,8 @@ h1{
   padding: 16px;
   display: grid;
   grid-template-columns: auto; 
-  background-color:  var(--plumMedium);
   border-radius: 12px; 
-  border: 2px solid lavenderblush;  
   margin-top: 10px;
-  @media (prefers-color-scheme: light) {
-    background-color:  var(--roseLight);
-    border: 2px solid var(--roseMaroon);  
-  }
 }
 
 /* #textareaGrid div:nth-child(2){
@@ -568,7 +576,12 @@ fieldset{
 /* Soft Rose Theme */
 @media (prefers-color-scheme: light) {
   body { 
-    background: var(--rosePink); 
+    background: var(--rosePinkGrad); 
+    /* opacity: 0.8; */
+    /* background-color: var(--rosePink);
+    background-image:  radial-gradient(circle 23px at 20px 8px, var(--rosePinkMediumLight) 23px, transparent 24px), radial-gradient(circle 23px at 20px 32px,var(--rosePink)  23px, transparent 24px), linear-gradient(var(--rosePink) 50%,var(--rosePinkMediumLight) 50%);
+    background-size: 40px 60px;
+    background-position: 0 0, 20px 0, 0 0; */
     color: var(--roseRed); 
   }
   input{
@@ -585,8 +598,10 @@ fieldset{
     background: var(--rosePink); 
   }
   textArea{    
-    background-color: var(--roseLight);
+    /* background-color: var(--roseLight); */
+    background-color: transparent;
     color: var(--roseRed);
+    /* font-weight: 600; */
     /* border: 2px solid var(--roseDark); */
   }
 
@@ -617,6 +632,13 @@ fieldset{
     color: var(--rosePink);
   }
 
+  #textareaGrid{
+    background-color:  var(--roseLightTransparent);
+    border: 2px solid var(--roseMaroon);  
+  }
+  #textareaGrid:hover{    
+    background-color:  var(--roseLight);
+  }
   #wcGoal{
     background-color: var(--roseLight);
     color: var(--roseBlack);
@@ -627,7 +649,8 @@ fieldset{
   }
   
   @media screen and (min-width: 1200px){
-    #buddyGrid{    
+    #buddyGrid{          
+      background: repeating-linear-gradient(120deg,var(--rosePink) 25%, var(--roseLightTransparent) 55%);
       border: 2px solid var(--roseMaroon); 
     }
     #workMenu{
@@ -640,7 +663,13 @@ fieldset{
 /* Dark Plum Theme */
 @media (prefers-color-scheme: dark) {
   body { 
-    background:var(--plumDark); 
+    /* background:var(--plumDarkGrad);  */
+    /* opacity: 0.8; */
+    background-color: var(--plumDark);
+    background-image:  radial-gradient(circle 23px at 20px 8px, var(--plumMediumDark) 23px, transparent 24px), radial-gradient(circle 23px at 20px 32px,var(--plumDark)  23px, transparent 24px), linear-gradient(var(--plumDark) 50%,var(--plumMediumDark) 50%);
+    background-size: 45px 55px;
+    /* background-size: 40px 60px; */
+    background-position: 0 0, 20px 0, 0 0;
     color: var(--plumLight); 
   }
   input{
@@ -659,7 +688,8 @@ fieldset{
   }
   textarea{
     color: lavenderblush;
-    background-color:  var(--plumMedium);
+    /* background-color:  var(--plumMedium); */
+    background-color:  transparent;
   }
 
   ::placeholder{
@@ -686,7 +716,13 @@ fieldset{
     border: 1px solid var(--plumDark);
     color: var(--plumDark);
   }
-
+  #textareaGrid{
+    background-color:  var(--plumMedium);
+    border: 2px solid lavenderblush;  
+  }
+  /* #textareaGrid:hover{    
+    background-color:  var(--plumMedium);
+  } */
   #wcGoal{
     color: lavenderblush;
     background-color:  var(--plumMedium);
@@ -698,12 +734,15 @@ fieldset{
 
   @media screen and (min-width: 1200px){
     #buddyGrid{
+      /* background: repeating-linear-gradient(180deg,rgba(37, 8, 45) 55%,rgb(49, 16, 57) 75%); */
+      /* background: repeating-radial-gradient(rgba(37, 8, 45) 0%,rgb(49, 16, 57) 1%); */
+      background: repeating-linear-gradient(120deg,rgb(49, 16, 57) 25%, var(--plumMediumDarkish) 55%);
       border: 2px solid lavenderblush; 
     }
     #workMenu{
       background-color: var(--plumMediumDark);
       border-color: var(--plumMedium);
-      color: var(--plumMediumLight);
+      color: var(--plumMediumLighter);
     }
     #workMenu:hover{
       background-color: var(--plumMediumDark);

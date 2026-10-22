@@ -36,6 +36,25 @@ function countWords(s){
     return s.split(/\s+/).filter(String).length; // split excludes spaces and multiple lines
 }
 
+// let count = 0;
+
+// function countWordsPerPage(s,n){
+//     if ((count) <= n){
+//         s = s.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
+//         s = s.replace(/[ ]{2,}/gi," ");//2 or more space to 1
+//         s = s.replace(/\n /,"\n"); // exclude newline with a start spacing
+//         count = s.split(/\s+/).filter(String).length; // split excludes spaces and multiple lines
+//         return count;
+//     }
+//     else{
+//         let pg = count - n;
+//         if (count >= n){
+//             count = 0;
+//         }
+//         return pg;
+//     }
+// }
+
 let x = 1;
 
 function monAnimationCycle(a){
@@ -333,6 +352,9 @@ function whatAreWeCounting(x){
         }
 }
 
+
+let pagesNumberNL = 1;
+
 writingE.addEventListener('keyup', async () => {
 
     // alert(document.getElementById('goalOutput').textContent);
@@ -353,19 +375,31 @@ writingE.addEventListener('keyup', async () => {
         // Pages by number of words
 
         let page = countWords(writingE.value);  
-        let pageMax = 450; //in Docs it's around 500, Word is around 550 (at 12pt) ((some sources say ~400))
+        let pageMax = 5; //in Docs it's around 500, Word is around 550 (at 12pt) ((some sources say ~400))
         let pagesNumber = (Math.trunc(page / pageMax)) + 1;
 
-        if ((page % pageMax == 0) && (event.code === 'Space') || (event.key === '.')){
+        if ((page % pageMax == 0) && ((event.code === 'Space') || (event.key === '.'))){
             writingE.value = writingE.value + "\n" + "\n";
             // writingE.fillText(line, x, y);
-        }
+        }        
         
-        document.getElementById('word-number').innerHTML = pagesNumber; 
-
         if ((event.code === 'Space') || (event.key === '.')){
             whatAreWeCounting(pagesNumber);
-        }
+        } 
+
+        document.getElementById('word-number').innerHTML = pagesNumber; 
+
+
+        // if ((countWordsPerPage(writingE.value,5) >= pageMax) && (event.key === '.')){
+        //     writingE.value = writingE.value + "\n" + "\n";
+        //     pagesNumberNL = pagesNumberNL + 1;
+        //     // writingE.fillText(line, x, y);
+        //     whatAreWeCounting(pagesNumberNL);
+        // }
+
+        // document.getElementById('word-number').innerHTML = pagesNumberNL; 
+
+        // alert(countWordsPerPage(writingE.value,5));
 
     }
 })
