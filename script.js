@@ -111,6 +111,11 @@ const monTimeOut = setTimeout(monAnimationSleep(), 5000);
 const swmTimeOut = setTimeout(swmAnimationSleep(), 5000);
 
 
+// function writingOpacity(){
+//     textareaGridE.style.opacity = "1";
+// }
+
+
 
 /////////////////////////////////
 
@@ -143,6 +148,8 @@ wFont.addEventListener('input', async () => {
         writingE.style.fontFamily = "monospace";
     }else if (wFont.value == 'Times New Roman'){
         writingE.style.fontFamily = "Georgia,'Times New Roman', Times, serif";
+    }else if (wFont.value == 'Redacted Script'){
+        writingE.style.fontFamily = "Redacted Script";
     }else if (wFont.value == 'Segoe UI'){
         writingE.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
     }else{

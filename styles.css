@@ -13,7 +13,7 @@
   --plumMediumLight:  rgb(102, 61, 110);
   --plumMediumLighter:  rgb(130, 99, 137);
   --plumLight: rgb(254, 218, 253);
-  /* --plumLight: rgb(254, 218, 253); */
+  --plumLightMedium: rgb(181, 148, 180);
   --plumBlack:  rgb(15, 1, 19);
 
   /* --rosePinkGrad: repeating-linear-gradient(180deg,#fbd0e4 25%, #fec7e1 50%); */
@@ -30,6 +30,11 @@
   --roseBlack:rgb(43, 14, 31);
 
   --winGreen: #04AA6D;
+}
+
+@font-face{
+  font-family: Redacted Script;
+  src: url(/fonts/RedactedScript-Regular.ttf) ;
 }
 
 * {
@@ -89,17 +94,10 @@ textarea.flowstate{
 
 button{
   cursor:pointer;
-  background-color: var(--plumLight);  
   /* border-style: hidden;*/
   border-radius: 12px; 
-  border: 1px solid lavenderblush;
   padding: 8px;
   margin: 5px;
-
-  @media (prefers-color-scheme: light) {
-    background-color: var(--roseMaroon);
-    color: var(--rosePink);
-  }
 }
 
 button:hover{
@@ -576,6 +574,8 @@ fieldset{
 /* Soft Rose Theme */
 @media (prefers-color-scheme: light) {
   body { 
+    /* background-color: var(--rosePink);
+    background: repeating-linear-gradient(-45deg,  var(--rosePinkDark) 0px, var(--rosePink) 12.5px, transparent 12.5px, transparent 20px), repeating-linear-gradient(45deg,  var(--rosePinkDark) 0px,  var(--rosePink) 12.5px, transparent 12.5px, transparent 20px), linear-gradient( var(--roseLight), var(--roseLight)); */
     background: var(--rosePinkGrad); 
     /* opacity: 0.8; */
     /* background-color: var(--rosePink);
@@ -604,6 +604,14 @@ fieldset{
     /* font-weight: 600; */
     /* border: 2px solid var(--roseDark); */
   }
+  button{
+    border: 1px solid lavenderblush;
+    background-color: var(--roseLight);
+    color: var(--roseMaroon);
+  }
+  fieldset{
+    border-color: var(--roseMaroon);
+  }
 
   ::placeholder{
     color: rgba(168, 103, 125, 0.543);
@@ -628,6 +636,11 @@ fieldset{
     border: 1px solid var(--roseRed);
   }
   .cpBtn:hover{
+    background-color: var(--roseMaroon);
+    color: var(--rosePink);
+  }
+  .settingButtons{
+    border: 1px solid lavenderblush;
     background-color: var(--roseMaroon);
     color: var(--rosePink);
   }
@@ -691,6 +704,11 @@ fieldset{
     /* background-color:  var(--plumMedium); */
     background-color:  transparent;
   }
+  button{
+    background-color: var(--plumMediumDark);  
+    color: var(--plumLightMedium);
+    border: 1px solid  var(--plumMedium);
+  }
 
   ::placeholder{
     color: rgba(255, 240, 245, 0.331);
@@ -716,6 +734,12 @@ fieldset{
     border: 1px solid var(--plumDark);
     color: var(--plumDark);
   }
+  .settingButtons{
+    background-color: var(--plumLightMedium);  
+    color: var(--plumDark); 
+    border: 1px solid var(--plumLightMedium);
+  }
+
   #textareaGrid{
     background-color:  var(--plumMedium);
     border: 2px solid lavenderblush;  
@@ -749,5 +773,12 @@ fieldset{
       border-color: var(--plumLight);
       color: var(--plumLight);
     }
+  }
+}
+
+@media (prefers-color-scheme: yellowLemon) {
+  body{
+    background-color: var(--rosePink);
+    background: repeating-linear-gradient(-45deg,  var(--rosePinkDark) 0px, var(--rosePink) 12.5px, transparent 12.5px, transparent 20px), repeating-linear-gradient(45deg,  var(--rosePinkDark) 0px,  var(--rosePink) 12.5px, transparent 12.5px, transparent 20px), linear-gradient( var(--roseLight), var(--roseLight));
   }
 }

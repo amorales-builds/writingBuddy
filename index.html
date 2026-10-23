@@ -16,11 +16,11 @@
         <div class="settingsLine">      
             <details id="themeSelector">
                 <summary>Themes</summary>
-                <button id="toggle-dark-mode"> <strong id="theme-source">Other</strong> Mode</button>
+                <button class="settingButtons" id="toggle-dark-mode"> <strong id="theme-source">Other</strong> Mode</button>
             </details>
             
-            <button id="reset-to-system">Reset to System Theme</button>
-            <button id="quit"> x </button>
+            <button class="settingButtons" id="reset-to-system">Reset to System Theme</button>
+            <button class="settingButtons" id="quit"> x </button>
         </div>
 
         <div class="app">    
@@ -76,6 +76,7 @@
                         <option value="Gill Sans"></option>
                         <option value="Monospace"></option>
                         <option value="Times New Roman"></option>
+                        <option value="Redacted Script"></option>
                         <option value="Segoe UI"></option>
                     </datalist>
                     <input class="letterInput" id="letterFontInput" type="search" list="letterFont"></input>
@@ -122,7 +123,7 @@
                                     <option value="Novel - 100k"></option>
                                 </datalist>
                                 <input class="workInfoInput" id="wType" name="wType" type="search" list="workType"><br>
-                                <button id="saveBtn" style="width: 100%; margin-top: 2vh; opacity: 0.5;">Save</button>   
+                                <button id="saveBtn" style="width: 100%; margin-top: 2vh;">Save</button>   
                             <!-- </fieldset>                      -->
                         </form>
                     </div>    
@@ -166,7 +167,7 @@
                         </div>
                     </div>
                     <div id="buddySettings">
-                        <button id="buddyCharacterBtn" style="opacity:0.5">Buddy Shop</button>
+                        <button id="buddyCharacterBtn">Buddy Shop</button>
                     </div>  
                     <div id="buddyShop" style="display: none;">
                         <fieldset>
@@ -177,7 +178,7 @@
                     </div>           
                 </div>
                 
-                <div id = "textareaGrid" checked>   
+                <div id = "textareaGrid">   
                     <div class="upperBtnGrid">
                         <button class="cpBtn" id="copyBtn">COPY</button>
                         <button class="cpBtn" id="pasteBtn">PASTE</button>
