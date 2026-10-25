@@ -111,9 +111,9 @@ const monTimeOut = setTimeout(monAnimationSleep(), 5000);
 const swmTimeOut = setTimeout(swmAnimationSleep(), 5000);
 
 
-// function writingOpacity(){
-//     textareaGridE.style.opacity = "1";
-// }
+function writingOpacity(){
+    textareaGridE.style.backgroundColor = "var(--roseLight)";
+}
 
 
 
