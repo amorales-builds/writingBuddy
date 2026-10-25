@@ -100,19 +100,6 @@ button{
   margin: 5px;
 }
 
-button:hover{
-  background-color: var(--plumDark);  
-  border: 1px solid var(--plumLight);
-  color:  var(--plumLight);
-  /* margin-inline-end: 15px; */
-
-  @media (prefers-color-scheme: light) {
-    background-color: var(--rosePink);
-  border: 1px solid var(--roseRed);
-    color: var(--roseRed);
-  }
-}
-
 input,
 select {
   -webkit-app-region: no-drag;
@@ -146,7 +133,6 @@ h1{
   text-align: center;
 }
 
-/* The close button */
 .closebtn {
   margin-left: 15px;
   color: white;
@@ -157,8 +143,6 @@ h1{
   cursor: pointer;
   transition: 0.3s;
 }
-
-/* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
 }
@@ -167,15 +151,6 @@ h1{
   margin-left: 95%;
   padding: 14px;
   border: transparent;
-
-  @media (prefers-color-scheme: light) {
-    background:url(svg/copyIcon.svg);
-    background-repeat: no-repeat;
-  }  
-  @media (prefers-color-scheme: dark) {
-    background:url(svg/copyIconDark.svg);
-    background-repeat: no-repeat;
-  }  
   @media screen and (min-width: 1200px){ 
     display: none;
   }
@@ -209,7 +184,6 @@ h1{
     /* margin-left: 0%; */
   }
 }
-
 .cpBtn:active{
   background-color: var(--winGreen);
 }
@@ -239,19 +213,9 @@ h1{
 
 .headingLine{
   position: fixed;
-  /* background-color: #25082d; */
   top: 0;
   width: 100%;  
   padding-top: 60px;  
-  /* opacity: .9; */
-  /* -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
-  from(rgba(0,0,0,1)), to(rgba(0,0,0,0))); */
-  /* background: linear-gradient(180deg,rgba(37, 8, 45, 0.95) 41%, rgba(37, 8, 45, 0.82) 66%, rgba(37, 8, 45, 0.62) 85%, rgba(37, 8, 45, 0) 100%); */
-  background: linear-gradient(180deg,rgba(37, 8, 45, 1) 50%, rgba(37, 8, 45, 0) 100%);
-  @media (prefers-color-scheme: light) {
-    background:  linear-gradient(180deg, var(--rosePink) 50%,rgba(37, 8, 45, 0) 100%);;
-  }
-  /* background-image: linear-gradient(to top, rgba(255,0,0,0),  rgba(37,8,45,100)); */
 }
 
 #themeSelector{
@@ -270,15 +234,12 @@ h1{
   border-radius: 12px; 
   margin-top: 10px;
 }
-
 /* #textareaGrid div:nth-child(2){
   height: 70vh;
 }
-
 #textareaGrid div:nth-child(3){
   grid-row: 3/3;
 } */
-
 
 /* .titleGrid{
   display: grid;
@@ -298,7 +259,6 @@ h1{
 
 .sideBar{
   margin-top: 25px;
-  border: 2px solid lavenderblush; 
   border-radius: 8px; 
   padding: 10px;
 }
@@ -417,7 +377,6 @@ fieldset{
   margin-bottom: 35px;
   width: 100%;
   padding: 5px;
-  background-color: lavenderblush;
   border: transparent;
   border-radius: 10px;
 }
@@ -609,6 +568,11 @@ fieldset{
     background-color: var(--roseLight);
     color: var(--roseMaroon);
   }
+  button:hover{
+    background-color: var(--rosePink);
+    border: 1px solid var(--roseRed);
+    color: var(--roseRed);
+  }
   fieldset{
     border-color: var(--roseMaroon);
   }
@@ -617,6 +581,9 @@ fieldset{
     color: rgba(168, 103, 125, 0.543);
   }
 
+  .headingLine{
+      background:  linear-gradient(180deg, var(--rosePink) 50%,rgba(37, 8, 45, 0) 100%);
+  }
   .sideBar{
     border: 2px solid var(--roseMaroon);     
     background-color: var(--roseLight);
@@ -624,6 +591,9 @@ fieldset{
   .sideBar:hover{
     color: var(--roseLight);
     background-color: var(--roseDark);  
+  }  
+  .workInfoInput{    
+    background-color: lavenderblush;
   }
   .letterInput{
     outline: auto;
@@ -645,6 +615,10 @@ fieldset{
     color: var(--rosePink);
   }
 
+  #copyIcon{   
+    background:url(svg/copyIcon.svg);
+    background-repeat: no-repeat; 
+  }
   #textareaGrid{
     background-color:  var(--roseLightTransparent);
     border: 2px solid var(--roseMaroon);  
@@ -709,16 +683,27 @@ fieldset{
     color: var(--plumLightMedium);
     border: 1px solid  var(--plumMedium);
   }
+  button:hover{
+    background-color: var(--plumDark);  
+    border: 1px solid var(--plumLight);
+    color:  var(--plumLight);
+  }
 
   ::placeholder{
     color: rgba(255, 240, 245, 0.331);
   }
 
+  .headingLine{
+    background: linear-gradient(180deg,rgba(37, 8, 45, 1) 50%, rgba(37, 8, 45, 0) 100%);
+  }
   .sideBar{
     border: 2px solid lavenderblush; 
   }
   .sideBar:hover{
     background-color: var(--plumMedium);
+  }
+  .workInfoInput{    
+    background-color: lavenderblush;
   }
   .letterInput{
     background-color: lavenderblush;
@@ -740,6 +725,10 @@ fieldset{
     border: 1px solid var(--plumLightMedium);
   }
 
+  #copyIcon{   
+    background:url(svg/copyIconDark.svg);
+    background-repeat: no-repeat;
+  }
   #textareaGrid{
     background-color:  var(--plumMedium);
     border: 2px solid lavenderblush;  

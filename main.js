@@ -23,9 +23,9 @@ const createWindow = () => {
 
 ipcMain.handle('dark-mode:toggle', () => {
   if (nativeTheme.shouldUseDarkColors) {
-    nativeTheme.themeSource = 'softRose'
+    nativeTheme.themeSource = 'light'
   } else {
-    nativeTheme.themeSource = 'darkPlum'
+    nativeTheme.themeSource = 'dark'
   }
   return nativeTheme.shouldUseDarkColors
 })
