@@ -111,9 +111,11 @@ const monTimeOut = setTimeout(monAnimationSleep(), 5000);
 const swmTimeOut = setTimeout(swmAnimationSleep(), 5000);
 
 
-function writingOpacity(){
-    textareaGridE.style.backgroundColor = "var(--roseLight)";
-}
+// function writingOpacity(){
+//     if (textareaGridE.style.backgroundColor != "var(--plumMedium)"){
+//         textareaGridE.style.backgroundColor = "var(--roseLight)";
+//     }
+// }
 
 
 
@@ -338,7 +340,7 @@ function whatAreWeCounting(x){
                 document.getElementById('word-percent').innerHTML= percentage + '%';
                 document.getElementById('word-meter').value = percentage;
                 if(percentage >= 100){
-                    document.getElementById('word-meter').style.accentColor =' #04AA6D';
+                    document.getElementById('word-meter').style.accentColor = 'var(--winGreen)';
                 }
             }
 
@@ -353,10 +355,10 @@ function whatAreWeCounting(x){
                 }
             } 
 
-            if ( (wcGoalE.style.background !== '#04AA6D') && (x >= wcGoalE.value)) {
-                wcGoalE.style.background = '#04AA6D';
+            if ( (wcGoalE.style.background !== 'var(--winGreen)') && (x >= wcGoalE.value)) {
+                wcGoalE.style.background ='var(--winGreen)';
             }
-            else if ((wcGoalE.style.background === '#04AA6D') && (x < wcGoalE.value)) {
+            else if ((wcGoalE.style.background === 'var(--winGreen)') && (x < wcGoalE.value)) {
                 wcGoalE.style.background = 'red';
             }
         }
@@ -424,7 +426,7 @@ document.getElementById("goalGrid").addEventListener('click', async () => {
 })
 
 document.getElementById("copyBtn").addEventListener('click', async () => {
-    navigator.clipboard.writeText(writingE.value);
+    await navigator.clipboard.writeText(writingE.value);
 })
 
 document.getElementById("pasteBtn").addEventListener('click', async () => {    

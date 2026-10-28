@@ -620,11 +620,11 @@ fieldset{
     background-repeat: no-repeat; 
   }
   #textareaGrid{
-    background-color:  var(--roseLightTransparent);
+    background-color: var(--roseLightTransparent);
     border: 2px solid var(--roseMaroon);  
   }
   #textareaGrid:hover{    
-    background-color:  var(--roseLight);
+    background-color: var(--roseLight);
   }
   #wcGoal{
     background-color: var(--roseLight);
@@ -730,7 +730,7 @@ fieldset{
     background-repeat: no-repeat;
   }
   #textareaGrid{
-    background-color:  var(--plumMedium);
+    background-color: var(--plumMedium);
     border: 2px solid lavenderblush;  
   }
   /* #textareaGrid:hover{    
