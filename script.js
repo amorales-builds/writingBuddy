@@ -15,6 +15,7 @@ let wSize = document.getElementById("letterSizeInput");
 let wWeight = document.getElementById("letterWeightInput");
 let wFont = document.getElementById("letterFontInput");
 let wParagraph = document.getElementById("letterParagraphInput");
+let wHeight = document.getElementById("letterHeightInput");
 let workMenuE = document.getElementById("workMenu");
 let workInfoE = document.getElementById("workInfo");
 let topGenreE = document.getElementById("topGenre");
@@ -144,16 +145,26 @@ wWeight.addEventListener('input', async () => {
 wFont.addEventListener('input', async () => {    
     if (wFont.value == 'Arial'){
         writingE.style.fontFamily = "Arial, Helvetica, sans-serif";
+    }else if (wFont.value == 'Audiowide'){
+        writingE.style.fontFamily = "Audiowide";
     }else if (wFont.value == 'Gill Sans'){
         writingE.style.fontFamily = "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif";
+    }else if (wFont.value == 'Gorditas'){
+        writingE.style.fontFamily = "Gorditas";
+    }else if (wFont.value == 'Macondo'){
+        writingE.style.fontFamily = "Macondo";
     }else if (wFont.value == 'Monospace'){
         writingE.style.fontFamily = "monospace";
     }else if (wFont.value == 'Times New Roman'){
         writingE.style.fontFamily = "Georgia,'Times New Roman', Times, serif";
     }else if (wFont.value == 'Redacted Script'){
-        writingE.style.fontFamily = "Redacted Script";
+        writingE.style.fontFamily =  "Redacted Script";
     }else if (wFont.value == 'Segoe UI'){
         writingE.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+    }else if (wFont.value == 'Sniglet'){
+        writingE.style.fontFamily = "Sniglet";
+    }else if (wFont.value == 'Yuyu Short'){
+        writingE.style.fontFamily = "YuyuShort";
     }else{
         writingE.style.fontFamily = wFont.value;
     }
@@ -173,6 +184,14 @@ wParagraph.addEventListener('input', async () => {
     }
 })
 
+wHeight.addEventListener('input', async () => {    
+    if (wHeight.value != ''){
+        writingE.style.lineHeight = wHeight.value;
+    }
+    else{
+        writingE.style.lineHeight = '';
+    }
+})
 
 wSize.addEventListener('click', async () => {    
     if (wSize.value != ''){
@@ -357,6 +376,7 @@ function whatAreWeCounting(x){
 
             if ( (wcGoalE.style.background !== 'var(--winGreen)') && (x >= wcGoalE.value)) {
                 wcGoalE.style.background ='var(--winGreen)';
+                wcGoalE.style.color ='white';
             }
             else if ((wcGoalE.style.background === 'var(--winGreen)') && (x < wcGoalE.value)) {
                 wcGoalE.style.background = 'red';
@@ -476,7 +496,7 @@ function buttonClose(){
     if(workMenuE.style.opacity != "1"){
         workMenuE.style.opacity = "1";
         workMenuE.style.width = "3vh";
-        workMenuE.style.marginLeft = "218%";
+        workMenuE.style.marginLeft = "210%";
         workMenuE.innerHTML = "x";
         workInfoE.style.display = "block";
         // workTitleE.style.display = 'none';

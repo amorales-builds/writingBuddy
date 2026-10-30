@@ -33,9 +33,30 @@
 }
 
 @font-face{
+  font-family: Gorditas;
+  src: url(/fonts/Gorditas-Regular.ttf) ;
+}
+@font-face{
+  font-family: Macondo;
+  src: url(/fonts/Macondo-Regular.ttf) ;
+}
+@font-face{
   font-family: Redacted Script;
   src: url(/fonts/RedactedScript-Regular.ttf) ;
 }
+@font-face{
+  font-family: Sniglet;
+  src: url(/fonts/Sniglet-Regular.ttf) ;
+}
+@font-face{
+  font-family: YuyuShort;
+  src: url(/fonts/YuyuShort-Regular.ttf) ;
+}
+@font-face{
+  font-family: Audiowide;
+  src: url(/fonts/Audiowide-Regular.ttf) ;
+}
+
 
 * {
   box-sizing: border-box;
@@ -49,6 +70,7 @@ body {
   background: rgb(255, 215, 236);
   user-select: none;
   -webkit-app-region: drag;
+  font-family: Sniglet;
 }
 
 .foot{
@@ -56,18 +78,21 @@ body {
   margin-top: 50px;
 }
 
+#writing{  
+  line-height: 1.8;
+}
+
 textarea {
   /* width: 99%; */
   /* height: 900px; */
   max-width: 83vw;
   height: 650px;
-  line-height: 1.8;
   padding: 30px;
   padding-top: 5px;
   /* margin-bottom: 100px; */
   /* font-weight: 1000; */
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-family: Sniglet;
   margin-top: 5px;
   /* background-color: rgb(147, 107, 145); */
   border: 0;
@@ -79,9 +104,9 @@ textarea {
     padding-inline: 10%;
   }
   @media screen and (min-width: 1200px){ 
-    padding-inline: 8vw;
+    padding-inline: 6vw;
     line-height: 1.8; 
-    margin-top: 15px;
+    margin-top: 25px;
   }
 }
 
@@ -98,6 +123,7 @@ button{
   border-radius: 12px; 
   padding: 8px;
   margin: 5px;
+  font-family: Sniglet;
 }
 
 input,
@@ -105,11 +131,20 @@ select {
   -webkit-app-region: no-drag;
   cursor: pointer;
   text-align: center;
+  font-family: Sniglet;
 }
 
-h1{
-  padding-top: 20px;
+h1, h2, h3{
+  font-family: Macondo;
 }
+
+option{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* p, button, summary, details, option, label, input, legend, abbr{
+  font-family: Sniglet;
+} */
 
 /* span{
   padding: 20px;
@@ -123,8 +158,6 @@ h1{
 
 #alertNote {
   padding: 18px;
-  background-color: var(--winGreen); /* Red */
-  color: white;
   margin-top: 15px;
   border-radius: 15px;
   display: none;
@@ -135,16 +168,12 @@ h1{
 
 .closebtn {
   margin-left: 15px;
-  color: white;
   font-weight: bold;
   float: right;
   font-size: 45px;
   line-height: 25px;
   cursor: pointer;
   transition: 0.3s;
-}
-.closebtn:hover {
-  color: black;
 }
 
 #copyIcon{
@@ -174,6 +203,7 @@ h1{
 
 .cpBtn{
   display: none;
+  font-weight: bold;
   /* max-width: 65px;
   margin-left: 90%;
   padding:6px; */
@@ -253,7 +283,7 @@ h1{
 #writingOptions{  
   display: none;
   margin-top: 5vh;
-  width: 115px;
+  width: 120px;
   font-weight: bold;
 }
 
@@ -261,6 +291,8 @@ h1{
   margin-top: 25px;
   border-radius: 8px; 
   padding: 10px;
+  /* font-size: 18px; */
+  font-weight: 400;
 }
 
 .letterInput{
@@ -302,7 +334,7 @@ h1{
     right: 7.7vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 1vh;
+    margin-top: .01vh;
   }
 }
 
@@ -483,10 +515,10 @@ fieldset{
     padding-bottom: 2vh;
     /* padding-bottom: 2vh; */
     /* padding-inline: 100px; */
-    padding-inline: 3vw ;
+    padding-inline: 3.5vw ;
     position: fixed;
     top: 8.5vh;
-    right: 2vw;
+    right: 1.9vw;
     border-radius: 20px;
     /* align-items: center; */
   }
@@ -533,6 +565,11 @@ fieldset{
 /* Soft Rose Theme */
 @media (prefers-color-scheme: light) {
   body { 
+    /* background: url(/images/pinkBG.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;  */
+    /*  */
     /* background-color: var(--rosePink);
     background: repeating-linear-gradient(-45deg,  var(--rosePinkDark) 0px, var(--rosePink) 12.5px, transparent 12.5px, transparent 20px), repeating-linear-gradient(45deg,  var(--rosePinkDark) 0px,  var(--rosePink) 12.5px, transparent 12.5px, transparent 20px), linear-gradient( var(--roseLight), var(--roseLight)); */
     background: var(--rosePinkGrad); 
@@ -556,7 +593,7 @@ fieldset{
     font-weight: bold;
     background: var(--rosePink); 
   }
-  textArea{    
+  textarea{    
     /* background-color: var(--roseLight); */
     background-color: transparent;
     color: var(--roseRed);
@@ -614,7 +651,17 @@ fieldset{
     background-color: var(--roseMaroon);
     color: var(--rosePink);
   }
+  .closebtn {
+    color: white;
+  }
+  .closebtn:hover {
+    color: #243428;
+  }
 
+  #alertNote {
+    background-color: rgb(57, 160, 112); 
+    color: white;
+  }
   #copyIcon{   
     background:url(svg/copyIcon.svg);
     background-repeat: no-repeat; 
@@ -724,7 +771,17 @@ fieldset{
     color: var(--plumDark); 
     border: 1px solid var(--plumLightMedium);
   }
+  .closebtn {
+  color: white;
+  }
+  .closebtn:hover {
+  color: black;
+  }
 
+  #alertNote {
+    background-color: var(--winGreen); /* Red */
+    color: white;
+  }
   #copyIcon{   
     background:url(svg/copyIconDark.svg);
     background-repeat: no-repeat;

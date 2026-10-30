@@ -12,7 +12,7 @@
     </header> -->
     <body>
         
-        <div class="headingLine"><p></p></div>        
+        <div class="headingLine"><p></p></div> 
         <div class="settingsLine">      
             <details id="themeSelector">
                 <summary>Themes</summary>
@@ -21,11 +21,11 @@
             
             <button class="settingButtons" id="reset-to-system">Reset to System Theme</button>
             <button class="settingButtons" id="quit"> x </button>
-        </div>
+        </div>    
 
         <div class="app">    
-            <h1>Writing Buddy</h1>
-            <p style="margin:-15px; padding-left: 35px;"><i>Never lose count again!</i></p>
+            <h1 style="padding-top: 20px">Writing Buddy</h1>
+            <p style="margin:-18px; padding-left: 23px;"><i>Never lose count again!</i></p>
         </div>
 
         <!-- <div class="app">
@@ -72,12 +72,17 @@
                 <details class="sideBar">
                     <summary>Font</summary>
                     <datalist id="letterFont">                         
-                        <option value="Arial"></option>                        
-                        <option value="Gill Sans"></option>
+                        <option value="Arial"></option>                
+                        <option value="Audiowide"></option>                        
+                        <option value="Gill Sans"></option>                   
+                        <option value="Gorditas"></option>
+                        <option value="Macondo"></option>
                         <option value="Monospace"></option>
                         <option value="Times New Roman"></option>
                         <option value="Redacted Script"></option>
                         <option value="Segoe UI"></option>
+                        <option value="Sniglet"></option>
+                        <option value="Yuyu Short"></option>
                     </datalist>
                     <input class="letterInput" id="letterFontInput" type="search" list="letterFont"></input>
                 </details>
@@ -90,7 +95,21 @@
                         <option value="Right"></option>
                     </datalist>
                     <input class="letterInput" id="letterParagraphInput" type="search" list="letterParagraph"></input>
-                </details>                
+                </details>    
+                <details class="sideBar">
+                    <summary>Height</summary>
+                    <datalist id="letterHeight">                      
+                        <option value="0.8"></option>                          
+                        <option value="1"></option>   
+                        <option value="1.4"></option> 
+                        <option value="1.8"></option>
+                        <option value="2"></option>
+                        <option value="2.4"></option>
+                        <option value="2.8"></option>
+                        <option value="3"></option>
+                    </datalist>
+                    <input class="letterInput" id="letterHeightInput" type="search" list="letterHeight"></input>
+                </details>               
             </div>
             <div class="appCenter">          
                 
