@@ -233,11 +233,13 @@ wParagraph.addEventListener('click', async () => {
 
 document.getElementById("buddyCharacterBtn").addEventListener('click', async () => {
     if(document.getElementById("buddyShop").style.display == 'none'){
+        // document.getElementById("buddyScreen").style.paddingTop = '4vh';
         document.getElementById("buddyShop").style.display = '';
-        document.getElementById("topBuddyGrid").style.display = 'none';
+        // document.getElementById("topBuddyGrid").style.display = 'none';
     }else{
+        // document.getElementById("buddyScreen").style.paddingTop = '';
         document.getElementById("buddyShop").style.display = 'none';
-        document.getElementById("topBuddyGrid").style.display = '';
+        // document.getElementById("topBuddyGrid").style.display = '';
     }
     // alert(document.getElementsByName('buddySelection').value);
 })
@@ -496,12 +498,15 @@ function buttonClose(){
     if(workMenuE.style.opacity != "1"){
         workMenuE.style.opacity = "1";
         workMenuE.style.width = "3vh";
-        workMenuE.style.marginLeft = "210%";
+        workMenuE.style.marginLeft = "214%";
         workMenuE.innerHTML = "x";
         workInfoE.style.display = "block";
         // workTitleE.style.display = 'none';
         document.getElementById('topBuddyInfo').style.visibility ='hidden';
-        document.getElementById('buddySettings').style.display = 'none';
+        document.getElementById('buddySettings').style.display = 'none';   
+        if(document.getElementById('buddyShop').style.display != "none"){
+            document.getElementById('buddyShop').style.display = "none";
+        } 
 
     } 
     else{
@@ -511,7 +516,7 @@ function buttonClose(){
         workMenuE.innerHTML = "menu";   
         if(workInfoE.style.display != "none"){
             workInfoE.style.display = "none";
-        }    
+        }  
 
         document.getElementById('buddySettings').style.display = '';
 
@@ -533,6 +538,7 @@ saveBtnE.addEventListener('click', async () => {
         if (document.getElementById("wTitle").value == ""){
             workTitleE.textContent = savedTitle;
         }else{
+            workTitleE.style.display = 'inline-block';
             workTitleE.textContent = document.getElementById("wTitle").value;
             savedTitle = document.getElementById("wTitle").value;
         }

@@ -33,6 +33,10 @@
 }
 
 @font-face{
+  font-family: Audiowide;
+  src: url(/fonts/Audiowide-Regular.ttf) ;
+}
+@font-face{
   font-family: Gorditas;
   src: url(/fonts/Gorditas-Regular.ttf) ;
 }
@@ -52,11 +56,6 @@
   font-family: YuyuShort;
   src: url(/fonts/YuyuShort-Regular.ttf) ;
 }
-@font-face{
-  font-family: Audiowide;
-  src: url(/fonts/Audiowide-Regular.ttf) ;
-}
-
 
 * {
   box-sizing: border-box;
@@ -245,7 +244,8 @@ option{
   position: fixed;
   top: 0;
   width: 100%;  
-  padding-top: 60px;  
+  /* padding-top: 60px;   */
+  padding-top: 40px; 
 }
 
 #themeSelector{
@@ -378,8 +378,12 @@ option{
   padding: 6px;
   font-size: small;
   font-weight: bold;
-  opacity: .35;
+  opacity: .4;
 }
+#hideBtn:hover{
+  opacity: .5;
+}
+
 
 #workMenu{
   display: inline-block;
@@ -524,7 +528,7 @@ fieldset{
   }
 
   #buddyScreen{
-    padding-top: 8vh;
+    padding-top: 6.5vh;
   }
 
   #wcGoal{
@@ -681,6 +685,13 @@ fieldset{
   #word-meter{
     accent-color: var(--roseDark);
   }
+  #buddyCharacterBtn{
+    color: var(--roseDark);
+  }
+  #buddyCharacterBtn:hover{
+    background-color: var(--roseLight);
+    /* border: 1px solid var(--roseDark);  */
+  }
   
   @media screen and (min-width: 1200px){
     #buddyGrid{          
@@ -691,6 +702,9 @@ fieldset{
       background-color: var(--roseLight);
       color: var(--roseDark);
     }
+    /* #workMenu:hover{
+      border: 1px solid var(--roseDark); 
+    } */
   }
 }
 
@@ -728,7 +742,7 @@ fieldset{
   button{
     background-color: var(--plumMediumDark);  
     color: var(--plumLightMedium);
-    border: 1px solid  var(--plumMedium);
+    border: 1px solid  var(--plumLightMedium);
   }
   button:hover{
     background-color: var(--plumDark);  
@@ -801,6 +815,16 @@ fieldset{
   #word-meter{
     accent-color: var(--plumMediumLight);
   }
+  #buddyCharacterBtn{
+      background-color: var(--plumMediumDark);
+      border-color: var(--plumMediumLight);
+      color: var(--plumLightMedium);
+  }
+  #buddyCharacterBtn:hover{
+      background-color: var(--plumMediumDark);
+      border-color: var(--plumLight);
+      color: var(--plumLight);
+  }
 
   @media screen and (min-width: 1200px){
     #buddyGrid{
@@ -812,7 +836,7 @@ fieldset{
     #workMenu{
       background-color: var(--plumMediumDark);
       border-color: var(--plumMedium);
-      color: var(--plumMediumLighter);
+      color: var(--plumLightMedium);
     }
     #workMenu:hover{
       background-color: var(--plumMediumDark);
