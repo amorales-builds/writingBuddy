@@ -217,6 +217,26 @@ wParagraph.addEventListener('click', async () => {
     }
 })
 
+
+// document.getElementById("rosePinkThemeOption").addEventListener('click', async () => {    
+//     document.body.dataset.theme = ("rosePink");
+// })
+
+// function rosePink_selected() {
+//     document.body.dataset.theme = ("rosePink");
+// }
+
+document.body.dataset.theme = "rosePink";
+
+document.getElementById("themeSelector").addEventListener('click', async () => {   
+    if (document.getElementById("themeOptions").value == 'rosePink'){ 
+        document.body.dataset.theme = ("rosePink");
+    }
+    if (document.getElementById("themeOptions").value == 'darkPlum'){ 
+        document.body.dataset.theme = ("darkPlum");
+    }
+})
+
 // document.getElementById("buddyCharacterBtn").addEventListener('click', async () => {
 //     if(monmonE.style.display =='none'){
 //         swmE.style.display = 'none';
@@ -530,35 +550,58 @@ function buttonClose(){
     }
 }
 
-workMenuE.addEventListener('click', async () => {
-    buttonClose();    
-})
+function saveForm() {
+    
+    if (document.getElementById("wTitle").value == ""){
+        workTitleE.textContent = savedTitle;
+    }else{
+        workTitleE.style.display = 'inline-block';
+        workTitleE.textContent = document.getElementById("wTitle").value;
+        savedTitle = document.getElementById("wTitle").value;
+    }
 
-saveBtnE.addEventListener('click', async () => {      
-        if (document.getElementById("wTitle").value == ""){
-            workTitleE.textContent = savedTitle;
-        }else{
-            workTitleE.style.display = 'inline-block';
-            workTitleE.textContent = document.getElementById("wTitle").value;
-            savedTitle = document.getElementById("wTitle").value;
-        }
-
-        if (document.getElementById("wGenre").value == ""){
-            topGenreE.textContent = savedGenre;
-        }else{
-            topGenreE.textContent = document.getElementById("wGenre").value;
-            savedGenre = document.getElementById("wGenre").value;
-        }
-        
-        if (document.getElementById("wType").value == ""){
-            topTypeE.textContent = savedType;
-        }else{
-            topTypeE.textContent = document.getElementById("wType").value;
-            savedType = document.getElementById("wType").value;
-        }
+    if (document.getElementById("wGenre").value == ""){
+        topGenreE.textContent = savedGenre;
+    }else{
+        topGenreE.textContent = document.getElementById("wGenre").value;
+        savedGenre = document.getElementById("wGenre").value;
+    }
+    
+    if (document.getElementById("wType").value == ""){
+        topTypeE.textContent = savedType;
+    }else{
+        topTypeE.textContent = document.getElementById("wType").value;
+        savedType = document.getElementById("wType").value;
+    }
 
     buttonClose();  //when save/submit true delete this and fix other stuff
-})
+}
+
+// saveBtnE.addEventListener('click', async () => {      
+//     if (document.getElementById("wTitle").value == ""){
+//         workTitleE.textContent = savedTitle;
+//     }else{
+//         workTitleE.style.display = 'inline-block';
+//         workTitleE.textContent = document.getElementById("wTitle").value;
+//         savedTitle = document.getElementById("wTitle").value;
+//     }
+
+//     if (document.getElementById("wGenre").value == ""){
+//         topGenreE.textContent = savedGenre;
+//     }else{
+//         topGenreE.textContent = document.getElementById("wGenre").value;
+//         savedGenre = document.getElementById("wGenre").value;
+//     }
+    
+//     if (document.getElementById("wType").value == ""){
+//         topTypeE.textContent = savedType;
+//     }else{
+//         topTypeE.textContent = document.getElementById("wType").value;
+//         savedType = document.getElementById("wType").value;
+//     }
+
+//     buttonClose();  //when save/submit true delete this and fix other stuff
+// })
 
 /////
 
