@@ -1,0 +1,147 @@
+body[data-theme="mellowYellow"] {
+    background-color:burlywood;
+    background: repeating-linear-gradient(-45deg, rgb(237, 217, 162) 0px, rgb(244, 240, 209) 12.5px, transparent 12.5px, transparent 20px), repeating-linear-gradient(45deg,  rgb(205, 187, 142) 0px,  rgb(247, 243, 211) 12.5px, transparent 12.5px, transparent 20px), linear-gradient(lightgoldenrodyellow, lightgoldenrodyellow);
+}
+
+
+body[data-theme="mellowYellow"] input {
+  color: var(--roseMaroon);
+  background-color: lavenderblush;
+}
+
+body[data-theme="mellowYellow"] select {
+  color: var(--roseMaroon);
+  background-color: transparent;
+  border: transparent;
+}
+
+body[data-theme="mellowYellow"] option {
+  font-weight: bold;
+  background: var(--mellowYellow);
+}
+
+body[data-theme="mellowYellow"] textarea {
+  background-color: transparent;
+  color: var(--roseRed);
+}
+
+body[data-theme="mellowYellow"] button {
+  border: 1px solid lavenderblush;
+  background-color: var(--roseLight);
+  color: var(--roseMaroon);
+}
+
+body[data-theme="mellowYellow"] button:hover {
+  background-color: var(--mellowYellow);
+  border: 1px solid var(--roseRed);
+  color: var(--roseRed);
+}
+
+body[data-theme="mellowYellow"] fieldset {
+  border-color: var(--roseMaroon);
+}
+
+body[data-theme="mellowYellow"] ::placeholder {
+  color: rgba(168, 103, 125, 0.543);
+}
+
+body[data-theme="mellowYellow"] .headingLine {
+  background: linear-gradient(180deg, var(--mellowYellow) 50%, rgba(37, 8, 45, 0) 100%);
+}
+
+body[data-theme="mellowYellow"] .sideBar {
+  border: 2px solid var(--roseMaroon);
+  background-color: var(--roseLight);
+}
+
+body[data-theme="mellowYellow"] .sideBar:hover {
+  color: var(--roseLight);
+  background-color: var(--roseDark);
+}
+
+body[data-theme="mellowYellow"] .workInfoInput {
+  background-color: lavenderblush;
+}
+
+body[data-theme="mellowYellow"] .letterInput {
+  outline: auto;
+  outline-color: var(--roseMaroon);
+}
+
+body[data-theme="mellowYellow"] .cpBtn {
+  background-color: var(--mellowYellow);
+  color: var(--roseMaroon);
+  border: 1px solid var(--roseRed);
+}
+
+body[data-theme="mellowYellow"] .cpBtn:hover {
+  background-color: var(--roseMaroon);
+  color: var(--mellowYellow);
+}
+
+body[data-theme="mellowYellow"] .settingButtons {
+  border: 1px solid lavenderblush;
+  background-color: var(--roseMaroon);
+  color: var(--mellowYellow);
+}
+
+body[data-theme="mellowYellow"] .closebtn {
+  color: white;
+}
+
+body[data-theme="mellowYellow"] .closebtn:hover {
+  color: #243428;
+}
+
+body[data-theme="mellowYellow"] #alertNote {
+  background-color: rgb(57, 160, 112);
+  color: white;
+}
+
+body[data-theme="mellowYellow"] #copyIcon {
+  background: url(svg/copyIcon.svg);
+  background-repeat: no-repeat;
+}
+
+body[data-theme="mellowYellow"] #textareaGrid {
+  background-color: var(--roseLightTransparent);
+  border: 2px solid var(--roseMaroon);
+}
+
+body[data-theme="mellowYellow"] #textareaGrid:hover {
+  background-color: var(--roseLight);
+}
+
+body[data-theme="mellowYellow"] #wcGoal {
+  background-color: var(--roseLight);
+  color: var(--roseBlack);
+  border: 2px solid var(--roseDark);
+}
+
+body[data-theme="mellowYellow"] #word-meter {
+  accent-color: var(--roseDark);
+}
+
+body[data-theme="mellowYellow"] #buddyCharacterBtn {
+  color: var(--roseDark);
+}
+
+body[data-theme="mellowYellow"] #buddyCharacterBtn:hover {
+  background-color: var(--roseLight);
+}
+
+@media screen and (min-width: 1200px) {
+  body[data-theme="mellowYellow"] #buddyGrid {
+    background: repeating-linear-gradient(
+      120deg,
+      var(--mellowYellow) 25%,
+      var(--roseLightTransparent) 55%
+    );
+    border: 2px solid var(--roseMaroon);
+  }
+
+  body[data-theme="mellowYellow"] #workMenu {
+    background-color: var(--roseLight);
+    color: var(--roseDark);
+  }
+}

@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import url(themescss/rosePink.css);
+@import url(themescss/darkPlum.css);
+@import url(themescss/mellowYellow.css);
+
 
 :root{
   --plumDarkGrad: repeating-linear-gradient(180deg,rgba(37, 8, 45) 55%,rgb(49, 16, 57) 75%);
@@ -28,6 +32,9 @@
   --roseMaroon:#67254b;  
   --roseDark: #ad5980;
   --roseBlack:rgb(43, 14, 31);
+
+  --mellowYellow: rgb(244, 240, 209);
+  --butterYellow: lightgoldenrodyellow;
 
   --winGreen: #04AA6D;
 }
@@ -563,7 +570,7 @@ fieldset{
 
 /**/
 
-body[data-theme="rosePink"] {
+/* body[data-theme="rosePink"] {
   background: var(--rosePinkGrad);
   color: var(--roseRed);
 }
@@ -708,9 +715,9 @@ body[data-theme="rosePink"] #buddyCharacterBtn:hover {
     background-color: var(--roseLight);
     color: var(--roseDark);
   }
-}
+} */
 /*  */
-body[data-theme="darkPlum"] {
+/* body[data-theme="darkPlum"] {
   background-color: var(--plumDark);
   background-image:
     radial-gradient(circle 23px at 20px 8px, var(--plumMediumDark) 23px, transparent 24px),
@@ -870,7 +877,7 @@ body[data-theme="darkPlum"] #buddyCharacterBtn:hover {
     border-color: var(--plumLight);
     color: var(--plumLight);
   }
-}
+} */
 /*  */
 
 /* Soft Rose Theme */

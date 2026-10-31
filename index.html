@@ -16,11 +16,10 @@
         <div class="settingsLine">      
             <details id="themeSelector">
                 <summary>Themes</summary>
-                <!-- <button class="settingButtons" id="toggle-dark-mode"> <strong id="theme-source">Other</strong> Mode</button> -->
                 <select id="themeOptions">
                     <optgroup label="Light">
                         <option value="rosePink">Rose Pink</option>
-                        <option value="mellowYellowT">Mellow Yellow</option>
+                        <option value="mellowYellow">Mellow Yellow</option>
                         <option value="blueSky">Blue Sky</option>
                         <option value="gardenGreen">Garden Green</option>
                     </optgroup>
@@ -33,6 +32,7 @@
                 </select>
             </details>
             
+            <button class="settingButtons" id="toggle-dark-mode"> <strong id="theme-source">Other</strong> Mode</button>
             <button class="settingButtons" id="reset-to-system">Reset to System Theme</button>
             <button class="settingButtons" id="quit"> x </button>
         </div>
@@ -135,7 +135,7 @@
                             <label id="emDash">&mdash;</label>
                             <label id="topType"></label>
                         </div>
-                        <button id="workMenu" onclick="buttonClose()">menu</button>
+                        <button id="workMenu">menu</button>
                     </div>
                     <div>
                         <form id="workInfo" onsubmit="return false">
@@ -157,7 +157,7 @@
                                     <option value="Novel - 100k"></option>
                                 </datalist>
                                 <input class="workInfoInput" id="wType" name="wType" type="search" list="workType"><br>
-                                <button id="saveBtn" style="width: 100%; margin-top: 2vh;" onclick="saveForm()">Save</button>   
+                                <button id="saveBtn" style="width: 100%; margin-top: 2vh;">Save</button>   
                             <!-- </fieldset>                      -->
                         </form>
                     </div>    

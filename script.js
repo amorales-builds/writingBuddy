@@ -235,6 +235,9 @@ document.getElementById("themeSelector").addEventListener('click', async () => {
     if (document.getElementById("themeOptions").value == 'darkPlum'){ 
         document.body.dataset.theme = ("darkPlum");
     }
+    if (document.getElementById("themeOptions").value == 'mellowYellow'){ 
+        document.body.dataset.theme = ("mellowYellow");
+    }
 })
 
 // document.getElementById("buddyCharacterBtn").addEventListener('click', async () => {
@@ -550,58 +553,35 @@ function buttonClose(){
     }
 }
 
-function saveForm() {
-    
-    if (document.getElementById("wTitle").value == ""){
-        workTitleE.textContent = savedTitle;
-    }else{
-        workTitleE.style.display = 'inline-block';
-        workTitleE.textContent = document.getElementById("wTitle").value;
-        savedTitle = document.getElementById("wTitle").value;
-    }
+workMenuE.addEventListener('click', async () => {
+    buttonClose();    
+})
 
-    if (document.getElementById("wGenre").value == ""){
-        topGenreE.textContent = savedGenre;
-    }else{
-        topGenreE.textContent = document.getElementById("wGenre").value;
-        savedGenre = document.getElementById("wGenre").value;
-    }
-    
-    if (document.getElementById("wType").value == ""){
-        topTypeE.textContent = savedType;
-    }else{
-        topTypeE.textContent = document.getElementById("wType").value;
-        savedType = document.getElementById("wType").value;
-    }
+saveBtnE.addEventListener('click', async () => {      
+        if (document.getElementById("wTitle").value == ""){
+            workTitleE.textContent = savedTitle;
+        }else{
+            workTitleE.style.display = 'inline-block';
+            workTitleE.textContent = document.getElementById("wTitle").value;
+            savedTitle = document.getElementById("wTitle").value;
+        }
+
+        if (document.getElementById("wGenre").value == ""){
+            topGenreE.textContent = savedGenre;
+        }else{
+            topGenreE.textContent = document.getElementById("wGenre").value;
+            savedGenre = document.getElementById("wGenre").value;
+        }
+        
+        if (document.getElementById("wType").value == ""){
+            topTypeE.textContent = savedType;
+        }else{
+            topTypeE.textContent = document.getElementById("wType").value;
+            savedType = document.getElementById("wType").value;
+        }
 
     buttonClose();  //when save/submit true delete this and fix other stuff
-}
-
-// saveBtnE.addEventListener('click', async () => {      
-//     if (document.getElementById("wTitle").value == ""){
-//         workTitleE.textContent = savedTitle;
-//     }else{
-//         workTitleE.style.display = 'inline-block';
-//         workTitleE.textContent = document.getElementById("wTitle").value;
-//         savedTitle = document.getElementById("wTitle").value;
-//     }
-
-//     if (document.getElementById("wGenre").value == ""){
-//         topGenreE.textContent = savedGenre;
-//     }else{
-//         topGenreE.textContent = document.getElementById("wGenre").value;
-//         savedGenre = document.getElementById("wGenre").value;
-//     }
-    
-//     if (document.getElementById("wType").value == ""){
-//         topTypeE.textContent = savedType;
-//     }else{
-//         topTypeE.textContent = document.getElementById("wType").value;
-//         savedType = document.getElementById("wType").value;
-//     }
-
-//     buttonClose();  //when save/submit true delete this and fix other stuff
-// })
+})
 
 /////
 

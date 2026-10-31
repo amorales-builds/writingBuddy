@@ -1,0 +1,146 @@
+body[data-theme="rosePink"] {
+  background: var(--rosePinkGrad);
+  color: var(--roseRed);
+}
+
+body[data-theme="rosePink"] input {
+  color: var(--roseMaroon);
+  background-color: lavenderblush;
+}
+
+body[data-theme="rosePink"] select {
+  color: var(--roseMaroon);
+  background-color: transparent;
+  border: transparent;
+}
+
+body[data-theme="rosePink"] option {
+  font-weight: bold;
+  background: var(--rosePink);
+}
+
+body[data-theme="rosePink"] textarea {
+  background-color: transparent;
+  color: var(--roseRed);
+}
+
+body[data-theme="rosePink"] button {
+  border: 1px solid lavenderblush;
+  background-color: var(--roseLight);
+  color: var(--roseMaroon);
+}
+
+body[data-theme="rosePink"] button:hover {
+  background-color: var(--rosePink);
+  border: 1px solid var(--roseRed);
+  color: var(--roseRed);
+}
+
+body[data-theme="rosePink"] fieldset {
+  border-color: var(--roseMaroon);
+}
+
+body[data-theme="rosePink"] ::placeholder {
+  color: rgba(168, 103, 125, 0.543);
+}
+
+body[data-theme="rosePink"] .headingLine {
+  background: linear-gradient(180deg, var(--rosePink) 50%, rgba(37, 8, 45, 0) 100%);
+}
+
+body[data-theme="rosePink"] .sideBar {
+  border: 2px solid var(--roseMaroon);
+  background-color: var(--roseLight);
+}
+
+body[data-theme="rosePink"] .sideBar:hover {
+  color: var(--roseLight);
+  background-color: var(--roseDark);
+}
+
+body[data-theme="rosePink"] .workInfoInput {
+  background-color: lavenderblush;
+}
+
+body[data-theme="rosePink"] .letterInput {
+  outline: auto;
+  outline-color: var(--roseMaroon);
+}
+
+body[data-theme="rosePink"] .cpBtn {
+  background-color: var(--rosePink);
+  color: var(--roseMaroon);
+  border: 1px solid var(--roseRed);
+}
+
+body[data-theme="rosePink"] .cpBtn:hover {
+  background-color: var(--roseMaroon);
+  color: var(--rosePink);
+}
+
+body[data-theme="rosePink"] .settingButtons {
+  border: 1px solid lavenderblush;
+  background-color: var(--roseMaroon);
+  color: var(--rosePink);
+}
+
+body[data-theme="rosePink"] .closebtn {
+  color: white;
+}
+
+body[data-theme="rosePink"] .closebtn:hover {
+  color: #243428;
+}
+
+body[data-theme="rosePink"] #alertNote {
+  background-color: rgb(57, 160, 112);
+  color: white;
+}
+
+body[data-theme="rosePink"] #copyIcon {
+  background: url(svg/copyIcon.svg);
+  background-repeat: no-repeat;
+}
+
+body[data-theme="rosePink"] #textareaGrid {
+  background-color: var(--roseLightTransparent);
+  border: 2px solid var(--roseMaroon);
+}
+
+body[data-theme="rosePink"] #textareaGrid:hover {
+  background-color: var(--roseLight);
+}
+
+body[data-theme="rosePink"] #wcGoal {
+  background-color: var(--roseLight);
+  color: var(--roseBlack);
+  border: 2px solid var(--roseDark);
+}
+
+body[data-theme="rosePink"] #word-meter {
+  accent-color: var(--roseDark);
+}
+
+body[data-theme="rosePink"] #buddyCharacterBtn {
+  color: var(--roseDark);
+}
+
+body[data-theme="rosePink"] #buddyCharacterBtn:hover {
+  background-color: var(--roseLight);
+}
+
+@media screen and (min-width: 1200px) {
+  body[data-theme="rosePink"] #buddyGrid {
+    background: repeating-linear-gradient(
+      120deg,
+      var(--rosePink) 25%,
+      var(--roseLightTransparent) 55%
+    );
+    border: 2px solid var(--roseMaroon);
+  }
+
+  body[data-theme="rosePink"] #workMenu {
+    background-color: var(--roseLight);
+    color: var(--roseDark);
+  }
+}

@@ -1,0 +1,163 @@
+/* @import url(styles.css); */
+
+body[data-theme="darkPlum"] {
+  background-color: var(--plumDark);
+  background-image:
+    radial-gradient(circle 23px at 20px 8px, var(--plumMediumDark) 23px, transparent 24px),
+    radial-gradient(circle 23px at 20px 32px, var(--plumDark) 23px, transparent 24px),
+    linear-gradient(var(--plumDark) 50%, var(--plumMediumDark) 50%);
+  background-size: 45px 55px;
+  background-position: 0 0, 20px 0, 0 0;
+  color: var(--plumLight);
+}
+
+body[data-theme="darkPlum"] input {
+  color: var(--plumDark);
+}
+
+body[data-theme="darkPlum"] input[type="radio"] {
+  background-color: #25082d;
+}
+
+body[data-theme="darkPlum"] select {
+  background-color: transparent;
+  color: var(--plumLight);
+  border: transparent;
+}
+
+body[data-theme="darkPlum"] option {
+  background: var(--plumDark);
+}
+
+body[data-theme="darkPlum"] textarea {
+  color: lavenderblush;
+  background-color: transparent;
+}
+
+body[data-theme="darkPlum"] optgroup {
+  background-color: var(--plumMedium);
+  color: lavenderblush;
+}
+
+body[data-theme="darkPlum"] button {
+  background-color: var(--plumMediumDark);
+  color: var(--plumLightMedium);
+  border: 1px solid var(--plumLightMedium);
+}
+
+body[data-theme="darkPlum"] button:hover {
+  background-color: var(--plumDark);
+  border: 1px solid var(--plumLight);
+  color: var(--plumLight);
+}
+
+body[data-theme="darkPlum"] ::placeholder {
+  color: rgba(255, 240, 245, 0.331);
+}
+
+body[data-theme="darkPlum"] .headingLine {
+  background: linear-gradient(180deg, rgba(37, 8, 45, 1) 50%, rgba(37, 8, 45, 0) 100%);
+}
+
+body[data-theme="darkPlum"] .sideBar {
+  border: 2px solid lavenderblush;
+}
+
+body[data-theme="darkPlum"] .sideBar:hover {
+  background-color: var(--plumMedium);
+}
+
+body[data-theme="darkPlum"] .workInfoInput {
+  background-color: lavenderblush;
+}
+
+body[data-theme="darkPlum"] .letterInput {
+  background-color: lavenderblush;
+  border: 2px solid lavenderblush;
+}
+
+body[data-theme="darkPlum"] .cpBtn {
+  background-color: var(--plumDark);
+  border: 1px solid var(--plumLight);
+  color: lavenderblush;
+}
+
+body[data-theme="darkPlum"] .cpBtn:hover {
+  background-color: var(--plumLight);
+  border: 1px solid var(--plumDark);
+  color: var(--plumDark);
+}
+
+body[data-theme="darkPlum"] .settingButtons {
+  background-color: var(--plumLightMedium);
+  color: var(--plumDark);
+  border: 1px solid var(--plumLightMedium);
+}
+
+body[data-theme="darkPlum"] .closebtn {
+  color: white;
+}
+
+body[data-theme="darkPlum"] .closebtn:hover {
+  color: black;
+}
+
+body[data-theme="darkPlum"] #alertNote {
+  background-color: var(--winGreen);
+  color: white;
+}
+
+body[data-theme="darkPlum"] #copyIcon {
+  background: url(svg/copyIconDark.svg);
+  background-repeat: no-repeat;
+}
+
+body[data-theme="darkPlum"] #textareaGrid {
+  background-color: var(--plumMedium);
+  border: 2px solid lavenderblush;
+}
+
+body[data-theme="darkPlum"] #wcGoal {
+  color: lavenderblush;
+  background-color: var(--plumMedium);
+  border: 2px solid rgb(248, 240, 255);
+}
+
+body[data-theme="darkPlum"] #word-meter {
+  accent-color: var(--plumMediumLight);
+}
+
+body[data-theme="darkPlum"] #buddyCharacterBtn {
+  background-color: var(--plumMediumDark);
+  border-color: var(--plumMediumLight);
+  color: var(--plumLightMedium);
+}
+
+body[data-theme="darkPlum"] #buddyCharacterBtn:hover {
+  background-color: var(--plumMediumDark);
+  border-color: var(--plumLight);
+  color: var(--plumLight);
+}
+
+@media screen and (min-width: 1200px) {
+  body[data-theme="darkPlum"] #buddyGrid {
+    background: repeating-linear-gradient(
+      120deg,
+      rgb(49, 16, 57) 25%,
+      var(--plumMediumDarkish) 55%
+    );
+    border: 2px solid lavenderblush;
+  }
+
+  body[data-theme="darkPlum"] #workMenu {
+    background-color: var(--plumMediumDark);
+    border-color: var(--plumMedium);
+    color: var(--plumLightMedium);
+  }
+
+  body[data-theme="darkPlum"] #workMenu:hover {
+    background-color: var(--plumMediumDark);
+    border-color: var(--plumLight);
+    color: var(--plumLight);
+  }
+}
