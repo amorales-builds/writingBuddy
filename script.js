@@ -148,7 +148,9 @@ wFont.addEventListener('input', async () => {
     }else if (wFont.value == 'Audiowide'){
         writingE.style.fontFamily = "Audiowide";
     }else if (wFont.value == 'Gill Sans'){
-        writingE.style.fontFamily = "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif";
+        writingE.style.fontFamily = "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif";}
+    else if (wFont.value == 'Comic Sans'){
+        writingE.style.fontFamily = "Comic Sans MS, Comic Sans, cursive";
     }else if (wFont.value == 'Gorditas'){
         writingE.style.fontFamily = "Gorditas";
     }else if (wFont.value == 'Macondo'){
