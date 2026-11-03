@@ -1,6 +1,7 @@
 /* @import url(styles.css); */
 
 body[data-theme="darkPlum"] {
+  color: var(--plumLight);
   background-color: var(--plumDark);
   background-image:
     radial-gradient(circle 23px at 20px 8px, var(--plumMediumDark) 23px, transparent 24px),
@@ -8,7 +9,6 @@ body[data-theme="darkPlum"] {
     linear-gradient(var(--plumDark) 50%, var(--plumMediumDark) 50%);
   background-size: 45px 55px;
   background-position: 0 0, 20px 0, 0 0;
-  color: var(--plumLight);
 }
 
 body[data-theme="darkPlum"] input {

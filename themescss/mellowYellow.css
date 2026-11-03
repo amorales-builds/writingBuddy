@@ -1,16 +1,48 @@
+:root{
+  --mellowYellow: rgb(244, 240, 209);
+  
+  --color_black: #170c03;
+  --color_darker: #271700;
+  --color_dark: #3f2e20;
+  --color_mediumDarker: #71512b;
+  --color_mediumDark: #88653B;
+  --color_medium: #edc65c;
+  --color_lightMedium: #d8b764;
+  --color_light:  rgb(244, 240, 209);
+  --color_lighter:  rgb(254, 250, 228);
+  --color_lightest:  rgb(252, 250, 235);
+  --color_white:  rgb(255, 255, 254);
+
+  --color_accent: #ffab70;
+}
+
 body[data-theme="mellowYellow"] {
-    background-color:burlywood;
-    background: repeating-linear-gradient(-45deg, rgb(237, 217, 162) 0px, rgb(244, 240, 209) 12.5px, transparent 12.5px, transparent 20px), repeating-linear-gradient(45deg,  rgb(205, 187, 142) 0px,  rgb(247, 243, 211) 12.5px, transparent 12.5px, transparent 20px), linear-gradient(lightgoldenrodyellow, lightgoldenrodyellow);
+  color: var(--color_mediumDarker);
+  /* background-color:burlywood;
+  background: repeating-linear-gradient(-45deg, rgb(237, 217, 162) 0px, rgb(244, 240, 209) 12.5px, transparent 12.5px, transparent 20px), repeating-linear-gradient(45deg,  rgb(205, 187, 142) 0px,  rgb(247, 243, 211) 12.5px, transparent 12.5px, transparent 20px), linear-gradient(lightgoldenrodyellow, lightgoldenrodyellow); */
+  background-color:var(--color_lighter);
+  opacity: 0.8;
+  background-image: conic-gradient(from 60deg at 56.25% calc(425% / 6), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from 60deg at 56.25% calc(425% / 6), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from 180deg at 43.75% calc(425% / 6), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from 180deg at 43.75% calc(425% / 6), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from -60deg at 50% calc(175% / 12), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from -60deg at 50% calc(175% / 12), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg);
+  background-position: 0 0, 36px 62px, 0 0, 36px 62px, 36px 0, 0 62px;
+  background-size: 72px 124px;
 }
 
 
+/* body[data-theme="mellowYellow"] p, h1, h2, label, summary, legend {
+  color: var(--color_mediumDarker);
+} */
+
+/* body[data-theme="mellowYellow"] summary, legend {
+  color: var(--color_darker);
+} */
+
 body[data-theme="mellowYellow"] input {
-  color: var(--roseMaroon);
-  background-color: lavenderblush;
+  color: var(--color_darker);
+  background-color:  var(--color_white);
 }
 
 body[data-theme="mellowYellow"] select {
-  color: var(--roseMaroon);
+  color: var(--color_mediumDark);
   background-color: transparent;
   border: transparent;
 }
@@ -22,66 +54,67 @@ body[data-theme="mellowYellow"] option {
 
 body[data-theme="mellowYellow"] textarea {
   background-color: transparent;
-  color: var(--roseRed);
+  color: var(--color_darker);
 }
 
 body[data-theme="mellowYellow"] button {
-  border: 1px solid lavenderblush;
-  background-color: var(--roseLight);
-  color: var(--roseMaroon);
+  border: 1px solid  var(--color_mediumDark);
+  background-color: var(--color_lightest);
+  color: var(--color_mediumDark);
 }
 
 body[data-theme="mellowYellow"] button:hover {
   background-color: var(--mellowYellow);
-  border: 1px solid var(--roseRed);
-  color: var(--roseRed);
+  border: 1px solid var(--color_dark);
+  color: var(--color_dark);
 }
 
 body[data-theme="mellowYellow"] fieldset {
-  border-color: var(--roseMaroon);
+  border-color: var(--color_mediumDark);
 }
 
 body[data-theme="mellowYellow"] ::placeholder {
-  color: rgba(168, 103, 125, 0.543);
+  color: var(--color_mediumDark);
 }
 
 body[data-theme="mellowYellow"] .headingLine {
-  background: linear-gradient(180deg, var(--mellowYellow) 50%, rgba(37, 8, 45, 0) 100%);
+  background: linear-gradient(180deg, var(--mellowYellow) 50%, rgba(45, 41, 8, 0) 100%);
 }
 
 body[data-theme="mellowYellow"] .sideBar {
-  border: 2px solid var(--roseMaroon);
-  background-color: var(--roseLight);
+  border: 2px solid var(--color_mediumDark);
+  background-color: var(--color_lighter);
+  color: var(--color_darker);
 }
 
 body[data-theme="mellowYellow"] .sideBar:hover {
-  color: var(--roseLight);
-  background-color: var(--roseDark);
+  color: var(--color_light);
+  background-color: var(--color_dark);
 }
 
 body[data-theme="mellowYellow"] .workInfoInput {
-  background-color: lavenderblush;
+  background-color:  var(--color_white);
 }
 
 body[data-theme="mellowYellow"] .letterInput {
   outline: auto;
-  outline-color: var(--roseMaroon);
+  outline-color: var(--color_mediumDark);
 }
 
 body[data-theme="mellowYellow"] .cpBtn {
   background-color: var(--mellowYellow);
-  color: var(--roseMaroon);
-  border: 1px solid var(--roseRed);
+  color: var(--color_mediumDarker);
+  border: 1px solid var(--color_mediumDark);
 }
 
 body[data-theme="mellowYellow"] .cpBtn:hover {
-  background-color: var(--roseMaroon);
+  background-color: var(--color_mediumDark);
   color: var(--mellowYellow);
 }
 
 body[data-theme="mellowYellow"] .settingButtons {
-  border: 1px solid lavenderblush;
-  background-color: var(--roseMaroon);
+  border: 1px solid  var(--color_white);
+  background-color: var(--color_mediumDark);
   color: var(--mellowYellow);
 }
 
@@ -94,7 +127,7 @@ body[data-theme="mellowYellow"] .closebtn:hover {
 }
 
 body[data-theme="mellowYellow"] #alertNote {
-  background-color: rgb(57, 160, 112);
+  background-color: rgb(75, 146, 113);
   color: white;
 }
 
@@ -104,30 +137,30 @@ body[data-theme="mellowYellow"] #copyIcon {
 }
 
 body[data-theme="mellowYellow"] #textareaGrid {
-  background-color: var(--roseLightTransparent);
-  border: 2px solid var(--roseMaroon);
+  background-color: var(--color_lighter);
+  border: 2px solid var(--color_mediumDark);
 }
 
 body[data-theme="mellowYellow"] #textareaGrid:hover {
-  background-color: var(--roseLight);
+  background-color: var(--color_lightest);
 }
 
 body[data-theme="mellowYellow"] #wcGoal {
-  background-color: var(--roseLight);
-  color: var(--roseBlack);
-  border: 2px solid var(--roseDark);
+  background-color: var(--color_light);
+  color: var(--color_mediumDarker);
+  border: 2px solid var(--color_mediumDark);
 }
 
 body[data-theme="mellowYellow"] #word-meter {
-  accent-color: var(--roseDark);
+  accent-color: var(--color_dark);
 }
 
 body[data-theme="mellowYellow"] #buddyCharacterBtn {
-  color: var(--roseDark);
+  color: var(--color_dark);
 }
 
 body[data-theme="mellowYellow"] #buddyCharacterBtn:hover {
-  background-color: var(--roseLight);
+  background-color: var(--color_light);
 }
 
 @media screen and (min-width: 1200px) {
@@ -135,13 +168,13 @@ body[data-theme="mellowYellow"] #buddyCharacterBtn:hover {
     background: repeating-linear-gradient(
       120deg,
       var(--mellowYellow) 25%,
-      var(--roseLightTransparent) 55%
+      var(--color_lighter) 55%
     );
-    border: 2px solid var(--roseMaroon);
+    border: 2px solid var(--color_mediumDark);
   }
 
   body[data-theme="mellowYellow"] #workMenu {
-    background-color: var(--roseLight);
-    color: var(--roseDark);
+    background-color: var(--color_light);
+    color: var(--color_dark);
   }
 }
