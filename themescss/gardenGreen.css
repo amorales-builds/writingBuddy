@@ -1,0 +1,222 @@
+:root{
+    --gardenGreen: #b8c897;
+
+    --gColor_black: #25103b;
+    --gColor_darker: #471f71;
+    --gColor_dark: #18320d;
+    --gColor_mediumDarker: #2f4c24;
+    --gColor_mediumDark: #405c35;
+    --gColor_medium: #b8c897;
+    --gColor_mediumTransparent: #c1d1a2e6;
+    --gColor_light:  #d8e4bf;
+    --gColor_lighter:  #eff3cd;
+    --gColor_lightest:  #faffef;
+    --gColor_white: #fefefe;
+
+    --gColor_accentDarker: #2e0b13;
+    --gColor_accentDark: #a6465d;
+    --gColor_accent: #d98fa0;
+    --gColor_accentLight: #f1b8c5;
+
+    --gColor_gradient: linear-gradient(180deg, var(--gColor_accent) 55%, var(--gColor_lighter) 100%); 
+}
+
+body[data-theme="gardenGreen"] {
+    color: var(--gColor_mediumDarker);
+    background-color: var(--gColor_lighter);
+    /* background: var(--gColor_gradient); */
+    background-image:  radial-gradient(circle at 28px 100%, transparent 25px, #b8c897 25px, #b8c897 28px, transparent 28px), radial-gradient(circle at 28px 0%, transparent 25px, #f1b8c5 25px, #f1b8c5 28px, transparent 28px);
+    background-size: 56px 28px;
+    background-position: 0 0, 28px 0;
+    /* background-color: #eff3cd;
+    background: repeating-linear-gradient(30deg, #b8c897 0px, #b8c897 39px, #b2d5ba 39px, #b2d5ba 78px, #efa8ac 78px, #efa8ac 117px, #b2d5ba 117px, #efa8ac 156px); */
+}
+
+body[data-theme="gardenGreen"] h1 {
+  color: var(--gColor_dark);
+}
+body[data-theme="gardenGreen"] p {
+  color: var(--gColor_lightest);
+}
+body[data-theme="gardenGreen"] i {
+  color: var(--gColor_accentDarker);
+}
+
+body[data-theme="gardenGreen"] input {
+  color: var(--gColor_darker);
+  background-color:  var(--gColor_white);
+}
+
+body[data-theme="gardenGreen"] select {
+  color: var(--gColor_mediumDark);
+  background-color: transparent;
+  border: transparent;
+}
+
+body[data-theme="gardenGreen"] option {
+  font-weight: bold;
+  background: var(--gardenGreen);
+}
+
+body[data-theme="gardenGreen"] button {
+  border: 1px solid  var(--gColor_mediumDark);
+  background-color: var(--gColor_lightest);
+  color: var(--gColor_mediumDark);
+}
+
+body[data-theme="gardenGreen"] button:hover {
+  background-color: var(--gColor_accent);
+  border: 1px solid var(--gColor_lightest);
+  color: var(--gColor_white);
+}
+
+body[data-theme="gardenGreen"] fieldset {
+  border-color: var(--gColor_mediumDark);
+}
+
+body[data-theme="gardenGreen"] ::placeholder {
+  color: var(--gColor_mediumDark);
+}
+
+body[data-theme="gardenGreen"] .headingLine {
+  background: linear-gradient(180deg, var(--gColor_lighter) 80%, rgba(45, 41, 8, 0) 100%);
+  padding-top: 35px; 
+}
+
+body[data-theme="gardenGreen"] #writingOptions {  
+  width: 125px;
+}
+
+body[data-theme="gardenGreen"] .sideBar {
+  border: 2px solid var(--gColor_mediumDark);
+  background-color: var(--gColor_medium);
+  color: var(--gColor_dark);  
+  border-radius: 45%;
+  opacity: .9;
+  padding: 13px;
+}
+
+body[data-theme="gardenGreen"] .sideBar:hover {
+  border: 2px solid var(--gColor_accentDark);
+  color: var(--gColor_lightest);
+  background-color: var(--gColor_accent);
+  opacity: 1;
+}
+
+body[data-theme="gardenGreen"] .workInfoInput {
+  background-color:  var(--gColor_white);
+}
+
+body[data-theme="gardenGreen"] .letterInput {
+  outline: auto;
+  outline-color: var(--gColor_mediumDark);
+}
+
+body[data-theme="gardenGreen"] .cpBtn {
+  background-color: var(--gardenGreen);
+  color: var(--gColor_mediumDarker);
+  border: 1px solid var(--gColor_mediumDark);
+  border-radius: 50%;
+}
+
+body[data-theme="gardenGreen"] .cpBtn:hover {
+    border-color: var(--gColor_dark);
+    background-color: var(--gColor_accent);
+    color: var(--gColor_lightest);
+}
+
+body[data-theme="gardenGreen"] .settingButtons {
+  border: 1px solid  var(--gColor_white);
+  background-color: var(--gColor_mediumDark);
+  color: var(--gardenGreen);
+}
+
+body[data-theme="gardenGreen"] .closebtn {
+  color: white;
+}
+
+body[data-theme="gardenGreen"] .closebtn:hover {
+  color: #243428;
+}
+
+body[data-theme="gardenGreen"] #alertNote {
+  background-color: rgb(75, 146, 113);
+  color: white;
+}
+
+body[data-theme="gardenGreen"] #copyIcon {
+  background: url(svg/copyIcon.svg);
+  background-repeat: no-repeat;
+}
+
+body[data-theme="gardenGreen"] #textareaGrid {
+    /* background-color: var(--gColor_mediumDarker); */
+    background: linear-gradient(
+        180deg,
+        var(--gColor_mediumDarker) 25%,
+        var(--gColor_dark) 100%
+    ); 
+    border: 2px solid var(--gColor_light);
+    border-radius: 6%;
+    opacity: 0.95;
+}
+
+body[data-theme="gardenGreen"] #textareaGrid:hover {
+    border: 2px solid var(--gColor_accent);
+    background-color: var(--gColor_dark);
+    opacity: 0.99;
+}
+
+body[data-theme="gardenGreen"] textarea {
+  background-color: transparent;
+  color: var(--gColor_lightest);
+}
+
+body[data-theme="gardenGreen"] textarea:hover {
+  color: var(--gColor_white);
+}
+
+body[data-theme="gardenGreen"] #wcGoal {
+  background-color: var(--gColor_light);
+  color: var(--gColor_mediumDarker);
+  border: 2px solid var(--gColor_mediumDark);
+}
+
+body[data-theme="gardenGreen"] #word-meter {
+  accent-color: var(--gColor_dark);
+}
+
+body[data-theme="gardenGreen"] #buddyCharacterBtn {
+  color: var(--gColor_dark);
+    border-radius: 50%;
+    padding: 12px;
+}
+
+body[data-theme="gardenGreen"] #buddyCharacterBtn:hover {
+  background-color: var(--gColor_light);
+}
+
+@media screen and (min-width: 1200px) {
+  body[data-theme="gardenGreen"] #buddyGrid {
+    background: repeating-linear-gradient(
+      120deg,
+      var(--gColor_mediumTransparent) 25%,
+      var(--gColor_medium) 85%
+    );
+    /* background-color: #eff3cda4;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f4fff03c 100px ), repeating-linear-gradient( var(--gColor_medium), #d98fa0bb );*/
+    border: 2px solid var(--gColor_lighter); 
+    border-radius: 8%;
+  }
+
+  body[data-theme="gardenGreen"] #workMenu {
+    background-color: var(--gColor_light);
+    color: var(--gColor_dark);
+    width: 4.5vw;
+    border-radius: 50%;
+  }
+  body[data-theme="gardenGreen"] #workMenu:hover {
+    background-color: var(--gColor_lightest);
+    border-color: var(--gColor_mediumDark);
+  }
+}

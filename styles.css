@@ -2,7 +2,7 @@
 @import url(themescss/rosePink.css);
 @import url(themescss/darkPlum.css);
 @import url(themescss/mellowYellow.css);
-
+@import url(themescss/gardenGreen.css);
 
 :root{
   --plumDarkGrad: repeating-linear-gradient(180deg,rgba(37, 8, 45) 55%,rgb(49, 16, 57) 75%);
@@ -846,12 +846,5 @@ fieldset{
       border-color: var(--plumLight);
       color: var(--plumLight);
     }
-  }
-}
-
-@media (prefers-color-scheme: mellowYellow) {
-  body{
-    background-color: var(--rosePink);
-    background: repeating-linear-gradient(-45deg,  var(--rosePinkDark) 0px, var(--rosePink) 12.5px, transparent 12.5px, transparent 20px), repeating-linear-gradient(45deg,  var(--rosePinkDark) 0px,  var(--rosePink) 12.5px, transparent 12.5px, transparent 20px), linear-gradient( var(--roseLight), var(--roseLight));
   }
 }

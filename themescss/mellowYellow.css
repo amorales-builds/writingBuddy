@@ -13,7 +13,7 @@
   --color_lightest:  rgb(252, 250, 235);
   --color_white:  rgb(255, 255, 254);
 
-  --color_accent: #ffab70;
+  --color_accent: #d9c138;
 }
 
 body[data-theme="mellowYellow"] {
@@ -176,5 +176,8 @@ body[data-theme="mellowYellow"] #buddyCharacterBtn:hover {
   body[data-theme="mellowYellow"] #workMenu {
     background-color: var(--color_light);
     color: var(--color_dark);
+  }
+  body[data-theme="mellowYellow"] #workMenu:hover {
+    background-color: var(--color_lightest);
   }
 }

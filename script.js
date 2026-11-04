@@ -228,21 +228,20 @@ wParagraph.addEventListener('click', async () => {
 //     document.body.dataset.theme = ("rosePink");
 // }
 
-// document.body.dataset.theme = "rosePink";
-document.body.dataset.theme = "mellowYellow";
+document.body.dataset.theme = "rosePink";
+// document.body.dataset.theme = "gardenGreen";
 
 document.getElementById("themeSelector").addEventListener('click', async () => {   
     if (document.getElementById("themeOptions").value == 'rosePink'){ 
         document.body.dataset.theme = ("rosePink");
     }
-    if (document.getElementById("themeOptions").value == 'darkPlum'){ 
+    else if (document.getElementById("themeOptions").value == 'darkPlum'){ 
         document.body.dataset.theme = ("darkPlum");
     }
-    if (document.getElementById("themeOptions").value == 'mellowYellow'){ 
+    else if (document.getElementById("themeOptions").value == 'mellowYellow'){ 
         document.body.dataset.theme = ("mellowYellow");
-    }
-    
-    if (document.getElementById("themeOptions").value == 'gardenGreen'){ 
+    }    
+    else if (document.getElementById("themeOptions").value == 'gardenGreen'){ 
         document.body.dataset.theme = ("gardenGreen");
     }
 })
