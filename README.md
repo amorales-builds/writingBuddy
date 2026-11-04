@@ -35,7 +35,7 @@ The Writing Buddy is an animated fellow that moves to the rhythm of the user's k
 - [x] Animated Companion
    - [x] \(Optional) Character Selection <!--  ex. slaying monsters in dungeon, writing at desk, etc -->
 - [x] \(Optional) Dark/Light Mode
-    - [ ] \(Optional) UI Themes <!--  cuter/cooler themes with names -->
+    - [x] \(Optional) UI Themes <!--  cuter/cooler themes with names -->
 - [x] \(Optional) Page Counter option
 - [ ] \(Optional) Save progress on specific title
 - [ ] \(Optional) "Flowstate" button
