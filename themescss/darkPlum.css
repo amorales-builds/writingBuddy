@@ -15,10 +15,6 @@ body[data-theme="darkPlum"] input {
   color: var(--plumDark);
 }
 
-body[data-theme="darkPlum"] input[type="radio"] {
-  background-color: #25082d;
-}
-
 body[data-theme="darkPlum"] select {
   background-color: transparent;
   color: var(--plumLight);
@@ -49,6 +45,7 @@ body[data-theme="darkPlum"] button:hover {
   background-color: var(--plumDark);
   border: 1px solid var(--plumLight);
   color: var(--plumLight);
+  border-radius: 10px;
 }
 
 body[data-theme="darkPlum"] ::placeholder {
@@ -61,10 +58,12 @@ body[data-theme="darkPlum"] .headingLine {
 
 body[data-theme="darkPlum"] .sideBar {
   border: 2px solid lavenderblush;
+  border-radius: 20%;
 }
 
 body[data-theme="darkPlum"] .sideBar:hover {
   background-color: var(--plumMedium);
+  border-radius: 40%;
 }
 
 body[data-theme="darkPlum"] .workInfoInput {
@@ -80,18 +79,23 @@ body[data-theme="darkPlum"] .cpBtn {
   background-color: var(--plumDark);
   border: 1px solid var(--plumLight);
   color: lavenderblush;
+  border-radius: 30%;
 }
 
 body[data-theme="darkPlum"] .cpBtn:hover {
   background-color: var(--plumLight);
   border: 1px solid var(--plumDark);
   color: var(--plumDark);
+  border-radius: 35%;
 }
 
 body[data-theme="darkPlum"] .settingButtons {
   background-color: var(--plumLightMedium);
   color: var(--plumDark);
   border: 1px solid var(--plumLightMedium);
+}
+body[data-theme="darkPlum"] .settingButtons:hover {
+  border-radius: 20px;
 }
 
 body[data-theme="darkPlum"] .closebtn {
@@ -115,6 +119,10 @@ body[data-theme="darkPlum"] #copyIcon {
 body[data-theme="darkPlum"] #textareaGrid {
   background-color: var(--plumMedium);
   border: 2px solid lavenderblush;
+  border-radius: 6%;
+}
+body[data-theme="darkPlum"] #textareaGrid:hover {
+  border-radius: 4%;
 }
 
 body[data-theme="darkPlum"] #wcGoal {
@@ -137,6 +145,7 @@ body[data-theme="darkPlum"] #buddyCharacterBtn:hover {
   background-color: var(--plumMediumDark);
   border-color: var(--plumLight);
   color: var(--plumLight);
+  border-radius: 10%;
 }
 
 @media screen and (min-width: 1200px) {
@@ -147,6 +156,10 @@ body[data-theme="darkPlum"] #buddyCharacterBtn:hover {
       var(--plumMediumDarkish) 55%
     );
     border: 2px solid lavenderblush;
+    border-radius: 10%;
+  }
+  body[data-theme="darkPlum"] #buddyGrid:hover {
+    border-radius: 8%;
   }
 
   body[data-theme="darkPlum"] #workMenu {

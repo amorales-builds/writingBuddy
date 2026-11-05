@@ -1,0 +1,270 @@
+:root{
+    --tColors_blackTransparent: #0000008f;
+    --tColors_black: #000000;
+    --tColors_darker: #01040077;
+    --tColors_dark: #0d0e0c;
+    --tColors_mediumDarker: #282d28;
+    --tColors_mediumDark: #384038;
+    --tColors_medium: #485648;
+    --tColors_mediumTransparent: #485648c1;
+    --tColors_light:  #728572;
+    --tColors_lighter:  #90ab90;
+    --tColors_lightest:  #b6d5b6;
+    --tColors_whiteTransparent: #ffffffcf;
+    --tColors_white: #ffffff;
+
+    
+    --tColors_accentGreenDark: #04AA6D;
+    --tColors_accentGreenTransparent: #b7ff3b0a;
+    --tColors_accentGreen: #B6FF3B;
+    --tColors_accentGreenLight: #e5ffb9;
+    --tColors_accentBlueDarkGray: #28263a;
+    --tColors_accentBlueDark: #3227a7;
+    --tColors_accentBlue: #3df2e0;
+    --tColors_accentMagenta: #E445FF;
+    --tColors_accentOrangeDark: #f82032;
+    --tColors_accentOrange: #fb7443;
+
+    --tColors_gradient: linear-gradient(180deg, var(--tColors_accent) 55%, var(--tColors_lighter) 100%); 
+}
+
+body[data-theme="techNeon"] {
+    color: var(--tColors_accentGreen);
+    font-family: Audiowide;
+    /* background-color: #413d3d;
+    opacity: 0.8;
+    background: linear-gradient(135deg, #04000455 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #040004 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #04000455 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #040004 25%, #413d3d 25%) 0px 0/ 20px 20px; */
+    background-color: #0d0e0c;
+    opacity: 0.8;
+    background-image:  linear-gradient(30deg, #040004 12%, transparent 12.5%, transparent 87%, #040004 87.5%, #040004), linear-gradient(150deg, #040004 12%, transparent 12.5%, transparent 87%, #040004 87.5%, #040004), linear-gradient(30deg, #040004 12%, transparent 12.5%, transparent 87%, #040004 87.5%, #040004), linear-gradient(150deg, #040004 12%, transparent 12.5%, transparent 87%, #040004 87.5%, #040004), linear-gradient(60deg, #04000477 25%, transparent 25.5%, transparent 75%, #04000477 75%, #04000477), linear-gradient(60deg, #04000477 25%, transparent 25.5%, transparent 75%, #04000477 75%, #04000477);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+body[data-theme="techNeon"] h1 {  
+    font-family: Audiowide;
+    color: var(--tColors_accentGreenLight);    
+}
+body[data-theme="techNeon"] h2 {  
+    font-family: Audiowide;
+    color: var(--tColors_accentGreenLight);    
+}
+body[data-theme="techNeon"] i {  
+    color: var(--tColors_medium);
+}
+body[data-theme="techNeon"] p {  
+    color: var(--tColors_accentGreen);
+}
+
+body[data-theme="techNeon"] .topBuddyInfo {  
+    color: var(--tColors_accentOrange); 
+}
+
+body[data-theme="techNeon"] input {
+  font-family: Audiowide;
+  color: var(--tColors_accentGreenLight);        
+  border: 1px solid var(--tColors_accentGreen);
+  border-radius: 0;
+}
+
+body[data-theme="techNeon"] select {
+    font-family: Audiowide;
+    background-color: transparent;
+    color: var(--tColors_accentOrange);
+    border: transparent;
+}
+
+body[data-theme="techNeon"] option {
+  background: var(--tColors_dark);
+}
+
+body[data-theme="techNeon"] textarea {
+  color: var(--tColors_accentGreenLight);
+  background-color: transparent;
+  font-family: Audiowide;
+}
+
+body[data-theme="techNeon"] optgroup {
+  background-color: var(--tColors_mediumDarker);
+  color: var(--tColors_accentGreenLight);
+  font-family: Audiowide;
+}
+
+body[data-theme="techNeon"] button {
+  background-color: var(--tColors_mediumDark);
+  color: var(--tColors_lightMedium);
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+body[data-theme="techNeon"] button:hover {
+  background-color: var(--tColors_accentGreenTransparent);
+  border: 1px solid var(--tColors_accentGreenLight);
+  color: var(--tColors_accentGreenLight);
+  border-radius: 0;
+}
+
+body[data-theme="techNeon"] ::placeholder {
+  color: var(--tColors_medium);
+}
+
+body[data-theme="techNeon"] .headingLine {
+  background: linear-gradient(180deg, #0d0e0c 50%, rgba(37, 8, 45, 0) 100%);
+}
+
+body[data-theme="techNeon"] #writingOptions {  
+    width: 145px;
+}
+
+body[data-theme="techNeon"] .sideBar {
+    border: 2px solid transparent;
+    color: var(--tColors_accentGreenLight);
+    border-radius: 0;
+}
+
+body[data-theme="techNeon"] .sideBar:hover {
+    background-color: var(--tColors_medium);
+    border-radius: 0;
+}
+
+body[data-theme="techNeon"] .workInfoInput { 
+    background-color: var(--tColors_black);
+}
+
+body[data-theme="techNeon"] .letterInput {
+  background-color: var(--tColors_black);
+  border: 2px solid var(--tColors_medium);
+}
+
+body[data-theme="techNeon"] .cpBtn {
+  background-color: var(--tColors_dark);
+  border: 1px solid transparent;
+  color: var(--tColors_accentGreenLight);
+  border-radius: 0;
+}
+
+body[data-theme="techNeon"] .cpBtn:hover {
+  background-color: var(--tColors_medium);
+  border: 1px solid var(--tColors_accentGreenLight);
+  color: var(--tColors_accentGreenLight);
+  border-radius:0;
+}
+
+body[data-theme="techNeon"] .settingButtons {
+  background-color: transparent;
+  color: var(--tColors_accentGreen);
+  border: 1px solid var(--tColors_accentGreen);
+  border-radius: 0;
+}
+body[data-theme="techNeon"] .settingButtons:hover {
+  color: var(--tColors_accentGreenLight);
+  border: 1px solid var(--tColors_accentGreenLight);
+  border-radius: 0;
+}
+
+body[data-theme="techNeon"] .closebtn {
+  color: white;
+}
+
+body[data-theme="techNeon"] .closebtn:hover {
+  color: var(--tColors_accentGreen);
+}
+
+body[data-theme="techNeon"] #alertNote {
+  color: var(--tColors_accentGreenLight);
+  background-color: var(--tColors_accentGreenTransparent);
+  border: 1px solid var(--tColors_accentGreen);
+}
+
+body[data-theme="techNeon"] #copyIcon {
+  background: url(svg/copyIconDark.svg);
+  background-repeat: no-repeat;
+}
+
+body[data-theme="techNeon"] #textareaGrid {
+    background: linear-gradient(
+        180deg,
+        var(--tColors_accentGreenTransparent) 5%,
+        var(--tColors_blackTransparent) 100%
+    );
+    border: 1px solid var(--tColors_accentGreenTransparent);
+    /* background: transparent;
+    border: 1px solid transparent; */
+    border-radius: 0;
+}
+body[data-theme="techNeon"] #textareaGrid:hover {  
+  background: linear-gradient(
+        0,
+        var(--tColors_blackTransparent) 100%
+    );
+    border: 1px solid var(--tColors_medium);
+}
+
+body[data-theme="techNeon"] #wcGoal {
+  color: var(--tColors_accentGreenLight);
+  background-color: var(--tColors_blackTransparent);
+  border: 2px solid var(--tColors_accentOrange);
+    border-radius: 0;
+}
+body[data-theme="techNeon"] #lblGoal {
+  color: var(--tColors_accentOrange);
+}
+
+body[data-theme="techNeon"] #word-meter {
+  accent-color: var(--tColors_mediumLight);
+}
+
+body[data-theme="techNeon"] #buddyCharacterBtn {
+    border: 1px solid transparent;
+    background-color: var(--tColors_mediumDark);
+  /* border-color: var(--tColors_mediumLight); */
+    color: var(--tColors_lightMedium);
+}
+
+body[data-theme="techNeon"] #buddyCharacterBtn:hover {
+      background-color: var(--tColors_mediumDarker);
+      border: 1px solid var(--tColors_accentOrange);
+      color: var(--tColors_accentOrange);
+    border-radius: 0;
+}
+
+@media screen and (min-width: 1200px) {
+    body[data-theme="techNeon"] #buddyGrid {
+        /* background: linear-gradient(
+            180deg,
+            var(--tColors_accentGreenTransparent) 1%,
+            var(--tColors_blackTransparent) 8%,
+            var(--tColors_blackTransparent) 92%,
+            var(--tColors_accentGreenTransparent) 100%
+        ); */
+        background-color: var(--tColors_accentGreenTransparent);
+        /* opacity: 0.8; */
+        background-image: radial-gradient(circle at center center, var(--tColors_accentGreenTransparent), var(--tColors_blackTransparent)), repeating-radial-gradient(circle at center center, var(--tColors_blackTransparent), var(--tColors_blackTransparent), 40px, transparent 80px, transparent 40px);
+        background-blend-mode: multiply;
+        border: 1px solid var(--tColors_accentGreenTransparent);
+        /* background: transparent; */
+        /* border: 1px solid transparent; */
+        border-radius: 50%;
+    }
+    body[data-theme="techNeon"] #buddyGrid:hover {
+        background-color: transparent;
+        /* opacity: 0.8; */
+        background-image: radial-gradient(circle at center center, var(--tColors_accentGreenTransparent), var(--tColors_blackTransparent)), repeating-radial-gradient(circle at center center, var(--tColors_blackTransparent), var(--tColors_blackTransparent), 40px, transparent 80px, transparent 40px);
+        background-blend-mode: multiply;
+        /* background: var(--tColors_blackTransparent);*/
+        border: 1px solid var(--tColors_light); 
+        border-radius: 50%;
+    }
+
+    body[data-theme="techNeon"] #workMenu {
+        background-color: var(--tColors_mediumDark);        
+        border: 1px solid transparent;
+        color: var(--tColors_accentGreen);
+    }
+
+    body[data-theme="techNeon"] #workMenu:hover {
+      background-color: var(--tColors_mediumDarker);
+      border: 1px solid var(--tColors_accentOrange);
+      color: var(--tColors_accentOrange);
+    }
+}

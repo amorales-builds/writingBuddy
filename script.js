@@ -228,21 +228,24 @@ wParagraph.addEventListener('click', async () => {
 //     document.body.dataset.theme = ("rosePink");
 // }
 
-document.body.dataset.theme = "rosePink";
-// document.body.dataset.theme = "gardenGreen";
+// document.body.dataset.theme = "rosePink";
+document.body.dataset.theme = "techNeon";
 
 document.getElementById("themeSelector").addEventListener('click', async () => {   
     if (document.getElementById("themeOptions").value == 'rosePink'){ 
         document.body.dataset.theme = ("rosePink");
-    }
-    else if (document.getElementById("themeOptions").value == 'darkPlum'){ 
-        document.body.dataset.theme = ("darkPlum");
     }
     else if (document.getElementById("themeOptions").value == 'mellowYellow'){ 
         document.body.dataset.theme = ("mellowYellow");
     }    
     else if (document.getElementById("themeOptions").value == 'gardenGreen'){ 
         document.body.dataset.theme = ("gardenGreen");
+    }
+    else if (document.getElementById("themeOptions").value == 'darkPlum'){ 
+        document.body.dataset.theme = ("darkPlum");
+    }
+    else if (document.getElementById("themeOptions").value == 'techNeon'){ 
+        document.body.dataset.theme = ("techNeon");
     }
 })
 
