@@ -57,7 +57,7 @@ body[data-theme="techNeon"] p {
 }
 
 body[data-theme="techNeon"] .topBuddyInfo {  
-    color: var(--tColors_accentOrange); 
+    color: var(--tColors_accentGreenLight); 
 }
 
 body[data-theme="techNeon"] input {
@@ -70,7 +70,7 @@ body[data-theme="techNeon"] input {
 body[data-theme="techNeon"] select {
     font-family: Audiowide;
     background-color: transparent;
-    color: var(--tColors_accentOrange);
+    color: var(--tColors_accentGreenLight);
     border: transparent;
 }
 
@@ -187,7 +187,7 @@ body[data-theme="techNeon"] #textareaGrid {
         var(--tColors_accentGreenTransparent) 5%,
         var(--tColors_blackTransparent) 100%
     );
-    border: 1px solid var(--tColors_accentGreenTransparent);
+    border: 2px solid var(--tColors_accentGreenTransparent);
     /* background: transparent;
     border: 1px solid transparent; */
     border-radius: 0;
@@ -197,17 +197,17 @@ body[data-theme="techNeon"] #textareaGrid:hover {
         0,
         var(--tColors_blackTransparent) 100%
     );
-    border: 1px solid var(--tColors_medium);
+    border: 2px dashed var(--tColors_medium);
 }
 
 body[data-theme="techNeon"] #wcGoal {
   color: var(--tColors_accentGreenLight);
   background-color: var(--tColors_blackTransparent);
-  border: 2px solid var(--tColors_accentOrange);
+  border: 2px solid var(--tColors_accentGreenLight);
     border-radius: 0;
 }
 body[data-theme="techNeon"] #lblGoal {
-  color: var(--tColors_accentOrange);
+  color: var(--tColors_accentGreenLight);
 }
 
 body[data-theme="techNeon"] #word-meter {
@@ -222,9 +222,9 @@ body[data-theme="techNeon"] #buddyCharacterBtn {
 }
 
 body[data-theme="techNeon"] #buddyCharacterBtn:hover {
-      background-color: var(--tColors_mediumDarker);
-      border: 1px solid var(--tColors_accentOrange);
-      color: var(--tColors_accentOrange);
+      background-color: var(--tColors_medium);
+      border: 1px solid var(--tColors_accentGreenLight);
+      color: var(--tColors_accentGreenLight);
     border-radius: 0;
 }
 
@@ -241,7 +241,7 @@ body[data-theme="techNeon"] #buddyCharacterBtn:hover {
         /* opacity: 0.8; */
         background-image: radial-gradient(circle at center center, var(--tColors_accentGreenTransparent), var(--tColors_blackTransparent)), repeating-radial-gradient(circle at center center, var(--tColors_blackTransparent), var(--tColors_blackTransparent), 40px, transparent 80px, transparent 40px);
         background-blend-mode: multiply;
-        border: 1px solid var(--tColors_accentGreenTransparent);
+        border: 2px solid var(--tColors_accentGreenTransparent);
         /* background: transparent; */
         /* border: 1px solid transparent; */
         border-radius: 50%;
@@ -252,7 +252,7 @@ body[data-theme="techNeon"] #buddyCharacterBtn:hover {
         background-image: radial-gradient(circle at center center, var(--tColors_accentGreenTransparent), var(--tColors_blackTransparent)), repeating-radial-gradient(circle at center center, var(--tColors_blackTransparent), var(--tColors_blackTransparent), 40px, transparent 80px, transparent 40px);
         background-blend-mode: multiply;
         /* background: var(--tColors_blackTransparent);*/
-        border: 1px solid var(--tColors_light); 
+        border: 2px dashed var(--tColors_medium); 
         border-radius: 50%;
     }
 
@@ -263,8 +263,8 @@ body[data-theme="techNeon"] #buddyCharacterBtn:hover {
     }
 
     body[data-theme="techNeon"] #workMenu:hover {
-      background-color: var(--tColors_mediumDarker);
-      border: 1px solid var(--tColors_accentOrange);
-      color: var(--tColors_accentOrange);
+      background-color: var(--tColors_medium);
+      border: 1px solid var(--tColors_accentGreenLight);
+      color: var(--tColors_accentGreenLight);
     }
 }

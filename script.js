@@ -229,7 +229,7 @@ wParagraph.addEventListener('click', async () => {
 // }
 
 // document.body.dataset.theme = "rosePink";
-document.body.dataset.theme = "techNeon";
+document.body.dataset.theme = "vintageBrowns";
 
 document.getElementById("themeSelector").addEventListener('click', async () => {   
     if (document.getElementById("themeOptions").value == 'rosePink'){ 
@@ -246,6 +246,9 @@ document.getElementById("themeSelector").addEventListener('click', async () => {
     }
     else if (document.getElementById("themeOptions").value == 'techNeon'){ 
         document.body.dataset.theme = ("techNeon");
+    }
+    else if (document.getElementById("themeOptions").value == 'vintageBrowns'){ 
+        document.body.dataset.theme = ("vintageBrowns");
     }
 })
 

@@ -4,6 +4,7 @@
 @import url(themescss/mellowYellow.css);
 @import url(themescss/gardenGreen.css);
 @import url(themescss/techNeon.css);
+@import url(themescss/vintageBrowns.css);
 
 :root{
   --plumDarkGrad: repeating-linear-gradient(180deg,rgba(37, 8, 45) 55%,rgb(49, 16, 57) 75%);
