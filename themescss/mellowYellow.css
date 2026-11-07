@@ -18,6 +18,7 @@
 
 body[data-theme="mellowYellow"] {
   color: var(--color_mediumDarker);
+  font-family: Gorditas;
   /* background-color:burlywood;
   background: repeating-linear-gradient(-45deg, rgb(237, 217, 162) 0px, rgb(244, 240, 209) 12.5px, transparent 12.5px, transparent 20px), repeating-linear-gradient(45deg,  rgb(205, 187, 142) 0px,  rgb(247, 243, 211) 12.5px, transparent 12.5px, transparent 20px), linear-gradient(lightgoldenrodyellow, lightgoldenrodyellow); */
   background-color:var(--color_lighter);
@@ -25,6 +26,17 @@ body[data-theme="mellowYellow"] {
   background-image: conic-gradient(from 60deg at 56.25% calc(425% / 6), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from 60deg at 56.25% calc(425% / 6), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from 180deg at 43.75% calc(425% / 6), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from 180deg at 43.75% calc(425% / 6), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from -60deg at 50% calc(175% / 12), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from -60deg at 50% calc(175% / 12), transparent 0deg, transparent 0.5deg, var(--color_light) 0.5deg, var(--color_light) 119.5deg, transparent 119.5deg, transparent 120deg);
   background-position: 0 0, 36px 62px, 0 0, 36px 62px, 36px 0, 0 62px;
   background-size: 72px 124px;
+}
+
+body[data-theme="mellowYellow"] h1 {
+  font-family: Gorditas;
+  font-size: 38px;
+}
+body[data-theme="mellowYellow"] h2 {
+  font-family: Gorditas;
+}
+body[data-theme="mellowYellow"] label {
+  font-family: Sniglet;
 }
 
 
@@ -81,10 +93,15 @@ body[data-theme="mellowYellow"] .headingLine {
   background: linear-gradient(180deg, var(--mellowYellow) 50%, rgba(45, 41, 8, 0) 100%);
 }
 
+body[data-theme="mellowYellow"] #writingOptions{
+  width: 145px;
+}
+
 body[data-theme="mellowYellow"] .sideBar {
   border: 2px solid var(--color_mediumDark);
   background-color: var(--color_lighter);
-  color: var(--color_darker);
+  color: var(--color_mediumDarker);
+  font-size: 18px;
 }
 
 body[data-theme="mellowYellow"] .sideBar:hover {
@@ -123,12 +140,13 @@ body[data-theme="mellowYellow"] .closebtn {
 }
 
 body[data-theme="mellowYellow"] .closebtn:hover {
-  color: #243428;
+  color: #2e2a00;
 }
 
 body[data-theme="mellowYellow"] #alertNote {
   background-color: rgb(75, 146, 113);
   color: white;
+  font-family: Gorditas;
 }
 
 body[data-theme="mellowYellow"] #copyIcon {

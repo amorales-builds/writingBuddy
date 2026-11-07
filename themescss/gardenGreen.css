@@ -61,7 +61,7 @@ body[data-theme="gardenGreen"] option {
 body[data-theme="gardenGreen"] button {
   border: 1px solid  var(--gColor_mediumDark);
   background-color: var(--gColor_lightest);
-  color: var(--gColor_mediumDark);
+  color: var(--gColor_accent);
 }
 
 body[data-theme="gardenGreen"] button:hover {
@@ -142,6 +142,7 @@ body[data-theme="gardenGreen"] .closebtn:hover {
 body[data-theme="gardenGreen"] #alertNote {
   background-color: rgb(75, 146, 113);
   color: white;
+  font-family: Macondo;
 }
 
 body[data-theme="gardenGreen"] #copyIcon {

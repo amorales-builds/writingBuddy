@@ -43,8 +43,16 @@
   src: url(/fonts/Audiowide-Regular.ttf) ;
 }
 @font-face{
+  font-family: Flow-Circular;
+  src: url(/fonts/FlowCircular-Regular.ttf) ;
+}
+@font-face{
   font-family: Gorditas;
   src: url(/fonts/Gorditas-Regular.ttf) ;
+}
+@font-face{
+  font-family: Metamorphous;
+  src: url(/fonts/Metamorphous-Regular.ttf) ;
 }
 @font-face{
   font-family: Macondo;

@@ -103,7 +103,7 @@ body[data-theme="darkPlum"] .closebtn {
 }
 
 body[data-theme="darkPlum"] .closebtn:hover {
-  color: black;
+  color:  var(--plumMediumDark);
 }
 
 body[data-theme="darkPlum"] #alertNote {
@@ -121,8 +121,8 @@ body[data-theme="darkPlum"] #textareaGrid {
   border: 2px solid lavenderblush;
   border-radius: 6%;
 }
-body[data-theme="darkPlum"] #textareaGrid:hover {
-  border-radius: 4%;
+body[data-theme="darkPlum"] #textareaGrid:hover {  
+  border-radius: 5%;
 }
 
 body[data-theme="darkPlum"] #wcGoal {
