@@ -44,12 +44,24 @@
   src: url(/fonts/Audiowide-Regular.ttf) ;
 }
 @font-face{
+  font-family: AutourOne;
+  src: url(/fonts/AutourOne-Regular.ttf) ;
+}
+@font-face{
+  font-family: Flow-Block;
+  src: url(/fonts/FlowBlock-Regular.ttf) ;
+}
+@font-face{
   font-family: Flow-Circular;
   src: url(/fonts/FlowCircular-Regular.ttf) ;
 }
 @font-face{
   font-family: Gorditas;
   src: url(/fonts/Gorditas-Regular.ttf) ;
+}
+@font-face{
+  font-family: HappyMonkey;
+  src: url(/fonts/HappyMonkey-Regular.ttf) ;
 }
 @font-face{
   font-family: Metamorphous;
@@ -427,6 +439,7 @@ fieldset{
   padding: 5px;
   border: transparent;
   border-radius: 10px;
+  margin-left: 4.5px;
 }
 
 #workTitle {

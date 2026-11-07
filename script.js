@@ -147,16 +147,22 @@ wFont.addEventListener('input', async () => {
         writingE.style.fontFamily = "Arial, Helvetica, sans-serif";
     }else if (wFont.value == 'Audiowide'){
         writingE.style.fontFamily = "Audiowide";
+    }else if (wFont.value == 'AutourOne'){
+        writingE.style.fontFamily = "AutourOne";
     }else if (wFont.value == 'Gill Sans'){
         writingE.style.fontFamily = "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif";}
     else if (wFont.value == 'Comic Sans'){
         writingE.style.fontFamily = "Comic Sans MS, Comic Sans, cursive";
     }else if (wFont.value == 'Courier'){
         writingE.style.fontFamily = 'Courier New, Courier, monospace';
+    }else if (wFont.value == 'Flow-Block'){
+        writingE.style.fontFamily = "Flow-Block";
     }else if (wFont.value == 'Flow-Circular'){
         writingE.style.fontFamily = "Flow-Circular";
     }else if (wFont.value == 'Gorditas'){
         writingE.style.fontFamily = "Gorditas";
+    }else if (wFont.value == 'Happy Monkey'){
+        writingE.style.fontFamily = "HappyMonkey";
     }else if (wFont.value == 'Macondo'){
         writingE.style.fontFamily = "Macondo";
     }else if (wFont.value == 'Metamorphous'){

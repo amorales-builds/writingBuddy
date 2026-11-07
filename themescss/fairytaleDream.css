@@ -113,6 +113,7 @@ body[data-theme="fairytaleDream"] .sideBar {
     font-size: 15px;
     border-radius: 10px 0;
     box-shadow: 2px 3px 15px rgba(47, 30, 30, 0.902), 0 0 10px #8a4d0f inset;
+    width: 7vw;
 }
 
 body[data-theme="fairytaleDream"] .sideBar:hover {
@@ -177,11 +178,12 @@ body[data-theme="fairytaleDream"] #textareaGrid {
 }
 
 body[data-theme="fairytaleDream"] #textareaGrid:hover {
-    background-color: var(--fColor_lightest);
-    border-radius: 0 0;  
-    box-shadow: 2px 3px 5px black, 0 0 60px #8a4d0f inset;
-    /* transform:rotate(1deg); */
-    transform: scale(101%);
+  background-color: var(--fColor_lightest);
+  border-radius: 0 0;  
+  box-shadow: 2px 3px 5px black, 0 0 60px #8a4d0f inset;
+  /* transform:rotate(1deg); */
+  transform: scale(105%);
+  transition: .4s ease-in-out;
 }
 
 body[data-theme="fairytaleDream"] #wcGoal {

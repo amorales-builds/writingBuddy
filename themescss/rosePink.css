@@ -142,6 +142,13 @@ body[data-theme="rosePink"] #buddyCharacterBtn:hover {
     );
     border: 2px solid var(--roseMaroon);
   }
+  body[data-theme="rosePink"] #buddyGrid:hover{
+    background: repeating-linear-gradient(
+      120deg,
+      var(--roseLightTransparent) 25%,
+      var(--roseLightTransparentish) 55%
+    );
+  }
 
   body[data-theme="rosePink"] #workMenu {
     background-color: var(--roseLight);

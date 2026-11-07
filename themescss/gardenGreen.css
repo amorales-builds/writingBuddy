@@ -33,32 +33,43 @@ body[data-theme="gardenGreen"] {
 }
 
 body[data-theme="gardenGreen"] h1 {
+  font-family: AutourOne;
   color: var(--gColor_dark);
 }
 body[data-theme="gardenGreen"] p {
+  font-family: AutourOne;
   color: var(--gColor_lightest);
 }
 body[data-theme="gardenGreen"] i {
+  font-family: AutourOne;
   color: var(--gColor_accentDarker);
 }
 
 body[data-theme="gardenGreen"] input {
+  font-family: AutourOne;
+  font-weight: bold;
   color: var(--gColor_darker);
   background-color:  var(--gColor_white);
 }
 
 body[data-theme="gardenGreen"] select {
+  font-family: AutourOne;
+  font-size: 12px;
+  font-weight: bold;
   color: var(--gColor_mediumDark);
   background-color: transparent;
   border: transparent;
 }
 
 body[data-theme="gardenGreen"] option {
+  font-family: AutourOne;
   font-weight: bold;
   background: var(--gardenGreen);
 }
 
 body[data-theme="gardenGreen"] button {
+  font-family: AutourOne;
+  font-size: 12px;
   border: 1px solid  var(--gColor_mediumDark);
   background-color: var(--gColor_lightest);
   color: var(--gColor_accent);
@@ -68,6 +79,10 @@ body[data-theme="gardenGreen"] button:hover {
   background-color: var(--gColor_accent);
   border: 1px solid var(--gColor_lightest);
   color: var(--gColor_white);
+}
+
+body[data-theme="gardenGreen"] #hideBtn {
+  font-size: 10px;
 }
 
 body[data-theme="gardenGreen"] fieldset {
@@ -88,6 +103,9 @@ body[data-theme="gardenGreen"] #writingOptions {
 }
 
 body[data-theme="gardenGreen"] .sideBar {
+  font-family: AutourOne;
+  font-weight: bold;
+  font-size: 12px;
   border: 2px solid var(--gColor_mediumDark);
   background-color: var(--gColor_medium);
   color: var(--gColor_dark);  
@@ -101,6 +119,8 @@ body[data-theme="gardenGreen"] .sideBar:hover {
   color: var(--gColor_lightest);
   background-color: var(--gColor_accent);
   opacity: 1;
+  transform: translate(5%,-5%);
+  transition: 0.05s ease-out;
 }
 
 body[data-theme="gardenGreen"] .workInfoInput {
@@ -169,11 +189,12 @@ body[data-theme="gardenGreen"] #textareaGrid:hover {
 }
 
 body[data-theme="gardenGreen"] textarea {
+  font-family: AutourOne;
   background-color: transparent;
   color: var(--gColor_lightest);
-    scrollbar-color: var(--gColor_accent) var(--gColor_dark);
-    scrollbar-width: thin;
-    margin-top: 12px;
+  scrollbar-color: var(--gColor_accent) var(--gColor_dark);
+  scrollbar-width: thin;
+  margin-top: 12px;
 }
 
 body[data-theme="gardenGreen"] textarea:hover {

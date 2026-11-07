@@ -1,15 +1,18 @@
 :root{
   --mellowYellow: rgb(244, 240, 209);
+  --mellowYellowTransparent: rgba(244, 240, 209, 0.863);
   
   --color_black: #170c03;
   --color_darker: #271700;
   --color_dark: #3f2e20;
   --color_mediumDarker: #71512b;
   --color_mediumDark: #88653B;
+  --color_mediumHoney: #a07744;
   --color_medium: #edc65c;
   --color_lightMedium: #d8b764;
   --color_light:  rgb(244, 240, 209);
   --color_lighter:  rgb(254, 250, 228);
+  --color_lighterTransparent:  rgba(252, 249, 233, 0.861);
   --color_lightest:  rgb(252, 250, 235);
   --color_white:  rgb(255, 255, 254);
 
@@ -65,6 +68,9 @@ body[data-theme="mellowYellow"] option {
 }
 
 body[data-theme="mellowYellow"] textarea {
+  font-family: HappyMonkey;
+  font-weight: 600;
+  font-size: 17px;
   background-color: transparent;
   color: var(--color_darker);
   scrollbar-color: var(--color_mediumDark) var(--color_light);
@@ -111,13 +117,36 @@ body[data-theme="mellowYellow"] .sideBar:hover {
   background-color: var(--color_dark);
 }
 
+body[data-theme="mellowYellow"] #saveBtn {
+  color: var(--color_light);
+  background-color: var(--color_mediumHoney);
+  opacity: 0.8;
+}
+body[data-theme="mellowYellow"] #saveBtn:hover {  
+  border-color:  var(--color_mediumHoney);
+  background-color: var(--color_lighter);
+  color: var(--color_mediumDarker);
+  opacity: 1;
+}
+
+body[data-theme="mellowYellow"] #hideBtn {
+  color: var(--color_light);
+  background-color: var(--color_mediumHoney);
+}
+body[data-theme="mellowYellow"] #hideBtn:hover {  
+  border-color:  var(--color_mediumHoney);
+  background-color: var(--color_lighter);
+  color: var(--color_mediumDarker);
+}
+
 body[data-theme="mellowYellow"] .workInfoInput {
   background-color:  var(--color_white);
+  border: 1px solid var(--color_mediumHoney);
 }
 
 body[data-theme="mellowYellow"] .letterInput {
   outline: auto;
-  outline-color: var(--color_mediumDark);
+  outline-color: var(--color_dark);
 }
 
 body[data-theme="mellowYellow"] .cpBtn {
@@ -157,12 +186,17 @@ body[data-theme="mellowYellow"] #copyIcon {
 }
 
 body[data-theme="mellowYellow"] #textareaGrid {
-  background-color: var(--color_lighter);
+    background: repeating-linear-gradient(
+      120deg,
+      var(--mellowYellow) 25%,
+      var(--color_lighter) 75%
+    );
   border: 2px solid var(--color_mediumDark);
 }
 
 body[data-theme="mellowYellow"] #textareaGrid:hover {
-  background-color: var(--color_lightest);
+  background: var(--color_lightest);
+  border: 2px double var(--color_mediumDark);
 }
 
 body[data-theme="mellowYellow"] #wcGoal {
@@ -191,6 +225,15 @@ body[data-theme="mellowYellow"] #buddyCharacterBtn:hover {
       var(--color_lighter) 55%
     );
     border: 2px solid var(--color_mediumDark);
+  }
+  body[data-theme="mellowYellow"] #buddyGrid:hover {
+    background: repeating-linear-gradient(
+      120deg,
+      var(--mellowYellowTransparent) 25%,
+      var(--color_lighterTransparent) 55%
+    );
+    border: 2px solid;
+    border-color: var(--color_lightMedium) var(--color_lightest);
   }
 
   body[data-theme="mellowYellow"] #workMenu {
