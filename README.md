@@ -39,7 +39,7 @@ The Writing Buddy is an animated fellow that moves to the rhythm of the user's k
 - [x] \(Optional) Page Counter option
 - [ ] \(Optional) Save progress on specific title
 - [ ] \(Optional) "Flowstate" button
-
+- [ ] \(Optional) SFX sounds
 
 ## Project Status
 ✅️ Main Features functional <br>
