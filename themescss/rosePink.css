@@ -22,6 +22,8 @@ body[data-theme="rosePink"] option {
 body[data-theme="rosePink"] textarea {
   background-color: transparent;
   color: var(--roseRed);
+  scrollbar-color: var(--roseDark) var(--roseLight);
+  scrollbar-width: thin;
 }
 
 body[data-theme="rosePink"] button {

@@ -81,7 +81,9 @@ body[data-theme="techNeon"] option {
 body[data-theme="techNeon"] textarea {
   color: var(--tColors_accentGreenLight);
   background-color: transparent;
-  font-family: Audiowide;
+  font-family: Audiowide;    
+  scrollbar-color: var(--tColors_accentGreenLight) var(--tColors_mediumDarker);
+  scrollbar-width: thin;
 }
 
 body[data-theme="techNeon"] optgroup {

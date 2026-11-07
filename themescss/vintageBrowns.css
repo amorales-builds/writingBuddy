@@ -73,6 +73,10 @@ body[data-theme="vintageBrowns"] textarea {
   color: var(--vColors_lightest);
   background-color: transparent;
   font-family: 'Courier New', Courier, monospace;
+  scrollbar-color: var(--vColors_medium) transparent;
+  scrollbar-width: thin;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 body[data-theme="vintageBrowns"] optgroup {
@@ -162,6 +166,10 @@ body[data-theme="vintageBrowns"] .cpBtn:hover {
   background-color: var(--vColors_medium);
   border-color: var(--vColors_accentLight) var(--vColors_accentLight) var(--vColors_lighter) var(--vColors_lighter);
   color: var(--vColors_lighter);
+}
+
+body[data-theme="vintageBrowns"] #clearBtn {
+  margin-left: 30px;
 }
 
 body[data-theme="vintageBrowns"] .settingButtons {

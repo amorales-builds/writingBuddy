@@ -1,23 +1,24 @@
 :root{
   --fairytaleDream: rgb(244, 240, 209);
   
-  --color_black: #170c03;
-  --color_darker: #271700;
-  --color_dark: #3f2e20;
-  --color_mediumDarker: #71512b;
-  --color_mediumDark: #88653B;
-  --color_medium: #edc65c;
-  --color_lightMedium: #d8b764;
-  --color_light:  rgb(244, 240, 209);
-  --color_lighter:  rgb(254, 250, 228);
-  --color_lightest:  rgb(252, 250, 235);
-  --color_white:  rgb(255, 255, 254);
+  --fColor_black: #170c03;
+  --fColor_darker: #271700;
+  --fColor_dark: #3f2e20;
+  --fColor_mediumDarker: #71512b;
+  --fColor_mediumDark: #88653B;
+  --fColor_medium: #8a4d0f;  
+  --fColor_mediumLight: #e4cdaa;
+  --fColor_lightMedium: #d8b764;
+  --fColor_light:  rgb(244, 240, 209);
+  --fColor_lighter:  rgb(254, 250, 228);
+  --fColor_lightest:  rgb(252, 250, 235);
+  --fColor_white:  rgb(255, 255, 254);
 
-  --color_accent: #d9c138;
+  --fColor_accent: #d9c138;
 }
 
 body[data-theme="fairytaleDream"] {
-    color: var(--color_mediumDarker);
+    color: var(--fColor_mediumDarker);
     font-family: Metamorphous;
     /* background-color: #d9ceb2;
     opacity: 0.8;
@@ -44,13 +45,13 @@ body[data-theme="fairytaleDream"] label {
 
 body[data-theme="fairytaleDream"] input {
   font-family: Metamorphous;
-  color: var(--color_darker);
-  background-color:  var(--color_white);
+  color: var(--fColor_darker);
+  background-color:  var(--fColor_white);
 }
 
 body[data-theme="fairytaleDream"] select {
   font-family: Metamorphous;
-  color: var(--color_mediumDark);
+  color: var(--fColor_mediumDark);
   background-color: transparent;
   border: transparent;
 }
@@ -58,34 +59,43 @@ body[data-theme="fairytaleDream"] select {
 body[data-theme="fairytaleDream"] option {
   font-family: Metamorphous;
   font-weight: bold;
-  background: var(--fairytaleDream);
+  background: var(--fColor_light);
+}
+
+body[data-theme="fairytaleDream"] optgroup {
+  background: var(--fColor_lighter);
+  font-weight: 100;
 }
 
 body[data-theme="fairytaleDream"] textarea {
-  font-family: Metamorphous;
-  background-color: transparent;
-  color: var(--color_darker);
+    font-family: Metamorphous;
+    background-color: transparent;
+    color: var(--fColor_darker);
+    scrollbar-color: var(--fColor_mediumDark) var(--fColor_lightest);
+    scrollbar-width: thin;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 body[data-theme="fairytaleDream"] button {
   font-family: Metamorphous;
-  border: 1px solid  var(--color_mediumDark);
-  background-color: var(--color_lightest);
-  color: var(--color_mediumDark);
+  border: 1px solid  var(--fColor_mediumDark);
+  background-color: var(--fColor_lightest);
+  color: var(--fColor_mediumDark);
 }
 
 body[data-theme="fairytaleDream"] button:hover {
   background-color: var(--fairytaleDream);
-  border: 1px solid var(--color_dark);
-  color: var(--color_dark);
+  border: 1px solid var(--fColor_dark);
+  color: var(--fColor_dark);
 }
 
 body[data-theme="fairytaleDream"] fieldset {
-  border-color: var(--color_mediumDark);
+  border-color: var(--fColor_mediumDark);
 }
 
 body[data-theme="fairytaleDream"] ::placeholder {
-  color: var(--color_mediumDark);
+  color: var(--fColor_mediumDark);
 }
 
 body[data-theme="fairytaleDream"] .headingLine {
@@ -97,41 +107,46 @@ body[data-theme="fairytaleDream"] #writingOptions{
 }
 
 body[data-theme="fairytaleDream"] .sideBar {
-  border: 2px solid var(--color_mediumDark);
-  background-color: var(--color_lighter);
-  color: var(--color_mediumDarker);
-  font-size: 15px;
-  border-radius: 10px 0;
+    border: 2px solid var(--fColor_mediumDark);
+    background-color: var(--fColor_lighter);
+    color: var(--fColor_mediumDarker);
+    font-size: 15px;
+    border-radius: 10px 0;
+    box-shadow: 2px 3px 15px rgba(47, 30, 30, 0.902), 0 0 10px #8a4d0f inset;
 }
 
 body[data-theme="fairytaleDream"] .sideBar:hover {
-  color: var(--color_light);
-  background-color: var(--color_dark);
+    background-color: var(--fColor_lighter);
+    color: var(--fColor_mediumDarker);
+    border-radius: 4px 0;
+    box-shadow: 2px 3px 5px rgba(47, 30, 30, 0.902), 0 0 8px #8a4d0f inset;
+    transform: rotate(4deg);
+    /* transform: scale(95%); */
 }
 
 body[data-theme="fairytaleDream"] .workInfoInput {
-  background-color:  var(--color_white);
+  background-color:  var(--fColor_white);
 }
 
 body[data-theme="fairytaleDream"] .letterInput {
   outline: auto;
-  outline-color: var(--color_mediumDark);
+  outline-color: var(--fColor_mediumDark);
 }
 
 body[data-theme="fairytaleDream"] .cpBtn {
   background-color: var(--fairytaleDream);
-  color: var(--color_mediumDarker);
-  border: 1px solid var(--color_mediumDark);
+  color: var(--fColor_mediumDarker);
+  border: 1px solid var(--fColor_mediumDark);
 }
 
 body[data-theme="fairytaleDream"] .cpBtn:hover {
-  background-color: var(--color_mediumDark);
+  background-color: var(--fColor_mediumDark);
   color: var(--fairytaleDream);
 }
 
 body[data-theme="fairytaleDream"] .settingButtons {
-  border: 1px solid  var(--color_white);
-  background-color: var(--color_mediumDark);
+  border: 1px solid  var(--fColor_white);
+  background-color: var(--fColor_mediumDark);
   color: var(--fairytaleDream);
 }
 
@@ -155,51 +170,144 @@ body[data-theme="fairytaleDream"] #copyIcon {
 }
 
 body[data-theme="fairytaleDream"] #textareaGrid {
-    background-color: var(--color_lighter);
-    border: 2px solid var(--color_mediumDark);
+    background-color: var(--fColor_lighter);
+    border: 2px solid var(--fColor_mediumDark);
     border-radius: 30px 0;  
     box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
 }
 
 body[data-theme="fairytaleDream"] #textareaGrid:hover {
-  background-color: var(--color_lightest);
+    background-color: var(--fColor_lightest);
+    border-radius: 0 0;  
+    box-shadow: 2px 3px 5px black, 0 0 60px #8a4d0f inset;
+    /* transform:rotate(1deg); */
+    transform: scale(101%);
 }
 
 body[data-theme="fairytaleDream"] #wcGoal {
-  background-color: var(--color_light);
-  color: var(--color_mediumDarker);
-  border: 2px solid var(--color_mediumDark);
+  background-color: var(--fColor_light);
+  color: var(--fColor_mediumDarker);
+  border: 2px solid var(--fColor_mediumDark);
 }
 
 body[data-theme="fairytaleDream"] #word-meter {
-  accent-color: var(--color_dark);
+  accent-color: var(--fColor_dark);
+}
+
+body[data-theme="fairytaleDream"] #hideBtn {
+  font-size: 11px;
 }
 
 body[data-theme="fairytaleDream"] #buddyCharacterBtn {
-  color: var(--color_dark);
+  color: var(--fColor_dark);
 }
 
 body[data-theme="fairytaleDream"] #buddyCharacterBtn:hover {
-  background-color: var(--color_light);
+  background-color: var(--fColor_light);
 }
 
 @media screen and (min-width: 1200px) {
     body[data-theme="fairytaleDream"] #buddyGrid {
-        background: repeating-linear-gradient(
-        120deg,
-        var(--fairytaleDream) 25%,
-        var(--color_lighter) 55%
-        );
-        border: 2px solid var(--color_mediumDark);
+        background: transparent;
+        border: 2px solid var(--fColor_mediumDark);
         border-radius: 0 30px;
         box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
     }
+    body[data-theme="fairytaleDream"] #buddyGrid:hover {
+        /* background-color: var(--fColor_light);
+        opacity: 0.7; */
+        border-radius: 0 0;  
+        box-shadow: 2px 3px 10px black, 0 0 60px #8a4d0f inset;
+        transform: rotate(-1deg);
+        /* clip-path: polygon(
+            1% 2%,
+            3.5% 0.1%,
+            8.9% 2.7%,
+            16.2% 1.2%,
+            19.7% 0.8%,
+            24.7% 2%,
+            31.2% 0%,
+            35.9% 2.3%,
+            40.6% 0.5%,
+            47.1% 1.8%,
+            49.9% 1%,
+            53.8% 2.5%,
+            62.2% 0.4%,
+            67.3% 1.2%,
+            70.3% 0.3%,
+            75.8% 1.4%,
+            78.5% 1.7%,
+            84% 2.6%,
+            91.1% 0.5%,
+            93.6% 2.4%,
+            97.3% 0.3%,
+            98.9% 6%,
+            98.1% 11.4%,
+            98.6% 15.5%,
+            97.3% 17.8%,
+            97.7% 27.4%,
+            98.3% 28.5%,
+            99.7% 34.1%,
+            98.8% 41.9%,
+            98.3% 45.7%,
+            98.4% 50.9%,
+            98.7% 57.4%,
+            99.6% 60.4%,
+            99.4% 66.6%,
+            99.2% 69.5%,
+            97.4% 77.1%,
+            98.1% 82.3%,
+            99.9% 83.5%,
+            98.2% 91.5%,
+            99.3% 95.3%,
+            98% 98.6%,
+            93.6% 97.4%,
+            90.3% 98.3%,
+            86.8% 98.3%,
+            78.6% 98.5%,
+            76.4% 99.2%,
+            69.7% 99.8%,
+            64.2% 99.3%,
+            61.8% 99.2%,
+            57.2% 98.1%,
+            48.7% 98.3%,
+            46.8% 99%,
+            39.6% 98.9%,
+            33.8% 97.3%,
+            28.2% 99.4%,
+            27% 98.3%,
+            22.1% 98.6%,
+            13.1% 97.1%,
+            8.7% 99.3%,
+            2.7% 97.4%,
+            2% 98.2%,
+            2.1% 94.3%,
+            0.7% 90.5%,
+            0.9% 86.3%,
+            2.2% 78.2%,
+            0.4% 76.7%,
+            1.2% 72.1%,
+            2% 64%,
+            1.4% 59.8%,
+            0.4% 57.3%,
+            0.3% 49.1%,
+            2.9% 44.7%,
+            1.9% 41.3%,
+            0.8% 35.7%,
+            2.9% 31.3%,
+            0.8% 24.9%,
+            2.7% 20.5%,
+            0.8% 17.4%,
+            2.5% 8.6%,
+            1.1% 5.5%
+        ); */
+    }
 
     body[data-theme="fairytaleDream"] #workMenu {
-        background-color: var(--color_light);
-        color: var(--color_dark);
+        background-color: var(--fColor_light);
+        color: var(--fColor_dark);
     }
     body[data-theme="fairytaleDream"] #workMenu:hover {
-        background-color: var(--color_lightest);
+        background-color: var(--fColor_lightest);
     }
 }

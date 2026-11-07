@@ -28,6 +28,10 @@ body[data-theme="darkPlum"] option {
 body[data-theme="darkPlum"] textarea {
   color: lavenderblush;
   background-color: transparent;
+  scrollbar-color: var(--plumDarker) transparent;
+  scrollbar-width: thin;
+  margin-top: 12px;
+  margin-bottom: 8px;
 }
 
 body[data-theme="darkPlum"] optgroup {

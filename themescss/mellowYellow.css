@@ -67,6 +67,8 @@ body[data-theme="mellowYellow"] option {
 body[data-theme="mellowYellow"] textarea {
   background-color: transparent;
   color: var(--color_darker);
+  scrollbar-color: var(--color_mediumDark) var(--color_light);
+  scrollbar-width: thin;
 }
 
 body[data-theme="mellowYellow"] button {

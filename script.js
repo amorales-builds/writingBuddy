@@ -496,7 +496,21 @@ document.getElementById("copyBtn").addEventListener('click', async () => {
 })
 
 document.getElementById("pasteBtn").addEventListener('click', async () => {    
-    writingE.value = await navigator.clipboard.readText();
+    let pasted = await navigator.clipboard.readText();
+    writingE.value = writingE.value + pasted;
+
+    if (document.getElementById("goalSelection").value == 'Words'){
+
+        let wordNumber = countWords(writingE.value);
+
+        document.getElementById('word-number').innerHTML = wordNumber; 
+
+        whatAreWeCounting(wordNumber);
+    }
+})
+
+document.getElementById("clearBtn").addEventListener('click', async () => {    
+    writingE.value = "";
 })
 
 let savedTitle = workTitleE.textContent;

@@ -79,7 +79,7 @@ body[data-theme="gardenGreen"] ::placeholder {
 }
 
 body[data-theme="gardenGreen"] .headingLine {
-  background: linear-gradient(180deg, var(--gColor_lighter) 80%, rgba(45, 41, 8, 0) 100%);
+  background: linear-gradient(180deg, #eff3cdd4 45%, rgba(45, 41, 8, 0) 100%);
   padding-top: 35px; 
 }
 
@@ -171,6 +171,9 @@ body[data-theme="gardenGreen"] #textareaGrid:hover {
 body[data-theme="gardenGreen"] textarea {
   background-color: transparent;
   color: var(--gColor_lightest);
+    scrollbar-color: var(--gColor_accent) var(--gColor_dark);
+    scrollbar-width: thin;
+    margin-top: 12px;
 }
 
 body[data-theme="gardenGreen"] textarea:hover {
