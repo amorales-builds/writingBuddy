@@ -1,0 +1,205 @@
+:root{
+  --fairytaleDream: rgb(244, 240, 209);
+  
+  --color_black: #170c03;
+  --color_darker: #271700;
+  --color_dark: #3f2e20;
+  --color_mediumDarker: #71512b;
+  --color_mediumDark: #88653B;
+  --color_medium: #edc65c;
+  --color_lightMedium: #d8b764;
+  --color_light:  rgb(244, 240, 209);
+  --color_lighter:  rgb(254, 250, 228);
+  --color_lightest:  rgb(252, 250, 235);
+  --color_white:  rgb(255, 255, 254);
+
+  --color_accent: #d9c138;
+}
+
+body[data-theme="fairytaleDream"] {
+    color: var(--color_mediumDarker);
+    font-family: Metamorphous;
+    /* background-color: #d9ceb2;
+    opacity: 0.8;
+    background-image:  radial-gradient(circle at 50% 100%, transparent 20%, #cfc2a1 21%, #cfc2a1 34%, transparent 35%, transparent), radial-gradient(circle at 50% 0%, transparent 20%, #cfc2a1 21%, #cfc2a1 34%, transparent 35%, transparent);
+    background-position: 0 0, -20px 0;
+    background-size: 40px 30px; */
+    background-color: #d9ceb2;
+    opacity: 0.8;
+    background-image:  radial-gradient(circle at 50% 100%, transparent 20%, #e1d5b8 21%, #e1d5b8 34%, transparent 35%, transparent), radial-gradient(circle at 50% 0%, transparent 20%, #e1d5b8 21%, #e1d5b8 34%, transparent 35%, transparent);
+    background-position: 0 0, -8px 0;
+    background-size: 16px 12px;
+}
+
+body[data-theme="fairytaleDream"] h1 {
+  font-family: Metamorphous;
+  font-size: 26px;
+}
+body[data-theme="fairytaleDream"] h2 {
+  font-family: Metamorphous;
+}
+body[data-theme="fairytaleDream"] label {
+  font-family: Metamorphous;
+}
+
+body[data-theme="fairytaleDream"] input {
+  font-family: Metamorphous;
+  color: var(--color_darker);
+  background-color:  var(--color_white);
+}
+
+body[data-theme="fairytaleDream"] select {
+  font-family: Metamorphous;
+  color: var(--color_mediumDark);
+  background-color: transparent;
+  border: transparent;
+}
+
+body[data-theme="fairytaleDream"] option {
+  font-family: Metamorphous;
+  font-weight: bold;
+  background: var(--fairytaleDream);
+}
+
+body[data-theme="fairytaleDream"] textarea {
+  font-family: Metamorphous;
+  background-color: transparent;
+  color: var(--color_darker);
+}
+
+body[data-theme="fairytaleDream"] button {
+  font-family: Metamorphous;
+  border: 1px solid  var(--color_mediumDark);
+  background-color: var(--color_lightest);
+  color: var(--color_mediumDark);
+}
+
+body[data-theme="fairytaleDream"] button:hover {
+  background-color: var(--fairytaleDream);
+  border: 1px solid var(--color_dark);
+  color: var(--color_dark);
+}
+
+body[data-theme="fairytaleDream"] fieldset {
+  border-color: var(--color_mediumDark);
+}
+
+body[data-theme="fairytaleDream"] ::placeholder {
+  color: var(--color_mediumDark);
+}
+
+body[data-theme="fairytaleDream"] .headingLine {
+  background: linear-gradient(180deg, var(--fairytaleDream) 50%, rgba(45, 41, 8, 0) 100%);
+}
+
+body[data-theme="fairytaleDream"] #writingOptions{
+  width: 133px;
+}
+
+body[data-theme="fairytaleDream"] .sideBar {
+  border: 2px solid var(--color_mediumDark);
+  background-color: var(--color_lighter);
+  color: var(--color_mediumDarker);
+  font-size: 15px;
+  border-radius: 10px 0;
+}
+
+body[data-theme="fairytaleDream"] .sideBar:hover {
+  color: var(--color_light);
+  background-color: var(--color_dark);
+}
+
+body[data-theme="fairytaleDream"] .workInfoInput {
+  background-color:  var(--color_white);
+}
+
+body[data-theme="fairytaleDream"] .letterInput {
+  outline: auto;
+  outline-color: var(--color_mediumDark);
+}
+
+body[data-theme="fairytaleDream"] .cpBtn {
+  background-color: var(--fairytaleDream);
+  color: var(--color_mediumDarker);
+  border: 1px solid var(--color_mediumDark);
+}
+
+body[data-theme="fairytaleDream"] .cpBtn:hover {
+  background-color: var(--color_mediumDark);
+  color: var(--fairytaleDream);
+}
+
+body[data-theme="fairytaleDream"] .settingButtons {
+  border: 1px solid  var(--color_white);
+  background-color: var(--color_mediumDark);
+  color: var(--fairytaleDream);
+}
+
+body[data-theme="fairytaleDream"] .closebtn {
+  color: white;
+}
+
+body[data-theme="fairytaleDream"] .closebtn:hover {
+  color: #2e2a00;
+}
+
+body[data-theme="fairytaleDream"] #alertNote {
+  background-color: rgb(75, 146, 113);
+  color: white;
+  font-family: Metamorphous;
+}
+
+body[data-theme="fairytaleDream"] #copyIcon {
+  background: url(svg/copyIcon.svg);
+  background-repeat: no-repeat;
+}
+
+body[data-theme="fairytaleDream"] #textareaGrid {
+    background-color: var(--color_lighter);
+    border: 2px solid var(--color_mediumDark);
+    border-radius: 30px 0;  
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+}
+
+body[data-theme="fairytaleDream"] #textareaGrid:hover {
+  background-color: var(--color_lightest);
+}
+
+body[data-theme="fairytaleDream"] #wcGoal {
+  background-color: var(--color_light);
+  color: var(--color_mediumDarker);
+  border: 2px solid var(--color_mediumDark);
+}
+
+body[data-theme="fairytaleDream"] #word-meter {
+  accent-color: var(--color_dark);
+}
+
+body[data-theme="fairytaleDream"] #buddyCharacterBtn {
+  color: var(--color_dark);
+}
+
+body[data-theme="fairytaleDream"] #buddyCharacterBtn:hover {
+  background-color: var(--color_light);
+}
+
+@media screen and (min-width: 1200px) {
+    body[data-theme="fairytaleDream"] #buddyGrid {
+        background: repeating-linear-gradient(
+        120deg,
+        var(--fairytaleDream) 25%,
+        var(--color_lighter) 55%
+        );
+        border: 2px solid var(--color_mediumDark);
+        border-radius: 0 30px;
+        box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    }
+
+    body[data-theme="fairytaleDream"] #workMenu {
+        background-color: var(--color_light);
+        color: var(--color_dark);
+    }
+    body[data-theme="fairytaleDream"] #workMenu:hover {
+        background-color: var(--color_lightest);
+    }
+}

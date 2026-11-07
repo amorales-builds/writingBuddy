@@ -235,7 +235,7 @@ wParagraph.addEventListener('click', async () => {
 // }
 
 // document.body.dataset.theme = "rosePink";
-document.body.dataset.theme = "vintageBrowns";
+document.body.dataset.theme = "fairytaleDream";
 
 document.getElementById("themeSelector").addEventListener('click', async () => {   
     if (document.getElementById("themeOptions").value == 'rosePink'){ 
@@ -255,6 +255,9 @@ document.getElementById("themeSelector").addEventListener('click', async () => {
     }
     else if (document.getElementById("themeOptions").value == 'vintageBrowns'){ 
         document.body.dataset.theme = ("vintageBrowns");
+    }
+    else if (document.getElementById("themeOptions").value == 'fairytaleDream'){ 
+        document.body.dataset.theme = ("fairytaleDream");
     }
 })
 
