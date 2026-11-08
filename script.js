@@ -240,8 +240,8 @@ wParagraph.addEventListener('click', async () => {
 //     document.body.dataset.theme = ("rosePink");
 // }
 
-// document.body.dataset.theme = "rosePink";
-document.body.dataset.theme = "fairytaleDream";
+document.body.dataset.theme = "rosePink";
+// document.body.dataset.theme = "fairytaleDream";
 
 document.getElementById("themeSelector").addEventListener('click', async () => {   
     if (document.getElementById("themeOptions").value == 'rosePink'){ 
